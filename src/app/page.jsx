@@ -11,8 +11,27 @@ import achievementTwo from "@/images/pencapaian_2.png";
 import achievementThree from "@/images/pencapaian_3.png";
 import achievementFour from "@/images/pencapaian_4.png";
 import achievementFive from "@/images/pencapaian_5.png";
+import portoOne from "@/images/porto_1.png";
+import portoTwo from "@/images/porto_2.png";
+import portoThree from "@/images/porto_3.png";
+import portoFour from "@/images/porto_4.png";
+import portoFive from "@/images/porto_5.png";
+import portoSix from "@/images/porto_6.png";
+import portoSeven from "@/images/porto_7.png";
+import portoEight from "@/images/porto_8.png";
+import portoNine from "@/images/porto_9.png";
+import portoTen from "@/images/porto_10.png";
+import partnerOne from "@/images/partner_1.png";
+import partnerTwo from "@/images/partner_2.png";
+import partnerThree from "@/images/partner_3.png";
+import partnerFour from "@/images/partner_4.png";
+import partnerFive from "@/images/partner_5.png";
+import partnerSix from "@/images/partner_6.png";
+import partnerSeven from "@/images/partner_7.png";
+import partnerEight from "@/images/partner_8.png";
+import partnerNine from "@/images/partner_9.png";
 import investFlow from "@/images/investor_flow.png";
-import { RiWhatsappLine, RiArrowRightLine } from "react-icons/ri";
+import { RiWhatsappLine, RiArrowRightLine, RiInstagramLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import {
   Carousel,
@@ -21,6 +40,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import TestimonyCard from "@/components/testimonyCard";
 
 export default function Home(props) {
   const SLIDES = Array.from(Array(3).keys());
@@ -190,13 +210,8 @@ export default function Home(props) {
             <Carousel setApi={setApi}>
               <CarouselContent>
                 {SLIDES.map((val, idx) => (
-                  <CarouselItem key={idx} className={`basis-[70%] pl-16`}>
-                    <Image
-                      className="w-full h-full rounded-xl"
-                      src={`https://picsum.photos/600/350?v=${val}`}
-                      width={400}
-                      height={200}
-                    />
+                  <CarouselItem key={idx} className={`basis-[80%] pl-10`}>
+                    <TestimonyCard />
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -212,7 +227,7 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-        <div className="px-4 md:px-[99px] pt-[91px] pb-[169px] flex flex-col gap-6">
+        <div className="px-4 md:px-[149px] pt-[91px] pb-[169px] flex flex-col gap-24">
           <div className="flex flex-col gap-4 items-center">
             <h2 className="text-center text-4xl font-light">Portofolio Kami</h2>
             <p className="text-center w-[553px]">
@@ -220,17 +235,37 @@ export default function Home(props) {
               disesuaikan dengan tujuan finansial Anda.
             </p>
           </div>
-          <div className="grid grid-cols-5 grid-flow-row gap-4">
-            <div className="flex h-44 border"></div>
-            <div className="flex h-44 border"></div>
-            <div className="flex h-44 border"></div>
-            <div className="flex h-44 border"></div>
-            <div className="flex h-44 border"></div>
-            <div className="flex h-44 border"></div>
-            <div className="flex h-44 border"></div>
-            <div className="flex h-44 border"></div>
-            <div className="flex h-44 border"></div>
-            <div className="flex h-44 border"></div>
+          <div className="grid grid-cols-5 grid-flow-row gap-6">
+            <div className="flex h-24">
+              <Image src={portoOne} alt="Porto One" className="w-full object-contain" />
+            </div>
+            <div className="flex h-24">
+              <Image src={portoTwo} alt="Porto Two" className="w-full object-contain" />
+            </div>
+            <div className="flex h-24">
+              <Image src={portoThree} alt="Porto Three" className="w-full object-contain" />
+            </div>
+            <div className="flex h-24">
+              <Image src={portoFour} alt="Porto Four" className="w-full object-contain" />
+            </div>
+            <div className="flex h-24">
+              <Image src={portoFive} alt="Porto Five" className="w-full object-contain" />
+            </div>
+            <div className="flex h-24">
+              <Image src={portoSix} alt="Porto Six" className="w-full object-contain" />
+            </div>
+            <div className="flex h-24">
+              <Image src={portoSeven} alt="Porto Seven" className="w-full object-contain" />
+            </div>
+            <div className="flex h-24">
+              <Image src={portoEight} alt="Porto Eight" className="w-full object-contain" />
+            </div>
+            <div className="flex h-24">
+              <Image src={portoNine} alt="Porto Nine" className="w-full object-contain" />
+            </div>
+            <div className="flex h-24">
+              <Image src={portoTen} alt="Porto Ten" className="w-full object-contain" />
+            </div>
           </div>
         </div>
         <div className="flex bg-gradient-to-t from-[#1E74D7] from-[0%] to-[#1EE0B3] to-[96%]">
@@ -244,6 +279,203 @@ export default function Home(props) {
             <Image src={signContract} alt="Sign Contract" className="w-full object-cover" />
           </div>
         </div>
+        <footer className="bg-[#0957B1] text-white">
+          <div className="flex justify-between px-[99px] py-6">
+            <div className="flex flex-col gap-4">
+              <Image src={logo} width={120} alt="Logo Footer" />
+              <div>
+                <p>PT. Koaci Sinergi Indonesia</p>
+                <p>Jl. Terusan Sukadamai II No. 5,</p>
+                <p>Kelurahan Sukabungah, Kecamatan Sukajadi,</p>
+                <p>Kota Bandung, Jawa Barat, Indoensia 40162</p>
+              </div>
+              <div className="flex gap-4">
+                <div>
+                  <p>Email</p>
+                  <p>koaci.sinergi@gmail.com</p>
+                </div>
+                <div>
+                  <p>Telephone</p>
+                  <p>+62 882 1945 2787</p>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <p>Social Media</p>
+                <div className="flex">
+                  <RiInstagramLine className="w-8 h-8" />
+                  <RiInstagramLine className="w-8 h-8" />
+                  <RiInstagramLine className="w-8 h-8" />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h5>Halaman</h5>
+              <div className="flex flex-col">
+                <p>Pendanaan</p>
+                <p>Proyek</p>
+                <p>F.A.Q</p>
+                <p>Tentang Kami</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h5>Mitra Koaci</h5>
+              <div className="flex flex-col gap-4">
+                <div className="grid grid-cols-5 grid-flow-col gap-2">
+                  <div className="w-16 h-12">
+                    <Image
+                      src={partnerOne}
+                      alt="Partner One"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="w-16 h-12">
+                    <Image
+                      src={partnerTwo}
+                      alt="Partner Two"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="w-16 h-12">
+                    <Image
+                      src={partnerThree}
+                      alt="Partner Three"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="w-16 h-12">
+                    <Image
+                      src={partnerFour}
+                      alt="Partner Four"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="w-16 h-12">
+                    <Image
+                      src={partnerFive}
+                      alt="Partner Five"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-4 grid-flow-col gap-2">
+                  <div className="w-16 h-12">
+                    <Image
+                      src={partnerSix}
+                      alt="Partner Six"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="w-16 h-12">
+                    <Image
+                      src={partnerSeven}
+                      alt="Partner Seven"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="w-16 h-12">
+                    <Image
+                      src={partnerEight}
+                      alt="Partner Eight"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="w-16 h-12">
+                    <Image
+                      src={partnerNine}
+                      alt="Partner Nine"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 px-[90px]">
+            <h2 className="text-4xl font-medium">Disclaimer</h2>
+            <div className="flex flex-col gap-4">
+              <p>
+                Layanan pembiayaan dan investasi berdasarkan prinsip syariah berbasis proyek
+                merupakan kesepakatan perdata antara pemberi pembiayaan (investor) dengan penerima
+                pembiayaan (pebisnis) sehingga segala resiko yang timbul dari kesepakatan tersebut
+                ditanggung sepenuhnya oleh masing-masing pihak.
+              </p>
+              <p>
+                Risiko pembiayaan atau gagal bayar ditanggung sepenuhnya oleh investor. Tidak ada
+                lembaga atau otoritas negara yang bertanggung jawab atas resiko gagal bayar ini. PT
+                Koaci Sinergi Indonesia menyediakan wadah pertemuan tertutup antara investor dan
+                pebisnis, serta menjadi pihak penengah dan siap membantu pihak yang dirugikan hingga
+                ke jalur hukum.
+              </p>
+              <p>
+                Investor yang belum memiliki pengetahuan dan pengalaman terhadap layanan pembiayaan
+                dan investasi ini disarankan agar tidak menggunakan layanan ini.
+              </p>
+              <p>
+                Pengguna sebelum menjadi investor atau pebisnis harus membaca dan memahami informasi
+                sebelum membuat keputusan.
+              </p>
+              <p>
+                Setiap kecurangan yang terjadi secara digital di dunia maya dapat diketahui oleh
+                masyarakat luas di media sosial.
+              </p>
+              <p>
+                Penyelenggara (PT Koaci Sinergi Indonesia) dengan persetujuan dari masing-masing
+                pengguna (investor ataupun pebisnis) dapat mengakses, memperoleh, menyimpan,
+                mengelola dan.atau menggunakan data pribadi pengguna pada perangkat lunak maupun
+                perangkat keras dengan memberitahukan tujuan, batasan, dan mekanisme pemanfaatan
+                data kepada pengguna
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <h5 className="font-semibold">Resiko Usaha</h5>
+              <p>
+                Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
+                usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
+                usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
+                kahar lainnya.
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <h5 className="font-semibold">Resiko Usaha</h5>
+              <p>
+                Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
+                usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
+                usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
+                kahar lainnya.
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <h5 className="font-semibold">Resiko Usaha</h5>
+              <p>
+                Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
+                usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
+                usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
+                kahar lainnya.
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <h5 className="font-semibold">Resiko Usaha</h5>
+              <p>
+                Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
+                usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
+                usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
+                kahar lainnya.
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <h5 className="font-semibold">Resiko Usaha</h5>
+              <p>
+                Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
+                usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
+                usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
+                kahar lainnya.
+              </p>
+            </div>
+          </div>
+          <div className="flex w-full justify-center p-4 mt-4">
+            <span className="text-xs">© 2025 All Rights Reserved. Koaci Investasi</span>
+          </div>
+        </footer>
         {props.children}
       </div>
     </>

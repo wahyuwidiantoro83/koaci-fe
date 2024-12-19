@@ -31,15 +31,15 @@ import partnerSeven from "@/images/partner_7.png";
 import partnerEight from "@/images/partner_8.png";
 import partnerNine from "@/images/partner_9.png";
 import investFlow from "@/images/investor_flow.png";
-import { RiWhatsappLine, RiArrowRightLine, RiInstagramLine } from "react-icons/ri";
-import { useEffect, useState } from "react";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+  RiWhatsappLine,
+  RiArrowRightLine,
+  RiInstagramLine,
+  RiLinkedinBoxLine,
+  RiTiktokLine,
+} from "react-icons/ri";
+import { useEffect, useState } from "react";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import TestimonyCard from "@/components/testimonyCard";
 
 export default function Home(props) {
@@ -76,7 +76,7 @@ export default function Home(props) {
     <>
       <div className="h-dvh w-dvw overflow-auto font-roboto" id="layout-body">
         <nav
-          className={`flex w-full justify-between py-[37px] px-4 md:px-[99px] h-20 fixed top-0 left-0 z-50 ${
+          className={`flex w-full justify-between py-[37px] px-4 md:px-24 h-20 fixed top-0 left-0 z-50 ${
             scrolling
               ? "bg-white text-black transition-all duration-200"
               : "text-white transition-all duration-200"
@@ -110,13 +110,13 @@ export default function Home(props) {
             </Button>
           </div>
         </nav>
-        <div className="flex w-full h-svh items-center relative bg-red-400">
+        <div className="flex w-full h-svh items-center relative">
           <Image
             src={heroImage}
             alt="heroImage"
             className=" absolute top-0 left-0 w-full h-full object-cover"
           />
-          <div className="flex flex-col items-center md:items-start gap-2 md:gap-6 z-10 px-4 md:px-[99px]">
+          <div className="flex flex-col items-center md:items-start gap-2 md:gap-6 z-10 px-4 md:px-24">
             <h1 className="text-2xl md:text-5xl font-extrabold text-center md:text-start w-full md:w-[60%] text-white">
               Bangun Masa Depan Finansial Anda Bersama Kami
             </h1>
@@ -137,15 +137,15 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-        <div className="py-[122px] px-4 md:px-[99px] flex flex-col gap-6">
+        <div className="py-24 px-4 md:px-24 flex flex-col gap-6">
           <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex flex-col gap-4 w-[60%]">
-              <h2 className="font-light text-4xl">Pencapaian Kami</h2>
+            <div className="flex flex-col gap-4 w-full md:w-[60%]">
+              <h2 className="font-light text-2xl md:text-4xl">Pencapaian Kami</h2>
               <Button size="lg" variant="outline" className="w-fit border-black">
                 Cari Tahu Tentang Kami
               </Button>
             </div>
-            <div className="flex w-[40%]">
+            <div className="flex w-full md:w-[40%]">
               <p className="text-justify font-light text-sm">
                 Kami selalu berkomitmen untuk memberikan pelayanan terbaik kepada investor kami
                 dengan memastikan setiap langkah yang kami ambil didasarkan pada transparansi,
@@ -154,16 +154,16 @@ export default function Home(props) {
               </p>
             </div>
           </div>
-          <div className="flex gap-4">
-            <div className="flex h-96 overflow-hidden w-[60%] border border-gray-400 rounded-2xl">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex h-48 md:h-96 overflow-hidden w-full md:w-[60%] border border-gray-400 rounded-2xl">
               <Image src={achievementOne} className="w-full object-cover" alt="Achievement One" />
             </div>
-            <div className="flex h-96 overflow-hidden w-[40%] border border-gray-400 rounded-2xl">
+            <div className="flex h-48 md:h-96 overflow-hidden w-full md:w-[40%] border border-gray-400 rounded-2xl">
               <Image src={achievementTwo} className="w-full object-cover" alt="Achievement One" />
             </div>
           </div>
-          <div className="flex gap-4">
-            <div className="flex w-[60%] gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col md:flex-row w-full md:w-[60%] gap-4">
               <div className="flex flex-1 h-48 border overflow-hidden border-gray-400 rounded-2xl">
                 <Image
                   src={achievementThree}
@@ -179,7 +179,7 @@ export default function Home(props) {
                 />
               </div>
             </div>
-            <div className="flex w-[40%]">
+            <div className="flex w-full md:w-[40%]">
               <div className="flex flex-1 h-48 border overflow-hidden border-gray-400 rounded-2xl">
                 <Image
                   src={achievementFive}
@@ -190,9 +190,11 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-        <div className="pb-[65px] pt-[158px] px-4 md:px-[99px] flex gap-6 bg-gradient-to-r from-[#1E74D7] from-[8%] via-[#1F98DB] via-[48%] to-[#1EE0B3] to-100%">
-          <div className="flex flex-col gap-4 w-[40%] text-white">
-            <h2 className="text-4xl font-medium">Mengapa Harus Menggalang Dana di Koaci?</h2>
+        <div className="py-24 px-4 md:px-24 flex flex-col md:flex-row gap-6 bg-gradient-to-r from-[#1E74D7] from-[8%] via-[#1F98DB] via-[48%] to-[#1EE0B3] to-100%">
+          <div className="flex flex-col gap-4 w-full md:w-[40%] text-white">
+            <h2 className="text-2xl md:text-4xl font-medium">
+              Mengapa Harus Menggalang Dana di Koaci?
+            </h2>
             <p className="text-lg">
               Kami telah dipercaya oleh para investor sebagai mitra yang handal dan profesional.
             </p>
@@ -206,11 +208,11 @@ export default function Home(props) {
               <p className="text-xs font-medium">*Berdasarkan data Desember 2024</p>
             </div>
           </div>
-          <div className="flex flex-col gap-8 w-[60%]">
+          <div className="flex flex-col gap-8 w-full md:w-[60%]">
             <Carousel setApi={setApi}>
               <CarouselContent>
                 {SLIDES.map((val, idx) => (
-                  <CarouselItem key={idx} className={`basis-[80%] pl-10`}>
+                  <CarouselItem key={idx} className={`md:basis-[80%] md:pl-10`}>
                     <TestimonyCard />
                   </CarouselItem>
                 ))}
@@ -227,10 +229,10 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-        <div className="px-4 md:px-[149px] pt-[91px] pb-[169px] flex flex-col gap-24">
+        <div className="px-4 md:24 py-16 flex flex-col gap-12 md:gap-24">
           <div className="flex flex-col gap-4 items-center">
-            <h2 className="text-center text-4xl font-light">Portofolio Kami</h2>
-            <p className="text-center w-[553px]">
+            <h2 className="text-center text-2xl md:text-4xl font-light">Portofolio Kami</h2>
+            <p className="text-center w-full md:w-[553px]">
               Kami menempatkan kebutuhan Anda sebagai prioritas utama, menghadirkan layanan yang
               disesuaikan dengan tujuan finansial Anda.
             </p>
@@ -269,56 +271,56 @@ export default function Home(props) {
           </div>
         </div>
         <div className="flex bg-gradient-to-t from-[#1E74D7] from-[0%] to-[#1EE0B3] to-[96%]">
-          <div className="flex px-4 md:px-16 py-4 md:py-16 flex-col gap-4 w-[40%]">
-            <h2 className="text-4xl font-medium text-white">
+          <div className="flex px-4 md:px-24 py-16 flex-col gap-4 w-full md:w-[40%]">
+            <h2 className="text-2xl md:text-4xl font-medium text-white">
               Bagaimana Cara Investasi Melalui Koaci?
             </h2>
             <Image src={investFlow} alt="Invest Flow" className="w-full object-contain" />
           </div>
-          <div className="flex w-[60%] h-[626px] overflow-hidden">
+          <div className="hidden md:flex w-[60%] h-[626px] overflow-hidden">
             <Image src={signContract} alt="Sign Contract" className="w-full object-cover" />
           </div>
         </div>
         <footer className="bg-[#0957B1] text-white">
-          <div className="flex justify-between px-[99px] py-6">
+          <div className="flex flex-col md:flex-row gap-6 justify-between px-4 md:px-24 py-6">
             <div className="flex flex-col gap-4">
               <Image src={logo} width={120} alt="Logo Footer" />
-              <div>
-                <p>PT. Koaci Sinergi Indonesia</p>
-                <p>Jl. Terusan Sukadamai II No. 5,</p>
-                <p>Kelurahan Sukabungah, Kecamatan Sukajadi,</p>
-                <p>Kota Bandung, Jawa Barat, Indoensia 40162</p>
+              <div className="text-sm">
+                <p className="font-medium">PT. Koaci Sinergi Indonesia</p>
+                <p className="font-light">Jl. Terusan Sukadamai II No. 5,</p>
+                <p className="font-light">Kelurahan Sukabungah, Kecamatan Sukajadi,</p>
+                <p className="font-light">Kota Bandung, Jawa Barat, Indoensia 40162</p>
               </div>
-              <div className="flex gap-4">
+              <div className="flex gap-4 text-sm">
                 <div>
-                  <p>Email</p>
-                  <p>koaci.sinergi@gmail.com</p>
+                  <p className="font-medium">Email</p>
+                  <p className="font-light">koaci.sinergi@gmail.com</p>
                 </div>
                 <div>
-                  <p>Telephone</p>
-                  <p>+62 882 1945 2787</p>
+                  <p className="font-medium">Telephone</p>
+                  <p className="font-light">+62 882 1945 2787</p>
                 </div>
               </div>
               <div className="flex flex-col">
-                <p>Social Media</p>
-                <div className="flex">
+                <p className="font-medium text-sm">Social Media</p>
+                <div className="flex gap-2">
                   <RiInstagramLine className="w-8 h-8" />
-                  <RiInstagramLine className="w-8 h-8" />
-                  <RiInstagramLine className="w-8 h-8" />
+                  <RiLinkedinBoxLine className="w-8 h-8" />
+                  <RiTiktokLine className="w-8 h-8" />
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-4">
-              <h5>Halaman</h5>
+            <div className="flex flex-col gap-2">
+              <h5 className="font-medium">Halaman</h5>
               <div className="flex flex-col">
-                <p>Pendanaan</p>
-                <p>Proyek</p>
-                <p>F.A.Q</p>
-                <p>Tentang Kami</p>
+                <p className="font-light">Pendanaan</p>
+                <p className="font-light">Proyek</p>
+                <p className="font-light">F.A.Q</p>
+                <p className="font-light">Tentang Kami</p>
               </div>
             </div>
-            <div className="flex flex-col gap-4">
-              <h5>Mitra Koaci</h5>
+            <div className="flex flex-col gap-2">
+              <h5 className="font-medium">Mitra Koaci</h5>
               <div className="flex flex-col gap-4">
                 <div className="grid grid-cols-5 grid-flow-col gap-2">
                   <div className="w-16 h-12">
@@ -390,9 +392,9 @@ export default function Home(props) {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-4 px-[90px]">
-            <h2 className="text-4xl font-medium">Disclaimer</h2>
-            <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 px-4 md:px-24">
+            <h2 className="text-2xl md:text-4xl font-medium">Disclaimer</h2>
+            <div className="flex flex-col gap-4 font-light">
               <p>
                 Layanan pembiayaan dan investasi berdasarkan prinsip syariah berbasis proyek
                 merupakan kesepakatan perdata antara pemberi pembiayaan (investor) dengan penerima
@@ -427,8 +429,8 @@ export default function Home(props) {
               </p>
             </div>
             <div className="flex flex-col">
-              <h5 className="font-semibold">Resiko Usaha</h5>
-              <p>
+              <h5 className="font-medium">Resiko Usaha</h5>
+              <p className="font-light">
                 Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
                 usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
                 usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
@@ -436,8 +438,8 @@ export default function Home(props) {
               </p>
             </div>
             <div className="flex flex-col">
-              <h5 className="font-semibold">Resiko Usaha</h5>
-              <p>
+              <h5 className="font-medium">Resiko Usaha</h5>
+              <p className="font-light">
                 Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
                 usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
                 usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
@@ -445,8 +447,8 @@ export default function Home(props) {
               </p>
             </div>
             <div className="flex flex-col">
-              <h5 className="font-semibold">Resiko Usaha</h5>
-              <p>
+              <h5 className="font-medium">Resiko Usaha</h5>
+              <p className="font-light">
                 Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
                 usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
                 usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
@@ -454,8 +456,8 @@ export default function Home(props) {
               </p>
             </div>
             <div className="flex flex-col">
-              <h5 className="font-semibold">Resiko Usaha</h5>
-              <p>
+              <h5 className="font-medium">Resiko Usaha</h5>
+              <p className="font-light">
                 Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
                 usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
                 usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
@@ -463,8 +465,8 @@ export default function Home(props) {
               </p>
             </div>
             <div className="flex flex-col">
-              <h5 className="font-semibold">Resiko Usaha</h5>
-              <p>
+              <h5 className="font-medium">Resiko Usaha</h5>
+              <p className="font-light">
                 Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
                 usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
                 usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan

@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import logo from "@/images/koaci_slogan.png";
-import logoBlack from "@/images/koaci_slogan_black.png";
 import heroImage from "@/images/hero.png";
 import signContract from "@/images/sign_contract.png";
 import { Button } from "@/components/ui/button";
@@ -21,46 +19,17 @@ import portoSeven from "@/images/porto_7.png";
 import portoEight from "@/images/porto_8.png";
 import portoNine from "@/images/porto_9.png";
 import portoTen from "@/images/porto_10.png";
-import partnerOne from "@/images/partner_1.png";
-import partnerTwo from "@/images/partner_2.png";
-import partnerThree from "@/images/partner_3.png";
-import partnerFour from "@/images/partner_4.png";
-import partnerFive from "@/images/partner_5.png";
-import partnerSix from "@/images/partner_6.png";
-import partnerSeven from "@/images/partner_7.png";
-import partnerEight from "@/images/partner_8.png";
-import partnerNine from "@/images/partner_9.png";
 import investFlow from "@/images/investor_flow.png";
-import {
-  RiWhatsappLine,
-  RiArrowRightLine,
-  RiInstagramLine,
-  RiLinkedinBoxLine,
-  RiTiktokLine,
-} from "react-icons/ri";
+import { RiArrowRightLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import TestimonyCard from "@/components/testimonyCard";
+import Layout from "@/components/layout";
 
 export default function Home(props) {
   const SLIDES = Array.from(Array(3).keys());
-  const [scrolling, setScrolling] = useState(false);
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (document.getElementById("layout-body").scrollTop > 200) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
-    document.getElementById("layout-body").addEventListener("scroll", handleScroll);
-    return () => {
-      document.getElementById("layout-body").removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     if (!api) {
@@ -74,42 +43,7 @@ export default function Home(props) {
 
   return (
     <>
-      <div className="h-dvh w-dvw overflow-auto font-roboto" id="layout-body">
-        <nav
-          className={`flex w-full justify-between py-[37px] px-4 md:px-24 h-20 fixed top-0 left-0 z-50 ${
-            scrolling
-              ? "bg-white text-black transition-all duration-200"
-              : "text-white transition-all duration-200"
-          }`}
-        >
-          <div className="flex items-center gap-10">
-            <Image
-              src={scrolling ? logoBlack : logo}
-              className="transition-all duration-200"
-              alt="Koaci"
-              width={120}
-            />
-            <div className="hidden md:flex gap-8 text-base">
-              <span>Pendanaan</span>
-              <span>Proyek</span>
-              <span>F.A.Q</span>
-              <span>Tentang Kami</span>
-            </div>
-          </div>
-          <div className="hidden md:flex items-center gap-4">
-            <Button className="bg-green-400 text-white hover:bg-green-500 hover:text-white">
-              Daftar Sekarang
-            </Button>
-            <Button
-              variant="outline"
-              className={`bg-transparent ${
-                scrolling ? "border border-black text-black" : "text-white"
-              }`}
-            >
-              <RiWhatsappLine /> Hubungi Kami
-            </Button>
-          </div>
-        </nav>
+      <Layout>
         <div className="flex w-full h-svh items-center relative">
           <Image
             src={heroImage}
@@ -229,7 +163,7 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-        <div className="px-4 md:24 py-16 flex flex-col gap-12 md:gap-24">
+        <div className="px-4 md:px-24 py-16 flex flex-col gap-12 md:gap-24">
           <div className="flex flex-col gap-4 items-center">
             <h2 className="text-center text-2xl md:text-4xl font-light">Portofolio Kami</h2>
             <p className="text-center w-full md:w-[553px]">
@@ -281,205 +215,7 @@ export default function Home(props) {
             <Image src={signContract} alt="Sign Contract" className="w-full object-cover" />
           </div>
         </div>
-        <footer className="bg-[#0957B1] text-white">
-          <div className="flex flex-col md:flex-row gap-6 justify-between px-4 md:px-24 py-6">
-            <div className="flex flex-col gap-4">
-              <Image src={logo} width={120} alt="Logo Footer" />
-              <div className="text-sm">
-                <p className="font-medium">PT. Koaci Sinergi Indonesia</p>
-                <p className="font-light">Jl. Terusan Sukadamai II No. 5,</p>
-                <p className="font-light">Kelurahan Sukabungah, Kecamatan Sukajadi,</p>
-                <p className="font-light">Kota Bandung, Jawa Barat, Indoensia 40162</p>
-              </div>
-              <div className="flex gap-4 text-sm">
-                <div>
-                  <p className="font-medium">Email</p>
-                  <p className="font-light">koaci.sinergi@gmail.com</p>
-                </div>
-                <div>
-                  <p className="font-medium">Telephone</p>
-                  <p className="font-light">+62 882 1945 2787</p>
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <p className="font-medium text-sm">Social Media</p>
-                <div className="flex gap-2">
-                  <RiInstagramLine className="w-8 h-8" />
-                  <RiLinkedinBoxLine className="w-8 h-8" />
-                  <RiTiktokLine className="w-8 h-8" />
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h5 className="font-medium">Halaman</h5>
-              <div className="flex flex-col">
-                <p className="font-light">Pendanaan</p>
-                <p className="font-light">Proyek</p>
-                <p className="font-light">F.A.Q</p>
-                <p className="font-light">Tentang Kami</p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h5 className="font-medium">Mitra Koaci</h5>
-              <div className="flex flex-col gap-4">
-                <div className="grid grid-cols-5 grid-flow-col gap-2">
-                  <div className="w-16 h-12">
-                    <Image
-                      src={partnerOne}
-                      alt="Partner One"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="w-16 h-12">
-                    <Image
-                      src={partnerTwo}
-                      alt="Partner Two"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="w-16 h-12">
-                    <Image
-                      src={partnerThree}
-                      alt="Partner Three"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="w-16 h-12">
-                    <Image
-                      src={partnerFour}
-                      alt="Partner Four"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="w-16 h-12">
-                    <Image
-                      src={partnerFive}
-                      alt="Partner Five"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-4 grid-flow-col gap-2">
-                  <div className="w-16 h-12">
-                    <Image
-                      src={partnerSix}
-                      alt="Partner Six"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="w-16 h-12">
-                    <Image
-                      src={partnerSeven}
-                      alt="Partner Seven"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="w-16 h-12">
-                    <Image
-                      src={partnerEight}
-                      alt="Partner Eight"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="w-16 h-12">
-                    <Image
-                      src={partnerNine}
-                      alt="Partner Nine"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col gap-4 px-4 md:px-24">
-            <h2 className="text-2xl md:text-4xl font-medium">Disclaimer</h2>
-            <div className="flex flex-col gap-4 font-light">
-              <p>
-                Layanan pembiayaan dan investasi berdasarkan prinsip syariah berbasis proyek
-                merupakan kesepakatan perdata antara pemberi pembiayaan (investor) dengan penerima
-                pembiayaan (pebisnis) sehingga segala resiko yang timbul dari kesepakatan tersebut
-                ditanggung sepenuhnya oleh masing-masing pihak.
-              </p>
-              <p>
-                Risiko pembiayaan atau gagal bayar ditanggung sepenuhnya oleh investor. Tidak ada
-                lembaga atau otoritas negara yang bertanggung jawab atas resiko gagal bayar ini. PT
-                Koaci Sinergi Indonesia menyediakan wadah pertemuan tertutup antara investor dan
-                pebisnis, serta menjadi pihak penengah dan siap membantu pihak yang dirugikan hingga
-                ke jalur hukum.
-              </p>
-              <p>
-                Investor yang belum memiliki pengetahuan dan pengalaman terhadap layanan pembiayaan
-                dan investasi ini disarankan agar tidak menggunakan layanan ini.
-              </p>
-              <p>
-                Pengguna sebelum menjadi investor atau pebisnis harus membaca dan memahami informasi
-                sebelum membuat keputusan.
-              </p>
-              <p>
-                Setiap kecurangan yang terjadi secara digital di dunia maya dapat diketahui oleh
-                masyarakat luas di media sosial.
-              </p>
-              <p>
-                Penyelenggara (PT Koaci Sinergi Indonesia) dengan persetujuan dari masing-masing
-                pengguna (investor ataupun pebisnis) dapat mengakses, memperoleh, menyimpan,
-                mengelola dan.atau menggunakan data pribadi pengguna pada perangkat lunak maupun
-                perangkat keras dengan memberitahukan tujuan, batasan, dan mekanisme pemanfaatan
-                data kepada pengguna
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h5 className="font-medium">Resiko Usaha</h5>
-              <p className="font-light">
-                Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
-                usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
-                usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
-                kahar lainnya.
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h5 className="font-medium">Resiko Usaha</h5>
-              <p className="font-light">
-                Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
-                usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
-                usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
-                kahar lainnya.
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h5 className="font-medium">Resiko Usaha</h5>
-              <p className="font-light">
-                Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
-                usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
-                usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
-                kahar lainnya.
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h5 className="font-medium">Resiko Usaha</h5>
-              <p className="font-light">
-                Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
-                usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
-                usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
-                kahar lainnya.
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h5 className="font-medium">Resiko Usaha</h5>
-              <p className="font-light">
-                Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan
-                usaha. Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan
-                usaha secara sementara sebagai dampak dari adanya bencana alam dan/atau keadaan
-                kahar lainnya.
-              </p>
-            </div>
-          </div>
-          <div className="flex w-full justify-center p-4 mt-4">
-            <span className="text-xs">© 2025 All Rights Reserved. Koaci Investasi</span>
-          </div>
-        </footer>
-        {props.children}
-      </div>
+      </Layout>
     </>
   );
 }

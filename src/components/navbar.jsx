@@ -2,17 +2,15 @@ import Image from "next/image";
 import logo from "@/images/koaci_slogan.png";
 import logoBlack from "@/images/koaci_slogan_black.png";
 import { useState } from "react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { RiWhatsappLine } from "react-icons/ri";
 
-const Navbar = (props) => {
-  const [scrolling, setScrolling] = useState(false);
-
+const Navbar = ({ scrolling }) => {
   return (
     <nav
       className={`flex w-full justify-between py-[37px] px-4 md:px-24 h-20 fixed top-0 left-0 z-50 ${
         scrolling
-          ? "bg-white text-black transition-all duration-200"
+          ? "bg-white text-black transition-all duration-200 shadow-md"
           : "text-white transition-all duration-200"
       }`}
     >

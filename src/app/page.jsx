@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import heroImage from "@/images/hero.png";
-import signContract from "@/images/sign_contract.png";
+import signContract from "@/images/sign_contract.jpg";
 import { Button } from "@/components/ui/button";
 import achievementOne from "@/images/pencapaian_1.png";
 import achievementTwo from "@/images/pencapaian_2.png";
@@ -51,12 +51,11 @@ export default function Home(props) {
             className=" absolute top-0 left-0 w-full h-full object-cover"
           />
           <div className="flex flex-col items-center md:items-start gap-2 md:gap-6 z-10 px-4 md:px-24">
-            <h1 className="text-2xl md:text-5xl font-extrabold text-center md:text-start w-full md:w-[60%] text-white">
+            <h1 className="text-2xl md:text-5xl font-medium text-center md:text-start w-full md:w-[60%] text-white">
               Bangun Masa Depan Finansial Anda Bersama Kami
             </h1>
-            <p className="text-sm md:text-lg font-light md:font-normal text-center md:text-start w-full md:w-[50%] text-white">
-              Gabunglah dengan ekosistem kami dan mari tingkatkan pengalaman dalam berinvestasi Anda
-              ke level berikutnya!
+            <p className="text-sm md:text-lg font-light md:font-normal text-center md:text-start w-full md:w-[40%] text-white">
+            Kami menyediakan ekosistem syariah yang lebih baik dan dimulai dengan keuangan.
             </p>
             <div className="flex flex-col md:flex-row gap-2 w-fit md:gap-4">
               <Button
@@ -66,7 +65,7 @@ export default function Home(props) {
                 Daftar Sekarang
               </Button>
               <Button size="lg" variant="outline" className="bg-transparent text-white">
-                Cari Tahu Tentang Kami
+                Gabung Komunitas
               </Button>
             </div>
           </div>
@@ -163,7 +162,7 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-        <div className="px-4 md:px-24 py-16 flex flex-col gap-12 md:gap-24">
+        <div className="px-4 md:px-24 py-24 flex flex-col gap-12 md:gap-24">
           <div className="flex flex-col gap-4 items-center">
             <h2 className="text-center text-2xl md:text-4xl font-light">Portofolio Kami</h2>
             <p className="text-center w-full md:w-[553px]">
@@ -205,13 +204,13 @@ export default function Home(props) {
           </div>
         </div>
         <div className="flex bg-gradient-to-t from-[#1E74D7] from-[0%] to-[#1EE0B3] to-[96%]">
-          <div className="flex px-4 md:px-24 py-16 flex-col gap-4 w-full md:w-[40%]">
+          <div className="flex px-4 md:px-24 py-8 flex-col gap-4 w-full md:w-[50%]">
             <h2 className="text-2xl md:text-4xl font-medium text-white">
               Bagaimana Cara Investasi Melalui Koaci?
             </h2>
-            <Image src={investFlow} alt="Invest Flow" className="w-full object-contain" />
+            <Image src={investFlow} alt="Invest Flow" className="object-contain w-[80%]" />
           </div>
-          <div className="hidden md:flex w-[60%] h-[626px] overflow-hidden">
+          <div className="hidden md:flex w-[50%] h-[500px] overflow-hidden">
             <Image src={signContract} alt="Sign Contract" className="w-full object-cover" />
           </div>
         </div>

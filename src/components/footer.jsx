@@ -26,7 +26,7 @@ const Footer = (props) => {
           <div className="flex gap-4 text-sm">
             <div>
               <p className="font-medium">Email</p>
-              <p className="font-light">koaci.sinergi@gmail.com</p>
+              <a href="mailto:koaci.sinergi@gmail.com"><p className="font-light">koaci.sinergi@gmail.com</p></a>
             </div>
             <div>
               <p className="font-medium">Telephone</p>
@@ -36,19 +36,19 @@ const Footer = (props) => {
           <div className="flex flex-col">
             <p className="font-medium text-sm">Social Media</p>
             <div className="flex gap-2">
-              <RiInstagramLine className="w-8 h-8" />
-              <RiLinkedinBoxLine className="w-8 h-8" />
-              <RiTiktokLine className="w-8 h-8" />
+              <a href="https://www.instagram.com/koaci_investasi/" target="_blank"><RiInstagramLine className="w-7 h-7" /></a>
+              <a href="https://www.linkedin.com/company/koaci-id/" target="_blank"><RiLinkedinBoxLine className="w-7 h-7" /></a>
+              <a href="https://www.tiktok.com/@koaci_investasi" target="_blank"><RiTiktokLine className="w-7 h-7" /></a>              
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-2">
           <h5 className="font-medium">Halaman</h5>
           <div className="flex flex-col">
-            <p className="font-light">Pendanaan</p>
-            <p className="font-light">Proyek</p>
-            <p className="font-light">F.A.Q</p>
-            <p className="font-light">Tentang Kami</p>
+            <a href="#"><p className="font-light">Pendanaan</p></a>
+            <a href="#"><p className="font-light">Proyek</p></a>
+            <a href="#"><p className="font-light">F.A.Q</p></a>
+            <a href="#"><p className="font-light">Tentang Kami</p></a>
           </div>
         </div>
         <div className="flex flex-col gap-2">
@@ -124,8 +124,8 @@ const Footer = (props) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4 px-4 md:px-24">
-        <h2 className="text-2xl md:text-4xl font-medium">Disclaimer</h2>
+      <div className="flex flex-col gap-4 px-4 md:px-24 mt-10">
+        <h2 className="text-2xl md:text-4xl mb-3 font-medium">DISCLAIMER</h2>
         <div className="flex flex-col gap-4 font-light">
           <p>
             Layanan pembiayaan dan investasi berdasarkan prinsip syariah berbasis proyek merupakan
@@ -160,7 +160,7 @@ const Footer = (props) => {
           </p>
         </div>
         <div className="flex flex-col">
-          <h5 className="font-medium">Resiko Usaha</h5>
+          <h5 className="font-medium">Risiko Usaha</h5>
           <p className="font-light">
             Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan usaha.
             Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan usaha secara
@@ -168,35 +168,27 @@ const Footer = (props) => {
           </p>
         </div>
         <div className="flex flex-col">
-          <h5 className="font-medium">Resiko Usaha</h5>
+          <h5 className="font-medium">Risiko Kerugian Investasi</h5>
           <p className="font-light">
-            Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan usaha.
-            Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan usaha secara
-            sementara sebagai dampak dari adanya bencana alam dan/atau keadaan kahar lainnya.
+          Setiap investasi memiliki tingkat risiko yang beragam, salah satunya adalah tidak terkumpulnya dana investasi sesuai proyeksi yang telah ditetapkan dan/atau proyek yang dijalankan tidak menghasilkan keuntungan sesuai dengan yang ditargetkan.
           </p>
         </div>
         <div className="flex flex-col">
-          <h5 className="font-medium">Resiko Usaha</h5>
+          <h5 className="font-medium">Risiko Kekurangan Likuiditas</h5>
           <p className="font-light">
-            Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan usaha.
-            Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan usaha secara
-            sementara sebagai dampak dari adanya bencana alam dan/atau keadaan kahar lainnya.
+          Pemodal yang melakukan investasi memungkinkan dalam bentuk tidak likuid karena efek bersifat ekuitas yang ditawarkan tidak terdaftar di bursa efek atau belum dilaksanakan pasar sekunder. Hal ini berarti Pemodal mungkin tidak dapat dengan mudah menjual saham miliknya kepada pihak lain.
           </p>
         </div>
         <div className="flex flex-col">
-          <h5 className="font-medium">Resiko Usaha</h5>
+          <h5 className="font-medium">Risiko Kelangkaan Pembagian Dividen dan/atau Dilusi Kepemilikan</h5>
           <p className="font-light">
-            Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan usaha.
-            Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan usaha secara
-            sementara sebagai dampak dari adanya bencana alam dan/atau keadaan kahar lainnya.
+          Saham, Jika Efek Yang Diterbitkan Merupakan Saham Setiap Pemodal yang melakukan investasi pada efek bersifat ekuitas berupa saham, memiliki hak untuk mendapat dividen sesuai dengan jumlah kepemilikan yang dimiliki yang dibagikan oleh Penerbit melalui Penyelenggara secara periodik. Namun, kelangkaan dalam pembagian dividen dimungkinkan terjadi karena kinerja bisnis suatu proyek yang diinvestasikan tidak berjalan sebagaimana mestinya serta berpotensi terdilusi kepemilikan saham karena bertambahnya total saham yang beredar atau ditawarkan.
           </p>
         </div>
         <div className="flex flex-col">
-          <h5 className="font-medium">Resiko Usaha</h5>
+          <h5 className="font-medium">Risiko Gagal Bayar</h5>
           <p className="font-light">
-            Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan usaha.
-            Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan usaha secara
-            sementara sebagai dampak dari adanya bencana alam dan/atau keadaan kahar lainnya.
+          Penawaran Efek bersifat utang atau sukuk memiliki risiko dimana Penerbit akan gagal bayar (default). Apabila Penerbit mengalami gagal bayar maka Wali Amanat berdasarkan Surat Kuasa akan mengundang dan mengadakan Rapat Umum Pemegang Obligasi (RUPO), dalam RUPO tersebut akan dibahas mengenai gagal bayar yang terjadi serta skema perpanjangan jatuh tempo kupon ataupun eksekusi jaminan fidusia dan jaminan Penerbit lainnya (apabilaada).
           </p>
         </div>
       </div>

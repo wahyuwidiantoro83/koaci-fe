@@ -8,7 +8,7 @@ const Layout = (props) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (bodyFrame.current.scrollTop > 200) {
+      if (bodyFrame.current.scrollTop > 100) {
         setScrolling(true);
       } else {
         setScrolling(false);

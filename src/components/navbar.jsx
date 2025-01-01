@@ -1,14 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import logo from "@/images/koaci_slogan.png";
 import logoBlack from "@/images/koaci_slogan_black.png";
 import { Button } from "@/components/ui/button";
 import { RiWhatsappLine } from "react-icons/ri";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = ({ scrolling }) => {
+  const router = useRouter();
+  const urlPath = usePathname();
+
   return (
     <nav
       className={`flex w-full justify-between py-[37px] px-4 md:px-24 h-20 fixed top-0 left-0 z-50 ${
-        scrolling ? "bg-white text-gray-700 shadow-md" : "text-gray-200 bg-transparent"
+        scrolling ? "bg-white text-gray-700 shadow-md" : "text-gray-200"
       } transition-all duration-200`}
     >
       <div className="flex items-center gap-12">
@@ -19,43 +25,65 @@ const Navbar = ({ scrolling }) => {
           width={120}
         />
         <div className="hidden md:flex gap-10 text-base">
-          <div className="flex flex-col group overflow-hidden relative cursor-pointer">
-            <span className="font-semibold">Pendanaan</span>
-            <div
-              className={`absolute -left-full bottom-0 group-hover:left-0 ${
-                scrolling ? "bg-black" : "bg-white"
-              } w-full h-0.5 transition-all duration-200`}
-            ></div>
-          </div>
-          <div className="flex flex-col group overflow-hidden relative cursor-pointer">
+          <div
+            className="flex flex-col group overflow-hidden relative cursor-pointer"
+            onClick={() => {
+              router.push("/");
+            }}
+          >
             <span
-              className={` ${
-                scrolling ? `group-hover:text-black` : `group-hover:text-white`
-              } transition-all duration-200`}
+              className={`tracking-wide ${
+                urlPath === "/" ? `font-semibold ${scrolling ? "text-black" : "text-white"}` : ""
+              } ${scrolling ? `group-hover:text-black` : `group-hover:text-white`}`}
+            >
+              Pendanaan
+            </span>
+          </div>
+          <div
+            className="flex flex-col group overflow-hidden relative cursor-pointer"
+            onClick={() => {
+              router.push("/project");
+            }}
+          >
+            <span
+              className={`tracking-wide ${
+                urlPath === "/project"
+                  ? `font-semibold ${scrolling ? "text-black" : "text-white"}`
+                  : ""
+              } ${scrolling ? `group-hover:text-black` : `group-hover:text-white`}`}
             >
               Proyek
             </span>
-            <div
-              className={`absolute -left-full bottom-0 group-hover:left-0 ${
-                scrolling ? "bg-black" : "bg-white"
-              } w-full h-0.5 transition-all duration-200`}
-            ></div>
           </div>
-          <div className="flex flex-col group overflow-hidden relative cursor-pointer">
-            <span className="">F.A.Q</span>
-            <div
-              className={`absolute -left-full bottom-0 group-hover:left-0 ${
-                scrolling ? "bg-black" : "bg-white"
-              } w-full h-0.5 transition-all duration-200`}
-            ></div>
+          <div
+            className="flex flex-col group overflow-hidden relative cursor-pointer"
+            onClick={() => {
+              router.push("/faq");
+            }}
+          >
+            <span
+              className={`tracking-wide ${
+                urlPath === "/faq" ? `font-semibold ${scrolling ? "text-black" : "text-white"}` : ""
+              } ${scrolling ? `group-hover:text-black` : `group-hover:text-white`}`}
+            >
+              F.A.Q
+            </span>
           </div>
-          <div className="flex flex-col group overflow-hidden relative cursor-pointer">
-            <span className="">Tentang Kami</span>
-            <div
-              className={`absolute -left-full bottom-0 group-hover:left-0 ${
-                scrolling ? "bg-black" : "bg-white"
-              } w-full h-0.5 transition-all duration-200`}
-            ></div>
+          <div
+            className="flex flex-col group overflow-hidden relative cursor-pointer"
+            onClick={() => {
+              router.push("/about-us");
+            }}
+          >
+            <span
+              className={`tracking-wide ${
+                urlPath === "/about-us"
+                  ? `font-semibold ${scrolling ? "text-black" : "text-white"}`
+                  : ""
+              } ${scrolling ? `group-hover:text-black` : `group-hover:text-white`}`}
+            >
+              Tentang Kami
+            </span>
           </div>
         </div>
       </div>

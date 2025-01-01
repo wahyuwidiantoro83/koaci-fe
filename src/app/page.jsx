@@ -20,6 +20,8 @@ import portoEight from "@/images/porto_8.png";
 import portoNine from "@/images/porto_9.png";
 import portoTen from "@/images/porto_10.png";
 import investFlow from "@/images/investor_flow.png";
+import schemaOne from "@/images/schema_1.png";
+import schemaTwo from "@/images/schema_2.png";
 import { RiArrowRightLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -55,7 +57,7 @@ export default function Home(props) {
               Bangun Masa Depan Finansial Anda Bersama Kami
             </h1>
             <p className="text-sm md:text-lg font-light md:font-normal text-center md:text-start w-full md:w-[40%] text-white">
-            Kami menyediakan ekosistem syariah yang lebih baik dan dimulai dengan keuangan.
+              Kami menyediakan ekosistem syariah yang lebih baik dan dimulai dengan keuangan.
             </p>
             <div className="flex flex-col md:flex-row gap-2 w-fit md:gap-4">
               <Button
@@ -212,6 +214,27 @@ export default function Home(props) {
           </div>
           <div className="hidden md:flex w-[50%] h-[500px] overflow-hidden">
             <Image src={signContract} alt="Sign Contract" className="w-full object-cover" />
+          </div>
+        </div>
+        <div className="flex w-full px-4 md:px-24 py-24">
+          <div className="flex w-full flex-col gap-8 items-center">
+            <h2 className="text-2xl md:text-4xl font-medium text-center">
+              Skema Project Financing & Alur Akad
+            </h2>
+            <div className="flex justify-center w-full">
+              <Image
+                src={schemaOne}
+                alt="Schema One"
+                className="w-full max-w-[698px] object-contain"
+              />
+            </div>
+            <div className="flex justify-center w-full">
+              <Image
+                src={schemaTwo}
+                alt="Schema Two"
+                className="w-full max-w-[1026px] object-contain"
+              />
+            </div>
           </div>
         </div>
       </Layout>

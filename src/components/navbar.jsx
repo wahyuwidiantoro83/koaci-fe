@@ -20,7 +20,7 @@ const Navbar = ({ scrolling }) => {
       <div className="flex items-center gap-12">
         <Image
           src={scrolling ? logoBlack : logo}
-          className="transition-all duration-200"
+          className="transition-all duration-200 cursor-pointer"
           alt="Koaci"
           width={120}
           onClick={() => {
@@ -95,7 +95,12 @@ const Navbar = ({ scrolling }) => {
         </div>
       </div>
       <div className="hidden md:flex items-center gap-4">
-        <Button className="bg-green-400 text-gray-100 hover:bg-green-500 hover:text-gray-100">
+        <Button
+          className="bg-green-400 text-gray-100 hover:bg-green-500 hover:text-gray-100"
+          onClick={() => {
+            router.push("/register");
+          }}
+        >
           Daftar Sekarang
         </Button>
         <Button
@@ -103,6 +108,12 @@ const Navbar = ({ scrolling }) => {
           className={`bg-transparent ${
             scrolling ? "border border-black text-gray-800" : "text-gray-100"
           }`}
+          onClick={() => {
+            window.open(
+              "https://api.whatsapp.com/send/?phone=6282229427833&text=hallo&type=phone_number&app_absent=0",
+              "__blank"
+            );
+          }}
         >
           <RiWhatsappLine /> Hubungi Kami
         </Button>

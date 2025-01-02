@@ -1,14 +1,17 @@
 "use client";
+
 import Image from "next/image";
 import logo from "@/images/koaci_slogan.png";
 import logoBlack from "@/images/koaci_slogan_black.png";
 import { Button } from "@/components/ui/button";
 import { RiWhatsappLine } from "react-icons/ri";
+import { useRouter } from "next/navigation";
 
 const RegisterSuccess = (props) => {
+  const router = useRouter;
   return (
     <>
-      <div className="h-dvh w-dvw overflow-auto font-roboto">
+      <div className="h-dvh w-full overflow-auto font-roboto">
         <nav
           className={`flex w-full justify-between py-[37px] px-4 md:px-24 h-20 fixed top-0 left-0 z-50 bg-white text-gray-700 shadow-md transition-all duration-200`}
         >
@@ -18,31 +21,46 @@ const RegisterSuccess = (props) => {
               className="transition-all duration-200"
               alt="Koaci"
               width={120}
+              onClick={() => {
+                router.push("/");
+              }}
             />
             <div className="hidden md:flex gap-10 text-base">
-              <div className="flex flex-col group overflow-hidden relative cursor-pointer">
+              <div
+                className="flex flex-col group overflow-hidden relative cursor-pointer"
+                onClick={() => {
+                  router.push("/");
+                }}
+              >
                 <span className="font-semibold">Pendanaan</span>
                 <div
-                  className={`absolute -left-full bottom-0 group-hover:left-0 bg-black" : "bg-white"
+                  className={`absolute -left-full bottom-0 group-hover:left-0 bg--gray-800" : "bg-white"
                   } w-full h-0.5 transition-all duration-200`}
                 ></div>
               </div>
-              <div className="flex flex-col group overflow-hidden relative cursor-pointer">
-                <span className={`group-hover:text-black transition-all duration-200`}>Proyek</span>
+              <div
+                className="flex flex-col group overflow-hidden relative cursor-pointer"
+                onClick={() => {
+                  router.push("/project");
+                }}
+              >
+                <span className={`group-hover:text--gray-800 transition-all duration-200`}>
+                  Proyek
+                </span>
                 <div
-                  className={`absolute -left-full bottom-0 group-hover:left-0 bg-black w-full h-0.5 transition-all duration-200`}
+                  className={`absolute -left-full bottom-0 group-hover:left-0 bg--gray-800 w-full h-0.5 transition-all duration-200`}
                 ></div>
               </div>
               <div className="flex flex-col group overflow-hidden relative cursor-pointer">
                 <span className="">F.A.Q</span>
                 <div
-                  className={`absolute -left-full bottom-0 group-hover:left-0 bg-black w-full h-0.5 transition-all duration-200`}
+                  className={`absolute -left-full bottom-0 group-hover:left-0 bg--gray-800 w-full h-0.5 transition-all duration-200`}
                 ></div>
               </div>
               <div className="flex flex-col group overflow-hidden relative cursor-pointer">
                 <span className="">Tentang Kami</span>
                 <div
-                  className={`absolute -left-full bottom-0 group-hover:left-0 bg-black w-full h-0.5 transition-all duration-200`}
+                  className={`absolute -left-full bottom-0 group-hover:left-0 bg--gray-800 w-full h-0.5 transition-all duration-200`}
                 ></div>
               </div>
             </div>
@@ -51,7 +69,10 @@ const RegisterSuccess = (props) => {
             <Button className="bg-[#1EE0B3] text-white hover:bg-green-500 hover:text-white">
               Daftar Sekarang
             </Button>
-            <Button variant="outline" className={`bg-transparent border border-black text-black`}>
+            <Button
+              variant="outline"
+              className={`bg-transparent border border--gray-800 text--gray-800`}
+            >
               <RiWhatsappLine /> Hubungi Kami
             </Button>
           </div>

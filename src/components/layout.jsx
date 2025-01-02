@@ -17,7 +17,7 @@ const Layout = (props) => {
 
     document.getElementById("layout-body").addEventListener("scroll", handleScroll);
     return () => {
-      document.getElementById("layout-body").removeEventListener("scroll", handleScroll);
+      document.getElementById("layout-body")?.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

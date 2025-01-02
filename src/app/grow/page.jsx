@@ -2,71 +2,21 @@
 import Image from "next/image";
 import bgGrow from "@/images/bg_grow.png";
 import growLogo from "@/images/grow_logo.png";
-import logoBlack from "@/images/koaci_slogan_black.png";
-import { Button } from "@/components/ui/button";
-import { RiWhatsappLine } from "react-icons/ri";
 import growOne from "@/images/grow_1.png";
 import growTwo from "@/images/grow_2.png";
 import growThree from "@/images/grow_3.png";
-import Footer from "@/components/footer";
 import smallLogo from "@/images/logo_simple.png";
+import Layout from "@/components/layout";
 
 const Grow = (props) => {
   return (
     <>
-      <div className="h-dvh w-dvw overflow-auto font-roboto">
-        <nav
-          className={`flex w-full justify-between py-[37px] px-4 md:px-24 h-20 fixed top-0 left-0 z-50 bg-white text-gray-700 shadow-md transition-all duration-200`}
-        >
-          <div className="flex items-center gap-12">
-            <Image
-              src={logoBlack}
-              className="transition-all duration-200"
-              alt="Koaci"
-              width={120}
-            />
-            <div className="hidden md:flex gap-10 text-base">
-              <div className="flex flex-col group overflow-hidden relative cursor-pointer">
-                <span className="font-semibold">Pendanaan</span>
-                <div
-                  className={`absolute -left-full bottom-0 group-hover:left-0 bg-black" : "bg-white"
-                  } w-full h-0.5 transition-all duration-200`}
-                ></div>
-              </div>
-              <div className="flex flex-col group overflow-hidden relative cursor-pointer">
-                <span className={`group-hover:text-black transition-all duration-200`}>Proyek</span>
-                <div
-                  className={`absolute -left-full bottom-0 group-hover:left-0 bg-black w-full h-0.5 transition-all duration-200`}
-                ></div>
-              </div>
-              <div className="flex flex-col group overflow-hidden relative cursor-pointer">
-                <span className="">F.A.Q</span>
-                <div
-                  className={`absolute -left-full bottom-0 group-hover:left-0 bg-black w-full h-0.5 transition-all duration-200`}
-                ></div>
-              </div>
-              <div className="flex flex-col group overflow-hidden relative cursor-pointer">
-                <span className="">Tentang Kami</span>
-                <div
-                  className={`absolute -left-full bottom-0 group-hover:left-0 bg-black w-full h-0.5 transition-all duration-200`}
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div className="hidden md:flex items-center gap-4">
-            <Button className="bg-[#1EE0B3] text-white hover:bg-green-500 hover:text-white">
-              Daftar Sekarang
-            </Button>
-            <Button variant="outline" className={`bg-transparent border border-black text-black`}>
-              <RiWhatsappLine /> Hubungi Kami
-            </Button>
-          </div>
-        </nav>
+      <Layout>
         <div className="flex items-center w-full h-full overflow-hidden relative">
           <Image
             src={bgGrow}
             alt="Background Grow"
-            className="w-full h-full object-cover absolute top-0 left-0 z-10"
+            className="w-full h-full object-fill absolute top-0 left-0 z-10"
           />
           <div className="flex w-full py-[37px] px-4 md:px-24 z-20">
             <div className="flex flex-col w-[50%] gap-4 z-20 text-white">
@@ -177,7 +127,7 @@ const Grow = (props) => {
                   Nama Lengkap
                 </label>
                 <input
-                  className="px-6 py-3 border border-gray-500 rounded-lg"
+                  className="px-6 py-3 border border-gray-400 rounded-lg outline-gray-400"
                   type="text"
                   id="nama_lengkap"
                   placeholder="Masukkan Nama Lengkap"
@@ -188,7 +138,7 @@ const Grow = (props) => {
                   Email
                 </label>
                 <input
-                  className="px-6 py-3 border border-gray-500 rounded-lg"
+                  className="px-6 py-3 border border-gray-400 rounded-lg outline-gray-400"
                   type="email"
                   id="email"
                   placeholder="Masukkan Email"
@@ -199,7 +149,7 @@ const Grow = (props) => {
                   Nomor Telpon
                 </label>
                 <input
-                  className="px-6 py-3 border border-gray-500 rounded-lg"
+                  className="px-6 py-3 border border-gray-400 rounded-lg outline-gray-400"
                   type="text"
                   id="nomor_telpon"
                   placeholder="Masukkan Nomor Telpon"
@@ -210,7 +160,7 @@ const Grow = (props) => {
                   Akun Media Sosial (LinkedIn/Instagram/Facebook)
                 </label>
                 <input
-                  className="px-6 py-3 border border-gray-500 rounded-lg"
+                  className="px-6 py-3 border border-gray-400 rounded-lg outline-gray-400"
                   type="text"
                   id="sosial_media"
                   placeholder="Masukkan Akun Media Sosial"
@@ -221,7 +171,7 @@ const Grow = (props) => {
                   Alasan Bergabung Grow With Koaci
                 </label>
                 <textarea
-                  className="px-6 py-3 border border-gray-500 rounded-lg"
+                  className="px-6 py-3 border border-gray-400 rounded-lg outline-gray-400"
                   rows={5}
                   id="alasan"
                 ></textarea>
@@ -232,8 +182,7 @@ const Grow = (props) => {
             </div>
           </div>
         </div>
-        <Footer />
-      </div>
+      </Layout>
     </>
   );
 };

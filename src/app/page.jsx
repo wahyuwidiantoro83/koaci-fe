@@ -28,8 +28,10 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import TestimonyCard from "@/components/testimonyCard";
 import Layout from "@/components/layout";
 import Autoplay from "embla-carousel-autoplay";
+import { useRouter } from "next/navigation";
 
 export default function Home(props) {
+  const router = useRouter();
   const SLIDES = Array.from(Array(3).keys());
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
@@ -64,10 +66,20 @@ export default function Home(props) {
               <Button
                 size="lg"
                 className="bg-green-400 text-gray-100 hover:bg-green-500 hover:text-gray-100"
+                onClick={() => {
+                  router.push("/register");
+                }}
               >
                 Daftar Sekarang
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent text-gray-100">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent text-gray-100"
+                onClick={() => {
+                  router.push("/grow");
+                }}
+              >
                 Gabung Komunitas
               </Button>
             </div>
@@ -78,7 +90,14 @@ export default function Home(props) {
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <div className="flex flex-col w-full md:w-[60%]">
                 <h2 className="font-normal mb-2 md:mb-4 text-2xl md:text-3xl">Pencapaian Kami</h2>
-                <Button size="lg" variant="outline" className="w-fit border-gray-800">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-fit border-gray-800"
+                  onClick={() => {
+                    router.push("/about-us");
+                  }}
+                >
                   Cari Tahu Tentang Kami
                 </Button>
               </div>
@@ -143,6 +162,9 @@ export default function Home(props) {
                   className={
                     "w-fit bg-green-400 text-gray-100 hover:bg-green-500 hover:text-gray-100"
                   }
+                  onClick={() => {
+                    router.push("/register");
+                  }}
                 >
                   Daftar Sekarang <RiArrowRightLine />
                 </Button>

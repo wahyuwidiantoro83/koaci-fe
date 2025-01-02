@@ -8,13 +8,13 @@ const Project = (props) => {
   return (
     <>
       <Layout>
-        <div className="flex items-end w-full px-4 pb-16 md:px-24 h-[282px] bg-gradient-to-r from-[#1E74D7] from-[0%] via-[#1F98DB] via-[54%] to-[#1EE0B3] to-100%">
-          <h1 className="text-xl md:text-3xl text-white font-light">
+        <div className="flex items-end w-full px-4 pb-12 md:px-24 h-56 bg-gradient-to-r from-[#1E74D7] from-[0%] via-[#1F98DB] via-[54%] to-[#1EE0B3] to-100%">
+          <h1 className="text-xl md:text-3xl text-white font-normal">
             Proyek Yang Telah Kami Selesaikan
           </h1>
         </div>
         <div className="flex flex-col w-full px-4 py-16 md:px-24">
-          <h2 className="text-2xl md:text-3xl mb-16">
+          <h2 className="text-2xl md:text-4xl font-normal mb-8">
             Proyek Terpilih dengan klien <br></br> terbaik kami
           </h2>
           <div className="grid grid-cols-3 gap-16 border-t-4 border-b-4 py-8">

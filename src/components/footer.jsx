@@ -10,49 +10,84 @@ import partnerNine from "@/images/partner_9.png";
 import logo from "@/images/koaci_slogan.png";
 import Image from "next/image";
 import { RiInstagramLine, RiLinkedinBoxLine, RiTiktokLine } from "react-icons/ri";
+import { useRouter } from "next/navigation";
 
 const Footer = (props) => {
+  const router = useRouter();
+
   return (
-    <footer className="bg-[#0957B1] text-white">
-      <div className="flex flex-col md:flex-row gap-6 justify-between px-4 md:px-24 py-6">
+    <footer className="bg-[#0957B1] text-gray-100">
+      <div className="flex flex-col md:flex-row gap-6 justify-between px-4 md:px-24 py-8 md:py-10">
         <div className="flex flex-col gap-4">
           <Image src={logo} width={120} alt="Logo Footer" />
-          <div className="text-sm">
-            <p className="font-medium">PT. Koaci Sinergi Indonesia</p>
+          <div className="text-sm text-justify">
+            <p className="font-normal mb-1">PT. Koaci Sinergi Indonesia</p>
             <p className="font-light">Jl. Terusan Sukadamai II No. 5,</p>
             <p className="font-light">Kelurahan Sukabungah, Kecamatan Sukajadi,</p>
             <p className="font-light">Kota Bandung, Jawa Barat, Indoensia 40162</p>
           </div>
-          <div className="flex gap-4 text-sm">
+          <div className="flex gap-4 text-sm text-justify">
             <div>
-              <p className="font-medium">Email</p>
-              <a href="mailto:koaci.sinergi@gmail.com"><p className="font-light">koaci.sinergi@gmail.com</p></a>
+              <p className="font-normal mb-1">Email</p>
+              <a href="mailto:koaci.sinergi@gmail.com">
+                <p className="font-light">koaci.sinergi@gmail.com</p>
+              </a>
             </div>
             <div>
-              <p className="font-medium">Telephone</p>
+              <p className="font-normal mb-1">Telephone</p>
               <p className="font-light">+62 882 1945 2787</p>
             </div>
           </div>
           <div className="flex flex-col">
-            <p className="font-medium text-sm">Social Media</p>
+            <p className="font-normal text-sm mb-1">Social Media</p>
             <div className="flex gap-2">
-              <a href="https://www.instagram.com/koaci_investasi/" target="_blank"><RiInstagramLine className="w-7 h-7" /></a>
-              <a href="https://www.linkedin.com/company/koaci-id/" target="_blank"><RiLinkedinBoxLine className="w-7 h-7" /></a>
-              <a href="https://www.tiktok.com/@koaci_investasi" target="_blank"><RiTiktokLine className="w-7 h-7" /></a>              
+              <a href="https://www.instagram.com/koaci_investasi/" target="_blank">
+                <RiInstagramLine className="w-7 h-7" />
+              </a>
+              <a href="https://www.linkedin.com/company/koaci-id/" target="_blank">
+                <RiLinkedinBoxLine className="w-7 h-7" />
+              </a>
+              <a href="https://www.tiktok.com/@koaci_investasi" target="_blank">
+                <RiTiktokLine className="w-7 h-7" />
+              </a>
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2">
-          <h5 className="font-medium">Halaman</h5>
+        <div className="flex flex-col">
+          <h5 className="font-normal mb-2">Halaman</h5>
           <div className="flex flex-col">
-            <a href="#"><p className="font-light">Pendanaan</p></a>
-            <a href="#"><p className="font-light">Proyek</p></a>
-            <a href="#"><p className="font-light">F.A.Q</p></a>
-            <a href="#"><p className="font-light">Tentang Kami</p></a>
+            <a
+              onClick={() => {
+                router.push("/");
+              }}
+            >
+              <p className="font-light">Pendanaan</p>
+            </a>
+            <a
+              onClick={() => {
+                router.push("/project");
+              }}
+            >
+              <p className="font-light">Proyek</p>
+            </a>
+            <a
+              onClick={() => {
+                router.push("/faq");
+              }}
+            >
+              <p className="font-light">F.A.Q</p>
+            </a>
+            <a
+              onClick={() => {
+                router.push("/about-us");
+              }}
+            >
+              <p className="font-light">Tentang Kami</p>
+            </a>
           </div>
         </div>
-        <div className="flex flex-col gap-2">
-          <h5 className="font-medium">Mitra Koaci</h5>
+        <div className="flex flex-col">
+          <h5 className="font-normal mb-2">Mitra Koaci</h5>
           <div className="flex flex-col gap-4">
             <div className="grid grid-cols-5 grid-flow-col gap-2">
               <div className="w-16 h-12">
@@ -91,7 +126,7 @@ const Footer = (props) => {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-4 grid-flow-col gap-2">
+            <div className="flex justify-between gap-2">
               <div className="w-16 h-12">
                 <Image
                   src={partnerSix}
@@ -108,15 +143,15 @@ const Footer = (props) => {
               </div>
               <div className="w-16 h-12">
                 <Image
-                  src={partnerEight}
-                  alt="Partner Eight"
+                  src={partnerNine}
+                  alt="Partner Nine"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="w-16 h-12">
                 <Image
-                  src={partnerNine}
-                  alt="Partner Nine"
+                  src={partnerEight}
+                  alt="Partner Eight"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -124,9 +159,9 @@ const Footer = (props) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4 px-4 md:px-24 mt-10">
-        <h2 className="text-2xl md:text-4xl mb-3 font-medium">DISCLAIMER</h2>
-        <div className="flex flex-col gap-4 font-light">
+      <div className="flex flex-col gap-4 px-4 md:px-24 py-8 md:py-10">
+        <h2 className="text-2xl md:text-4xl mb-2 font-normal">DISCLAIMER</h2>
+        <div className="flex flex-col gap-4 font-light text-sm text-justify">
           <p>
             Layanan pembiayaan dan investasi berdasarkan prinsip syariah berbasis proyek merupakan
             kesepakatan perdata antara pemberi pembiayaan (investor) dengan penerima pembiayaan
@@ -159,40 +194,58 @@ const Footer = (props) => {
             dengan memberitahukan tujuan, batasan, dan mekanisme pemanfaatan data kepada pengguna
           </p>
         </div>
-        <div className="flex flex-col">
-          <h5 className="font-medium">Risiko Usaha</h5>
+        <div className="flex flex-col text-sm text-justify">
+          <h5 className="font-normal mb-1">Risiko Usaha</h5>
           <p className="font-light">
             Risiko usaha merupakan hal yang tidak dapat dihindari dalam menjalankan kegiatan usaha.
             Sejumlah risiko usaha yang mungkin saja terjadi adalah penutupan kegiatan usaha secara
             sementara sebagai dampak dari adanya bencana alam dan/atau keadaan kahar lainnya.
           </p>
         </div>
-        <div className="flex flex-col">
-          <h5 className="font-medium">Risiko Kerugian Investasi</h5>
+        <div className="flex flex-col text-sm text-justify">
+          <h5 className="font-normal mb-1">Risiko Kerugian Investasi</h5>
           <p className="font-light">
-          Setiap investasi memiliki tingkat risiko yang beragam, salah satunya adalah tidak terkumpulnya dana investasi sesuai proyeksi yang telah ditetapkan dan/atau proyek yang dijalankan tidak menghasilkan keuntungan sesuai dengan yang ditargetkan.
+            Setiap investasi memiliki tingkat risiko yang beragam, salah satunya adalah tidak
+            terkumpulnya dana investasi sesuai proyeksi yang telah ditetapkan dan/atau proyek yang
+            dijalankan tidak menghasilkan keuntungan sesuai dengan yang ditargetkan.
           </p>
         </div>
-        <div className="flex flex-col">
-          <h5 className="font-medium">Risiko Kekurangan Likuiditas</h5>
+        <div className="flex flex-col text-sm text-justify">
+          <h5 className="font-normal mb-1">Risiko Kekurangan Likuiditas</h5>
           <p className="font-light">
-          Pemodal yang melakukan investasi memungkinkan dalam bentuk tidak likuid karena efek bersifat ekuitas yang ditawarkan tidak terdaftar di bursa efek atau belum dilaksanakan pasar sekunder. Hal ini berarti Pemodal mungkin tidak dapat dengan mudah menjual saham miliknya kepada pihak lain.
+            Pemodal yang melakukan investasi memungkinkan dalam bentuk tidak likuid karena efek
+            bersifat ekuitas yang ditawarkan tidak terdaftar di bursa efek atau belum dilaksanakan
+            pasar sekunder. Hal ini berarti Pemodal mungkin tidak dapat dengan mudah menjual saham
+            miliknya kepada pihak lain.
           </p>
         </div>
-        <div className="flex flex-col">
-          <h5 className="font-medium">Risiko Kelangkaan Pembagian Dividen dan/atau Dilusi Kepemilikan</h5>
+        <div className="flex flex-col text-sm text-justify">
+          <h5 className="font-normal mb-1">
+            Risiko Kelangkaan Pembagian Dividen dan/atau Dilusi Kepemilikan
+          </h5>
           <p className="font-light">
-          Saham, Jika Efek Yang Diterbitkan Merupakan Saham Setiap Pemodal yang melakukan investasi pada efek bersifat ekuitas berupa saham, memiliki hak untuk mendapat dividen sesuai dengan jumlah kepemilikan yang dimiliki yang dibagikan oleh Penerbit melalui Penyelenggara secara periodik. Namun, kelangkaan dalam pembagian dividen dimungkinkan terjadi karena kinerja bisnis suatu proyek yang diinvestasikan tidak berjalan sebagaimana mestinya serta berpotensi terdilusi kepemilikan saham karena bertambahnya total saham yang beredar atau ditawarkan.
+            Saham, Jika Efek Yang Diterbitkan Merupakan Saham Setiap Pemodal yang melakukan
+            investasi pada efek bersifat ekuitas berupa saham, memiliki hak untuk mendapat dividen
+            sesuai dengan jumlah kepemilikan yang dimiliki yang dibagikan oleh Penerbit melalui
+            Penyelenggara secara periodik. Namun, kelangkaan dalam pembagian dividen dimungkinkan
+            terjadi karena kinerja bisnis suatu proyek yang diinvestasikan tidak berjalan
+            sebagaimana mestinya serta berpotensi terdilusi kepemilikan saham karena bertambahnya
+            total saham yang beredar atau ditawarkan.
           </p>
         </div>
-        <div className="flex flex-col">
-          <h5 className="font-medium">Risiko Gagal Bayar</h5>
+        <div className="flex flex-col text-sm text-justify">
+          <h5 className="font-normal mb-1">Risiko Gagal Bayar</h5>
           <p className="font-light">
-          Penawaran Efek bersifat utang atau sukuk memiliki risiko dimana Penerbit akan gagal bayar (default). Apabila Penerbit mengalami gagal bayar maka Wali Amanat berdasarkan Surat Kuasa akan mengundang dan mengadakan Rapat Umum Pemegang Obligasi (RUPO), dalam RUPO tersebut akan dibahas mengenai gagal bayar yang terjadi serta skema perpanjangan jatuh tempo kupon ataupun eksekusi jaminan fidusia dan jaminan Penerbit lainnya (apabilaada).
+            Penawaran Efek bersifat utang atau sukuk memiliki risiko dimana Penerbit akan gagal
+            bayar (default). Apabila Penerbit mengalami gagal bayar maka Wali Amanat berdasarkan
+            Surat Kuasa akan mengundang dan mengadakan Rapat Umum Pemegang Obligasi (RUPO), dalam
+            RUPO tersebut akan dibahas mengenai gagal bayar yang terjadi serta skema perpanjangan
+            jatuh tempo kupon ataupun eksekusi jaminan fidusia dan jaminan Penerbit lainnya
+            (apabilaada).
           </p>
         </div>
       </div>
-      <div className="flex w-full justify-center p-4 mt-4">
+      <div className="flex w-full justify-center p-4">
         <span className="text-xs">© 2025 All Rights Reserved. Koaci Investasi</span>
       </div>
     </footer>

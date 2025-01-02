@@ -23,6 +23,9 @@ const Navbar = ({ scrolling }) => {
           className="transition-all duration-200"
           alt="Koaci"
           width={120}
+          onClick={() => {
+            router.push("/");
+          }}
         />
         <div className="hidden md:flex gap-10 text-base">
           <div
@@ -33,8 +36,10 @@ const Navbar = ({ scrolling }) => {
           >
             <span
               className={`tracking-wide ${
-                urlPath === "/" ? `font-semibold ${scrolling ? "text-black" : "text-white"}` : ""
-              } ${scrolling ? `group-hover:text-black` : `group-hover:text-white`}`}
+                urlPath === "/"
+                  ? `font-medium ${scrolling ? "text-gray-800" : "text-gray-100"}`
+                  : ""
+              } ${scrolling ? `group-hover:text-gray-800` : `group-hover:text-gray-100`}`}
             >
               Pendanaan
             </span>
@@ -48,9 +53,9 @@ const Navbar = ({ scrolling }) => {
             <span
               className={`tracking-wide ${
                 urlPath === "/project"
-                  ? `font-semibold ${scrolling ? "text-black" : "text-white"}`
+                  ? `font-medium ${scrolling ? "text-gray-800" : "text-gray-100"}`
                   : ""
-              } ${scrolling ? `group-hover:text-black` : `group-hover:text-white`}`}
+              } ${scrolling ? `group-hover:text-gray-800` : `group-hover:text-gray-100`}`}
             >
               Proyek
             </span>
@@ -63,8 +68,10 @@ const Navbar = ({ scrolling }) => {
           >
             <span
               className={`tracking-wide ${
-                urlPath === "/faq" ? `font-semibold ${scrolling ? "text-black" : "text-white"}` : ""
-              } ${scrolling ? `group-hover:text-black` : `group-hover:text-white`}`}
+                urlPath === "/faq"
+                  ? `font-medium ${scrolling ? "text-gray-800" : "text-gray-100"}`
+                  : ""
+              } ${scrolling ? `group-hover:text-gray-800` : `group-hover:text-gray-100`}`}
             >
               F.A.Q
             </span>
@@ -78,9 +85,9 @@ const Navbar = ({ scrolling }) => {
             <span
               className={`tracking-wide ${
                 urlPath === "/about-us"
-                  ? `font-semibold ${scrolling ? "text-black" : "text-white"}`
+                  ? `font-medium ${scrolling ? "text-gray-800" : "text-gray-100"}`
                   : ""
-              } ${scrolling ? `group-hover:text-black` : `group-hover:text-white`}`}
+              } ${scrolling ? `group-hover:text-gray-800` : `group-hover:text-gray-100`}`}
             >
               Tentang Kami
             </span>
@@ -88,13 +95,13 @@ const Navbar = ({ scrolling }) => {
         </div>
       </div>
       <div className="hidden md:flex items-center gap-4">
-        <Button className="bg-green-400 text-white hover:bg-green-500 hover:text-white">
+        <Button className="bg-green-400 text-gray-100 hover:bg-green-500 hover:text-gray-100">
           Daftar Sekarang
         </Button>
         <Button
           variant="outline"
           className={`bg-transparent ${
-            scrolling ? "border border-black text-black" : "text-white"
+            scrolling ? "border border-black text-gray-800" : "text-gray-100"
           }`}
         >
           <RiWhatsappLine /> Hubungi Kami

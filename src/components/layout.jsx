@@ -23,7 +23,11 @@ const Layout = (props) => {
 
   return (
     <>
-      <div className="h-dvh w-dvw overflow-auto font-roboto" ref={bodyFrame} id="layout-body">
+      <div
+        className="h-dvh w-dvw overflow-auto font-roboto text-gray-800 bg-white"
+        ref={bodyFrame}
+        id="layout-body"
+      >
         <Navbar scrolling={scrolling} />
         {props.children}
         <Footer />

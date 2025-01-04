@@ -51,11 +51,13 @@ const Register = (props) => {
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Nomor Handphone Anda"
               />
-              <input
-                type="text"
-                className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
-                placeholder="Pilih Role Anda"
-              />
+              <select
+                className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 text-gray-200"
+              >
+                <option value="" disabled selected>Pilih Role Anda</option>
+                <option value="pebisnis" className="text-black">Pebisnis</option>
+                <option value="investor" className="text-black">Investor</option>
+              </select>
               <Button
                 className="bg-white text-black hover:bg-gray-200"
                 onClick={() => {

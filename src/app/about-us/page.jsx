@@ -12,7 +12,7 @@ const About = () => {
       <Layout>
         <div className="flex items-end w-full px-4 pb-12 md:px-24 h-56 bg-gradient-to-r from-[#1E74D7] from-[0%] via-[#1F98DB] via-[54%] to-[#1EE0B3] to-100% relative">
           <h1 className="text-xl md:text-3xl text-white font-normal z-10">
-            Frequently Asked Questions (F.A.Q)
+            Tentang Kami
           </h1>
           <Image
             src={AboutUS}

@@ -2,6 +2,7 @@
 import Layout from "@/components/layout";
 import Image from "next/image";
 import personOne from "@/images/person_1.png";
+import sample_project_1 from "@/images/sample_project_1.jpg";
 import { RiArrowRightUpLine } from "react-icons/ri";
 
 const Project = (props) => {
@@ -14,13 +15,13 @@ const Project = (props) => {
           </h1>
         </div>
         <div className="flex flex-col w-full px-4 py-16 md:px-24">
-          <h2 className="text-2xl md:text-4xl font-normal mb-8">
+          <h2 className="text-2xl md:text-2xl font-normal mb-8">
             Proyek Terpilih dengan klien <br></br> terbaik kami
           </h2>
           <div className="grid grid-cols-3 gap-16 border-t-4 border-b-4 py-8">
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full" src={personOne} alt="Person One" />
+                <Image className="w-full" src={sample_project_1} alt="Person One" />
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Pembuatan Website Abracadabra</p>

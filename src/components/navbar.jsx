@@ -8,10 +8,9 @@ import { RiCloseFill, RiMenuFill, RiWhatsappLine } from "react-icons/ri";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
-const Navbar = ({ scrolling }) => {
+const Navbar = ({ scrolling, openMoreMenu }) => {
   const router = useRouter();
   const urlPath = usePathname();
-  const [show, setShow] = useState(false);
 
   return (
     <>
@@ -33,7 +32,7 @@ const Navbar = ({ scrolling }) => {
           <RiMenuFill
             className="md:hidden w-8 h-8 cursor-pointer"
             onClick={() => {
-              setShow((prev) => !prev);
+              openMoreMenu();
             }}
           />
           <div className="hidden md:flex gap-10 text-base">
@@ -128,84 +127,6 @@ const Navbar = ({ scrolling }) => {
           </Button>
         </div>
       </nav>
-      <div
-        className={`absolute flex bottom-0 w-full h-svh ${
-          show ? "right-0" : "-right-full"
-        } bg-white z-[51] transition-all duration-500`}
-      >
-        <div className="flex-col w-full p-4">
-          <div className="flex w-full justify-between items-center mb-16">
-            <Image
-              src={logoBlack}
-              className="transition-all duration-200 cursor-pointer"
-              alt="Koaci"
-              width={120}
-              onClick={() => {
-                router.push("/");
-              }}
-            />
-            <RiCloseFill
-              className="w-8 h-8 cursor-pointer"
-              onClick={() => {
-                setShow((prev) => !prev);
-              }}
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <span
-              className="text-2xl font-light hover:font-normal cursor-pointer"
-              onClick={() => {
-                router.push("/");
-              }}
-            >
-              Pendanaan
-            </span>
-            <span
-              className="text-2xl font-light hover:font-normal cursor-pointer"
-              onClick={() => {
-                router.push("/project");
-              }}
-            >
-              Proyek
-            </span>
-            <span
-              className="text-2xl font-light hover:font-normal cursor-pointer"
-              onClick={() => {
-                router.push("/faq");
-              }}
-            >
-              F.A.Q
-            </span>
-            <span
-              className="text-2xl font-light hover:font-normal cursor-pointer"
-              onClick={() => {
-                router.push("/about-us");
-              }}
-            >
-              About Us
-            </span>
-            <span
-              className="text-2xl font-light hover:font-normal cursor-pointer"
-              onClick={() => {
-                router.push("/register");
-              }}
-            >
-              Daftar Sekarang
-            </span>
-            <span
-              className="text-2xl font-light hover:font-normal cursor-pointer"
-              onClick={() => {
-                window.open(
-                  "https://api.whatsapp.com/send/?phone=6282229427833&text=hallo&type=phone_number&app_absent=0",
-                  "__blank"
-                );
-              }}
-            >
-              Hubungi Kami
-            </span>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

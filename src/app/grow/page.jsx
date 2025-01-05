@@ -18,12 +18,12 @@ const Grow = (props) => {
             alt="Background Grow"
             className="w-full h-full object-fill absolute top-0 left-0 z-10"
           />
-          <div className="flex w-full py-[37px] px-4 md:px-24 z-20">
-            <div className="flex flex-col w-[50%] gap-4 z-20 text-white">
-              <h1 className="text-4xl font-medium">
+          <div className="flex flex-col-reverse md:flex-row w-full px-4 md:px-24 z-20 gap-8">
+            <div className="flex flex-col items-center md:items-start w-full md:w-[50%] gap-4 z-20 text-white">
+              <h1 className="text-2xl md:text-4xl font-medium text-center md:text-start">
                 Mari Bertumbuh Membangun Jaringan Bersama Kami
               </h1>
-              <p className="font-light mb-4">
+              <p className="font-light mb-4 text-center md:text-start">
                 Mulailah langkah awal kalian dalam mempelajari keuangan syariah secara mendalam, dan
                 bangun jaringan kalian dari sekarang
               </p>
@@ -31,24 +31,24 @@ const Grow = (props) => {
                 Bergabung
               </button>
             </div>
-            <div className="flex w-[50%] relative">
+            <div className="flex w-full md:w-[50%] relative">
               <Image
                 src={growLogo}
                 alt="Grow Logo"
-                className="w-full object-contain z-20 absolute -top-20 left-0"
+                className="w-full object-contain z-20 md:absolute -top-20 left-0"
               />
             </div>
           </div>
         </div>
 
-        <div className="flex w-full px-24 py-16">
-          <div className="flex flex-col gap-4 w-full items-center">
+        <div className="flex w-full">
+          <div className="flex flex-col px-4 md:px-24 py-16 gap-4 w-full items-center">
             <span className="bg-[#1F98DB] text-white px-10 py-2 rounded-full">Grow With Koaci</span>
-            <p className="text-2xl text-center w-[50%] mb-20">
-              Grow With Koaci adalah platform edukasi dan kolaborasi untuk investasi dan bisnis
-              syariah.
+            <p className="text-2xl text-center w-full mb-8 md:mb-20 font-normal">
+              Grow With Koaci adalah platform edukasi dan kolaborasi <br /> untuk investasi dan
+              bisnis syariah.
             </p>
-            <div className="flex justify-center w-full gap-16">
+            <div className="flex flex-col md:flex-row justify-center items-center w-full gap-16">
               <div className="flex w-full max-w-72 h-[26rem] relative overflow-hidden rounded-lg">
                 <Image
                   src={growOne}
@@ -119,11 +119,13 @@ const Grow = (props) => {
             alt="ornament"
             className="w-[31rem]  object-contain absolute bottom-0 -left-64"
           />
-          <div className="flex w-full flex-col items-center px-24 py-16">
-            <h2 className="text-4xl mb-24">Daftar Grow With Koaci Sekarang</h2>
-            <div className="flex flex-col gap-4 w-[50%]">
+          <div className="flex w-full flex-col items-center px-4 md:px-24 py-16">
+            <h2 className="text-2xl md:text-4xl mb-8 md:mb-24 text-center font-normal">
+              Daftar Grow With Koaci Sekarang
+            </h2>
+            <div className="flex flex-col gap-2 md:gap-4 w-full md:w-[50%]">
               <div className="flex flex-col gap-1">
-                <label className="text-2xl font-light" htmlFor="nama_lengkap">
+                <label className="text-xl md:text-2xl font-light" htmlFor="nama_lengkap">
                   Nama Lengkap
                 </label>
                 <input
@@ -134,7 +136,7 @@ const Grow = (props) => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-2xl font-light" htmlFor="email">
+                <label className="text-xl md:text-2xl font-light" htmlFor="email">
                   Email
                 </label>
                 <input
@@ -145,7 +147,7 @@ const Grow = (props) => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-2xl font-light" htmlFor="nomor_telpon">
+                <label className="text-xl md:text-2xl font-light" htmlFor="nomor_telpon">
                   Nomor Telpon
                 </label>
                 <input
@@ -156,7 +158,7 @@ const Grow = (props) => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-2xl font-light" htmlFor="sosial_media">
+                <label className="text-xl md:text-2xl font-light" htmlFor="sosial_media">
                   Akun Media Sosial (LinkedIn/Instagram/Facebook)
                 </label>
                 <input
@@ -167,7 +169,7 @@ const Grow = (props) => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-2xl font-light" htmlFor="alasan">
+                <label className="text-xl md:text-2xl font-light" htmlFor="alasan">
                   Alasan Bergabung Grow With Koaci
                 </label>
                 <textarea

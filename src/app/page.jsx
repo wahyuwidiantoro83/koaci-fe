@@ -29,6 +29,7 @@ import TestimonyCard from "@/components/testimonyCard";
 import Layout from "@/components/layout";
 import Autoplay from "embla-carousel-autoplay";
 import { useRouter } from "next/navigation";
+import Rating from "@/components/rating";
 
 export default function Home(props) {
   const router = useRouter();
@@ -147,7 +148,7 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-        <div className="flex w-full py-16 md:py-20 px-4 md:px-24 bg-gradient-to-r from-[#1E74D7] from-[8%] via-[#1F98DB] via-[48%] to-[#1EE0B3] to-100%">
+        <div className="flex w-full py-16 md:py-20 px-4 md:px-24 bg-gradient-to-r from-[#1E74D7] from-[10%] via-[#1F98DB] via-[60%] to-[#1EE0B3] to-100%">
           <div className="flex flex-col md:flex-row w-full gap-4 md:gap-6">
             <div className="flex flex-col gap-2 md:gap-4 w-full md:w-[40%] text-gray-100">
               <h2 className="text-2xl md:text-3xl font-normal">
@@ -172,22 +173,58 @@ export default function Home(props) {
               </div>
             </div>
             <div className="flex flex-col gap-4 md:gap-6 w-full md:w-[60%]">
-              <Carousel
-                plugins={[
-                  Autoplay({
-                    delay: 2000,
-                  }),
-                ]}
-                setApi={setApi}
-              >
+            <Carousel
+              plugins={[
+                Autoplay({
+                  delay: 2000,
+                }),
+              ]}
+              setApi={setApi}
+            >
                 <CarouselContent>
-                  {SLIDES.map((val, idx) => (
-                    <CarouselItem key={idx} className={`md:basis-[80%] md:pl-10`}>
-                      <TestimonyCard />
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
+                {/* Slide 1 */}
+                <CarouselItem className={`md:basis-[80%] md:pl-10`}>
+                  <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
+                    <div className="flex flex-col gap-1">
+                      <p className="text-2xl font-medium text-[#1459A8]">Mayor Teddy</p>
+                      <p className="text-sm">CTO at Pengusaha Modal</p>
+                      <Rating value={4} starCount={5} />
+                    </div>
+                    <p className="text-sm font-light">
+                      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum tenetur, porro exercitationem magni voluptatibus."
+                    </p>
+                  </div>
+                </CarouselItem>
+
+                {/* Slide 2 */}
+                <CarouselItem className={`md:basis-[80%] md:pl-10`}>
+                  <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
+                    <div className="flex flex-col gap-1">
+                      <p className="text-2xl font-medium text-[#1459A8]">Jane Doe</p>
+                      <p className="text-sm">CEO at Startup Labs</p>
+                      <Rating value={5} starCount={5} />
+                    </div>
+                    <p className="text-sm font-light">
+                      "Aliquid recusandae consequatur exercitationem porro maiores, repellendus iure architecto dolorum quidem."
+                    </p>
+                  </div>
+                </CarouselItem>
+
+                {/* Slide 3 */}
+                <CarouselItem className={`md:basis-[80%] md:pl-10`}>
+                  <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
+                    <div className="flex flex-col gap-1">
+                      <p className="text-2xl font-medium text-[#1459A8]">John Smith</p>
+                      <p className="text-sm">Product Manager at Innovatech</p>
+                      <Rating value={3} starCount={5} />
+                    </div>
+                    <p className="text-sm font-light">
+                      "Temporibus culpa blanditiis excepturi ratione maxime inventore voluptatum iste eos pariatur dolorum."
+                    </p>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+            </Carousel>
               <div className="flex gap-4 justify-center">
                 {SLIDES.map((val, idx) => (
                   <span
@@ -247,7 +284,7 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-        <div className="flex w-full py-16 md:py-20 px-4 md:px-24 bg-gradient-to-t from-[#1E74D7] from-[0%] to-[#1EE0B3] to-[96%] relative">
+        <div className="flex w-full py-16 md:py-20 px-4 md:px-24 bg-gradient-to-t from-[#1E74D7] from-[5%] to-[#1EE0B3] to-[100%] relative">
           <div className="flex w-full">
             <div className="flex flex-col gap-4 w-full md:w-[40%]">
               <h2 className="text-2xl md:text-3xl font-normal text-gray-100">

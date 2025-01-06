@@ -3,6 +3,15 @@ import Layout from "@/components/layout";
 import Image from "next/image";
 import personOne from "@/images/person_1.png";
 import sample_project_1 from "@/images/sample_project_1.jpg";
+import sample_project_2 from "@/images/sample_project_2.jpg";
+import sample_project_3 from "@/images/sample_project_3.jpg";
+import sample_project_4 from "@/images/sample_project_4.jpg";
+import sample_project_5 from "@/images/sample_project_5.jpg";
+import sample_project_6 from "@/images/sample_project_6.jpg";
+import sample_project_7 from "@/images/sample_project_7.jpg";
+import sample_project_8 from "@/images/sample_project_8.jpg";
+import sample_project_9 from "@/images/sample_project_9.jpg";
+import sample_project_10 from "@/images/sample_project_10.jpg";
 import { RiArrowRightUpLine } from "react-icons/ri";
 
 const Project = (props) => {
@@ -20,8 +29,8 @@ const Project = (props) => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 border-t-4 border-b-4 py-8">
             <div className="flex flex-col gap-4">
-              <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full object-cover" src={sample_project_1} alt="Person One" />
+              <div className="w-full aspect-square overflow-hidden
+                <Image className="w-full h-full object-cover" src={sample_project_1} alt="sample project 1" /
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Pembuatan Website Abracadabra</p>
@@ -52,8 +61,7 @@ const Project = (props) => {
             </div>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full" src={personOne} alt="Person One" />
-              </div>
+              <Image className="w-full h-full object-cover" src={sample_project_2} alt="sample project 2" />              </div>
               <div className="flex justify-between">
                 <p className="text-lg">J-Bow Riser Main Oil Line (MOL) 12" XMA KE XAP</p>
                 <a href="#">
@@ -83,7 +91,7 @@ const Project = (props) => {
             </div>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full" src={personOne} alt="Person One" />
+              <Image className="w-full h-full object-cover" src={sample_project_3} alt="sample project 3" /> 
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Bahan Kimia dan Biologi Pengolahan Limbah</p>
@@ -114,7 +122,7 @@ const Project = (props) => {
             </div>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full" src={personOne} alt="Person One" />
+              <Image className="w-full h-full object-cover" src={sample_project_4} alt="sample project 4" /> 
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Pengadaan Barang dan Instalasi HVAC</p>
@@ -144,7 +152,7 @@ const Project = (props) => {
             </div>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full" src={personOne} alt="Person One" />
+              <Image className="w-full h-full object-cover" src={sample_project_5} alt="sample project 5" /> 
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Aksesoris Fiber Optic</p>
@@ -174,7 +182,7 @@ const Project = (props) => {
             </div>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full" src={personOne} alt="Person One" />
+              <Image className="w-full h-full object-cover" src={sample_project_6} alt="sample project 6" /> 
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Bahan Kimia dan Biologi Pengolahan Limbah</p>
@@ -204,7 +212,7 @@ const Project = (props) => {
             </div>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full" src={personOne} alt="Person One" />
+              <Image className="w-full h-full object-cover" src={sample_project_7} alt="sample project 7" /> 
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Pengadaan Barang dan Instalasi HVAC</p>
@@ -234,7 +242,7 @@ const Project = (props) => {
             </div>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full" src={personOne} alt="Person One" />
+              <Image className="w-full h-full object-cover" src={sample_project_8} alt="sample project 8" /> 
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Pengadaan Barang dan Instalasi HVAC</p>
@@ -264,7 +272,7 @@ const Project = (props) => {
             </div>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full" src={personOne} alt="Person One" />
+              <Image className="w-full h-full object-cover" src={sample_project_9} alt="sample project 9" /> 
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Pengadaan Barang Palletizing & Air Circulatio</p>
@@ -294,7 +302,7 @@ const Project = (props) => {
             </div>
             <div className="flex flex-col gap-4">
               <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full" src={personOne} alt="Person One" />
+              <Image className="w-full h-full object-cover" src={sample_project_10} alt="sample project 10" /> 
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Pengadaan Barang AC WAREHOUSE FG-88</p>

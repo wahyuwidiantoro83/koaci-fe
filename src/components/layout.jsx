@@ -4,11 +4,15 @@ import Footer from "@/components/footer";
 import logoBlack from "@/images/koaci_slogan_black.png";
 import Image from "next/image";
 import { RiCloseFill } from "react-icons/ri";
+import { usePathname, useRouter } from "next/navigation";
+
 
 const Layout = (props) => {
   const [scrolling, setScrolling] = useState(false);
   const [moreMenu, setMoreMenu] = useState(false);
   const bodyFrame = useRef();
+  const router = useRouter();
+  const urlPath = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {

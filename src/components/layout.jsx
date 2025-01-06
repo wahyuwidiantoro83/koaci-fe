@@ -6,6 +6,7 @@ import Image from "next/image";
 import { RiCloseFill } from "react-icons/ri";
 import { usePathname, useRouter } from "next/navigation";
 
+
 const Layout = (props) => {
   const [scrolling, setScrolling] = useState(false);
   const [moreMenu, setMoreMenu] = useState(false);

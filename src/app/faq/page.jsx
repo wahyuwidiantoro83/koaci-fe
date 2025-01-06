@@ -18,9 +18,9 @@ const FAQ = (props) => {
             Frequently Asked Questions (F.A.Q)
           </h1>
         </div>
-        <div className="flex w-full justify-center px-4 py-10 md:py-16 md:px-24">
+        <div className="flex w-full justify-center px-4 py-16 md:px-24">
           <Tabs defaultValue="umum" className="flex flex-col w-full items-center">
-            <TabsList className="flex w-full md:w-fit flex-wrap place-items-center gap-2 mb-16 h-full bg-[#DBF0FC]">
+            <TabsList className="flex w-fit flex-wrap place-items-center gap-2 mb-8 md:mb-16 h-full bg-[#DBF0FC]">
               <TabsTrigger
                 className="py-3 text-[#1459A8] data-[state=active]:text-white data-[state=active]:bg-[#8AB3E3]"
                 value="umum"

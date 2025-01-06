@@ -27,10 +27,10 @@ const Project = (props) => {
           <h2 className="text-2xl md:text-2xl font-normal mb-8">
             Proyek Terpilih dengan klien <br></br> terbaik kami
           </h2>
-          <div className="grid grid-cols-3 gap-16 border-t-4 border-b-4 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 border-t-4 border-b-4 py-8">
             <div className="flex flex-col gap-4">
-              <div className="w-full aspect-square overflow-hidden">
-                <Image className="w-full h-full object-cover" src={sample_project_1} alt="sample project 1" />
+              <div className="w-full aspect-square overflow-hidden
+                <Image className="w-full h-full object-cover" src={sample_project_1} alt="sample project 1" /
               </div>
               <div className="flex justify-between">
                 <p className="text-lg">Pembuatan Website Abracadabra</p>

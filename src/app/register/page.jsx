@@ -13,9 +13,9 @@ const Register = (props) => {
   return (
     <>
       <div className="flex w-full min-h-svh">
-        <div className="flex w-[50%] flex-col px-20 py-10 bg-gradient-to-b from-[#1E74D7] from-[10%] to-[#1EE0B3] to-100%">
+        <div className="flex w-full md:w-[50%] flex-col px-4 md:px-24 py-10 bg-gradient-to-b from-[#1E74D7] from-[10%] to-[#1EE0B3] to-100%">
           <div
-            className="flex items-center mb-16 text-white cursor-pointer"
+            className="flex items-center mb-8 md:mb-16 text-gray-100 cursor-pointer"
             onClick={() => {
               router.push("/");
             }}
@@ -23,8 +23,8 @@ const Register = (props) => {
             <RiArrowLeftSLine className="w-8 h-8" />
             <p className="text-sm">Back to Home Page</p>
           </div>
-          <div className="flex gap-4 items-center mb-10">
-            <p className="text-white text-2xl">Welcome to</p>
+          <div className="flex gap-4 items-center mb-6 md:mb-10">
+            <p className="text-gray-100 text-2xl font-normal">Welcome to</p>
             <Image src={logoKoaci} alt="Logo Koaci" className="w-24" />
           </div>
           <div className="flex flex-col gap-2 text-white">
@@ -51,12 +51,16 @@ const Register = (props) => {
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Nomor Handphone Anda"
               />
-              <select
-                className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 text-gray-200"
-              >
-                <option value="" disabled selected>Pilih Role Anda</option>
-                <option value="pebisnis" className="text-black">Pebisnis</option>
-                <option value="investor" className="text-black">Investor</option>
+              <select className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 text-gray-200">
+                <option value="" disabled selected>
+                  Pilih Role Anda
+                </option>
+                <option value="pebisnis" className="text-black">
+                  Pebisnis
+                </option>
+                <option value="investor" className="text-black">
+                  Investor
+                </option>
               </select>
               <Button
                 className="bg-white text-black hover:bg-gray-200"
@@ -69,7 +73,7 @@ const Register = (props) => {
             </div>
           </div>
         </div>
-        <div className="flex w-[50%]">
+        <div className="hidden md:flex w-[50%]">
           <Image src={registerImage} alt="Register Image" className="w-full object-cover" />
         </div>
       </div>

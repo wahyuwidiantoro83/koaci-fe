@@ -11,9 +11,7 @@ const About = () => {
     <>
       <Layout>
         <div className="flex items-end w-full px-4 pb-12 md:px-24 h-56 bg-gradient-to-r from-[#1E74D7] from-[0%] via-[#1F98DB] via-[54%] to-[#1EE0B3] to-100% relative">
-          <h1 className="text-xl md:text-3xl text-white font-normal z-10">
-            Tentang Kami
-          </h1>
+          <h1 className="text-xl md:text-3xl text-white font-normal z-10">Tentang Kami</h1>
           <Image
             src={AboutUS}
             alt="Background About Us"
@@ -26,14 +24,14 @@ const About = () => {
             alt="Gear Logo"
             className="w-96 absolute -bottom-48 -left-36 scale-150"
           />
-          <div className="flex w-full items-center px-4 py-28 md:px-24 gap-20">
-            <div className="flex flex-1">
-              <p className="text-4xl font-light pr-15">
+          <div className="flex flex-col md:flex-row w-full items-center px-4 py-16 md:py-28 md:px-24 gap-8 md:gap-20">
+            <div className="flex w-full">
+              <p className="text-4xl font-light">
                 "<span className="text-[#2F63B0] font-normal">KOACI</span> adalah platform <br></br>{" "}
                 layanan financial antara <br></br> pebisnis dan investor <br></br> berbasis syariah"
               </p>
             </div>
-            <div className="flex flex-col flex-1 gap-4">
+            <div className="flex w-full flex-col gap-4">
               <h2 className="text-2xl md:text-3xl font-normal">Apa Itu Koaci?</h2>
               <div className="mr-15 font-light">
                 <p>
@@ -53,7 +51,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-full px-4 py-16 md:px-24 gap-6 bg-gradient-to-r from-[#1EE0B3]  to-[#1E74D7] from-[12%] to-75% text-white">
+        <div className="flex flex-col md:flex-row w-full px-4 py-16 md:px-24 gap-6 bg-gradient-to-r from-[#1EE0B3]  to-[#1E74D7] from-[12%] to-75% text-white">
           <div className="flex flex-1 flex-col gap-4">
             <h3 className="text-2xl md:text-3xl font-normal">Visi Koaci</h3>
             <p className="font-light">
@@ -112,10 +110,10 @@ const About = () => {
           </div>
         </div>
         <div className="flex w-full px-4 py-16 md:px-24">
-          <div className="flex flex-col w-full items-center gap-16">
-            <h2 className="text-3xl font-normal">Mari Berkenalan Dengan Tim Kami</h2>
-            <div className="flex w-full justify-between gap-32">
-              <div className="flex flex-1 flex-col gap-4">
+          <div className="flex flex-col w-full items-center">
+            <h2 className="text-3xl font-normal mb-8 md:mb-16">Mari Berkenalan Dengan Tim Kami</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 grid-flow-row gap-16 md:gap-32">
+              <div className="flex max-w-96 flex-col gap-4">
                 <div className=" w-full aspect-square overflow-hidden rounded-sm">
                   <Image className="w-full" src={personOne} alt="Person One" />
                 </div>
@@ -131,7 +129,7 @@ const About = () => {
                   2021
                 </p>
               </div>
-              <div className="flex flex-1 flex-col gap-4">
+              <div className="flex max-w-96 flex-col gap-4">
                 <div className=" w-full aspect-square overflow-hidden rounded-sm">
                   <Image className="w-full" src={personOne} alt="Person One" />
                 </div>
@@ -146,7 +144,7 @@ const About = () => {
                   tahun, serta menjadi konsultan bisnis.
                 </p>
               </div>
-              <div className="flex flex-1 flex-col gap-4">
+              <div className="flex max-w-96 flex-col gap-4">
                 <div className=" w-full aspect-square overflow-hidden rounded-sm">
                   <Image className="w-full" src={personOne} alt="Person One" />
                 </div>
@@ -161,6 +159,53 @@ const About = () => {
                 </p>
               </div>
             </div>
+            {/* <div className="flex flex-col md:flex-row w-full justify-between gap-16 md:gap-32">
+              <div className="flex flex-col gap-4">
+                <div className=" w-full aspect-square overflow-hidden rounded-sm">
+                  <Image className="w-full" src={personOne} alt="Person One" />
+                </div>
+                <p className="text-center font-medium text-2xl">Norman Ibrahim Sultan</p>
+                <p className="text-center font-medium text-2xl italic">Founder & CEO</p>
+                <p className="text-justify font-light">
+                  Lulusan kampus POLBAN program studi Teknik Informatika. Berpengalaman bekerja di
+                  perusahaan software house, properti, dan asuransi selama 1 tahun, serta
+                  berpengalaman menjalankan usaha koperasi selama 1 tahun. Aktif mengikuti
+                  organisasi kampus sebagai ketua angkatan POLBAN Archery 2017, serta menjabat
+                  sebagai Ketua BEM POLBAN periode 2018/2019. Serta aktif organisasi pasca lulus
+                  sebagai kepala divisi hubungan almamater Ikatan Keluarga Alumni POLBAN (IKAPOLBAN)
+                  2021
+                </p>
+              </div>
+              <div className="flex flex-col gap-4">
+                <div className=" w-full aspect-square overflow-hidden rounded-sm">
+                  <Image className="w-full" src={personOne} alt="Person One" />
+                </div>
+                <p className="text-center font-medium text-2xl">Syarif Mawardi Putra</p>
+                <p className="text-center font-medium text-2xl italic">Co-Founder & COO</p>
+                <p className="text-justify font-light">
+                  Lulusan kampus UNISBA program studi Matematika dengan predikat Cum Laude, disertai
+                  menjadi asisten dosen praktikum matematika. Aktif mengikuti kegiatan organisasi
+                  kampus sebagai ketua angkatan Fakultas MIPA 2017 UNISBA, serta tergabung dengan
+                  ILM MIPA sebagai Koordinator Wilayah Jawa Barat, dan menjabat sebagai wakil ketua
+                  BEM Fakultas MIPA periode 2019/2020. Berpengalaman menjalankan bisnis F&B selama 1
+                  tahun, serta menjadi konsultan bisnis.
+                </p>
+              </div>
+              <div className="flex flex-col gap-4">
+                <div className=" w-full aspect-square overflow-hidden rounded-sm">
+                  <Image className="w-full" src={personOne} alt="Person One" />
+                </div>
+                <p className="text-center font-medium text-2xl">Septian Dwi Priyatmoko</p>
+                <p className="text-center font-medium text-2xl italic">Co-Founder & CFO</p>
+                <p className="text-justify font-light">
+                  Lulusan POLBAN tahun 2021 program studi D4 Akuntansi Pemerintahan dengan predikat
+                  Cum Laude. Aktif berorganisasi dan pernah menjabat sebagai Ketua Himpunan
+                  Mahasiswa Akuntansi POLBAN periode 2018/2019. Berpengalaman sebagai Akuntan di
+                  perusahaan manufaktur, jasa, dan pariwisata. Sudah tersertifikasi sebagai Teknisi
+                  Akuntan Yunior.
+                </p>
+              </div>
+            </div> */}
           </div>
         </div>
       </Layout>

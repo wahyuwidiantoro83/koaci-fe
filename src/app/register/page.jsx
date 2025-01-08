@@ -6,9 +6,35 @@ import Image from "next/image";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const Register = (props) => {
   const router = useRouter();
+  const [formData, setFormData] = useState({
+    Nama: "",
+    Email: "",
+    Nomor: "",
+    Role: "",
+  });
+
+  const submitFormRegister = () => {
+    let data = new FormData();
+    for (const key in formData) {
+      data.append(key, formData[key]);
+    }
+    fetch(
+      "https://script.google.com/macros/s/AKfycby3uFO9_lA4dk79ve5G3OlcRTdgj59iyzorB2bGCVYbmhqDaTx3zjA-to3yTt3sApcw/exec",
+      {
+        method: "POST",
+        body: data,
+        mode: "no-cors",
+      }
+    ).then((response) => {
+      if (response.status < 400) {
+        router.push("/register/success");
+      }
+    });
+  };
 
   return (
     <>
@@ -40,19 +66,42 @@ const Register = (props) => {
                 type="text"
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Nama Lengkap Anda"
+                onChange={(e) => {
+                  setFormData((prev) => {
+                    return { ...prev, Nama: e.target.value };
+                  });
+                }}
               />
               <input
                 type="email"
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Email Anda"
+                onChange={(e) => {
+                  setFormData((prev) => {
+                    return { ...prev, Email: e.target.value };
+                  });
+                }}
               />
               <input
                 type="text"
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Nomor Handphone Anda"
+                onChange={(e) => {
+                  setFormData((prev) => {
+                    return { ...prev, Nomor: e.target.value };
+                  });
+                }}
               />
-              <select className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 text-gray-200">
-                <option value="" disabled selected>
+              <select
+                className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 text-gray-200"
+                onChange={(e) => {
+                  setFormData((prev) => {
+                    return { ...prev, Role: e.target.value };
+                  });
+                }}
+                defaultValue={""}
+              >
+                <option value="" disabled>
                   Pilih Role Anda
                 </option>
                 <option value="pebisnis" className="text-black">
@@ -65,7 +114,8 @@ const Register = (props) => {
               <Button
                 className="bg-white text-black hover:bg-gray-200"
                 onClick={() => {
-                  router.push("/register/success");
+                  submitFormRegister();
+                  // router.push("/register/success");
                 }}
               >
                 Kirim

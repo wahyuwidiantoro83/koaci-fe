@@ -5,7 +5,7 @@ import logoBlack from "@/images/koaci_slogan_black.png";
 import Image from "next/image";
 import { RiCloseFill } from "react-icons/ri";
 import { usePathname, useRouter } from "next/navigation";
-
+import Link from "next/link";
 
 const Layout = (props) => {
   const [scrolling, setScrolling] = useState(false);
@@ -32,7 +32,7 @@ const Layout = (props) => {
   return (
     <>
       <div
-        className="h-dvh w-dvw overflow-auto relative font-roboto text-gray-800 bg-white"
+        className="h-dvh w-dvw overflow-auto relative font-roboto text-gray-800 bg-white scroll-smooth"
         ref={bodyFrame}
         id="layout-body"
       >
@@ -66,57 +66,39 @@ const Layout = (props) => {
               />
             </div>
             <div className="flex flex-col gap-2">
-              <span
-                className="text-2xl font-light hover:font-normal cursor-pointer"
-                onClick={() => {
-                  router.push("/");
-                }}
-              >
+              <Link className="text-2xl font-light hover:font-normal cursor-pointer" href={"/"}>
                 Pendanaan
-              </span>
-              <span
+              </Link>
+              <Link
                 className="text-2xl font-light hover:font-normal cursor-pointer"
-                onClick={() => {
-                  router.push("/project");
-                }}
+                href={"/project"}
               >
                 Proyek
-              </span>
-              <span
-                className="text-2xl font-light hover:font-normal cursor-pointer"
-                onClick={() => {
-                  router.push("/faq");
-                }}
-              >
+              </Link>
+              <Link className="text-2xl font-light hover:font-normal cursor-pointer" href={"/faq"}>
                 F.A.Q
-              </span>
-              <span
+              </Link>
+              <Link
                 className="text-2xl font-light hover:font-normal cursor-pointer"
-                onClick={() => {
-                  router.push("/about-us");
-                }}
+                href={"/about-us"}
               >
                 About Us
-              </span>
-              <span
+              </Link>
+              <Link
                 className="text-2xl font-light hover:font-normal cursor-pointer"
-                onClick={() => {
-                  router.push("/register");
-                }}
+                href={"/register"}
               >
-                Daftar Sekarang
-              </span>
-              <span
+                Register
+              </Link>
+              <Link
                 className="text-2xl font-light hover:font-normal cursor-pointer"
-                onClick={() => {
-                  window.open(
-                    "https://api.whatsapp.com/send/?phone=6282229427833&text=hallo&type=phone_number&app_absent=0",
-                    "__blank"
-                  );
-                }}
+                href={
+                  "https://api.whatsapp.com/send/?phone=6282229427833&text=hallo&type=phone_number&app_absent=0"
+                }
+                target="__blank"
               >
                 Hubungi Kami
-              </span>
+              </Link>
             </div>
           </div>
         </div>

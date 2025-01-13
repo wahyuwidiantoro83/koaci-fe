@@ -173,58 +173,61 @@ export default function Home(props) {
               </div>
             </div>
             <div className="flex flex-col gap-4 md:gap-6 w-full md:w-[60%]">
-            <Carousel
-              plugins={[
-                Autoplay({
-                  delay: 2000,
-                }),
-              ]}
-              setApi={setApi}
-            >
+              <Carousel
+                plugins={[
+                  Autoplay({
+                    delay: 2000,
+                  }),
+                ]}
+                setApi={setApi}
+              >
                 <CarouselContent>
-                {/* Slide 1 */}
-                <CarouselItem className={`md:basis-[80%] md:pl-10`}>
-                  <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
-                    <div className="flex flex-col gap-1">
-                      <p className="text-2xl font-medium text-[#1459A8]">Mayor Teddy</p>
-                      <p className="text-sm">CTO at Pengusaha Modal</p>
-                      <Rating value={4} starCount={5} />
+                  {/* Slide 1 */}
+                  <CarouselItem className={`md:basis-[80%] md:pl-10`}>
+                    <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
+                      <div className="flex flex-col gap-1">
+                        <p className="text-2xl font-medium text-[#1459A8]">Mayor Teddy</p>
+                        <p className="text-sm">CTO at Pengusaha Modal</p>
+                        <Rating value={4} starCount={5} />
+                      </div>
+                      <p className="text-sm font-light">
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum tenetur,
+                        porro exercitationem magni voluptatibus."
+                      </p>
                     </div>
-                    <p className="text-sm font-light">
-                      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum tenetur, porro exercitationem magni voluptatibus."
-                    </p>
-                  </div>
-                </CarouselItem>
+                  </CarouselItem>
 
-                {/* Slide 2 */}
-                <CarouselItem className={`md:basis-[80%] md:pl-10`}>
-                  <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
-                    <div className="flex flex-col gap-1">
-                      <p className="text-2xl font-medium text-[#1459A8]">Jane Doe</p>
-                      <p className="text-sm">CEO at Startup Labs</p>
-                      <Rating value={5} starCount={5} />
+                  {/* Slide 2 */}
+                  <CarouselItem className={`md:basis-[80%] md:pl-10`}>
+                    <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
+                      <div className="flex flex-col gap-1">
+                        <p className="text-2xl font-medium text-[#1459A8]">Jane Doe</p>
+                        <p className="text-sm">CEO at Startup Labs</p>
+                        <Rating value={5} starCount={5} />
+                      </div>
+                      <p className="text-sm font-light">
+                        "Aliquid recusandae consequatur exercitationem porro maiores, repellendus
+                        iure architecto dolorum quidem."
+                      </p>
                     </div>
-                    <p className="text-sm font-light">
-                      "Aliquid recusandae consequatur exercitationem porro maiores, repellendus iure architecto dolorum quidem."
-                    </p>
-                  </div>
-                </CarouselItem>
+                  </CarouselItem>
 
-                {/* Slide 3 */}
-                <CarouselItem className={`md:basis-[80%] md:pl-10`}>
-                  <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
-                    <div className="flex flex-col gap-1">
-                      <p className="text-2xl font-medium text-[#1459A8]">John Smith</p>
-                      <p className="text-sm">Product Manager at Innovatech</p>
-                      <Rating value={3} starCount={5} />
+                  {/* Slide 3 */}
+                  <CarouselItem className={`md:basis-[80%] md:pl-10`}>
+                    <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
+                      <div className="flex flex-col gap-1">
+                        <p className="text-2xl font-medium text-[#1459A8]">John Smith</p>
+                        <p className="text-sm">Product Manager at Innovatech</p>
+                        <Rating value={3} starCount={5} />
+                      </div>
+                      <p className="text-sm font-light">
+                        "Temporibus culpa blanditiis excepturi ratione maxime inventore voluptatum
+                        iste eos pariatur dolorum."
+                      </p>
                     </div>
-                    <p className="text-sm font-light">
-                      "Temporibus culpa blanditiis excepturi ratione maxime inventore voluptatum iste eos pariatur dolorum."
-                    </p>
-                  </div>
-                </CarouselItem>
-              </CarouselContent>
-            </Carousel>
+                  </CarouselItem>
+                </CarouselContent>
+              </Carousel>
               <div className="flex gap-4 justify-center">
                 {SLIDES.map((val, idx) => (
                   <span
@@ -300,23 +303,44 @@ export default function Home(props) {
           />
         </div>
         <div className="flex w-full py-16 md:py-20 px-4 md:px-24">
-          <div className="flex w-full flex-col gap-4 md:gap-6 items-center">
-            <h2 className="text-2xl md:text-3xl mb-2 font-normal text-center">
-              Skema Project Financing & Alur Akad
-            </h2>
-            <div className="flex justify-center w-full">
-              <Image
-                src={schemaOne}
-                alt="Schema One"
-                className="w-full max-w-[698px] object-contain"
-              />
+          <div className="flex w-full flex-col items-center">
+            <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-16 w-full mb-24">
+              <div className="flex justify-center w-full">
+                <Image
+                  src={schemaOne}
+                  alt="Schema One"
+                  className="w-full max-w-[698px] object-contain"
+                />
+              </div>
+              <div className="flex flex-col w-full">
+                <h2 className="text-2xl md:text-3xl font-normal text-gray-800 mb-4">
+                  Skema Project Financing
+                </h2>
+                <p className="font-light text-sm md:text-lg">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur cum explicabo
+                  iure beatae numquam ea, quisquam nostrum quo a consequatur necessitatibus
+                  doloremque, molestias id ad inventore placeat illo, rerum eos?
+                </p>
+              </div>
             </div>
-            <div className="flex justify-center w-full">
-              <Image
-                src={schemaTwo}
-                alt="Schema Two"
-                className="w-full max-w-[1026px] object-contain"
-              />
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 w-full">
+              <div className="flex flex-col w-full">
+                <h2 className="text-2xl md:text-3xl font-normal text-gray-800 mb-4">
+                  Skema Alur Akad
+                </h2>
+                <p className="font-light text-sm md:text-lg">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur cum explicabo
+                  iure beatae numquam ea, quisquam nostrum quo a consequatur necessitatibus
+                  doloremque, molestias id ad inventore placeat illo, rerum eos?
+                </p>
+              </div>
+              <div className="flex justify-center w-full">
+                <Image
+                  src={schemaTwo}
+                  alt="Schema Two"
+                  className="w-full max-w-[1026px] object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>

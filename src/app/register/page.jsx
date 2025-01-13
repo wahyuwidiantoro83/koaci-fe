@@ -7,6 +7,17 @@ import { RiArrowLeftSLine } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 const Register = (props) => {
   const router = useRouter();
@@ -16,6 +27,7 @@ const Register = (props) => {
     Nomor: "",
     Role: "",
   });
+  const [isOpen, setIsOpen] = useState(false);
 
   const submitFormRegister = () => {
     let data = new FormData();
@@ -31,7 +43,7 @@ const Register = (props) => {
       }
     ).then((response) => {
       if (response.status < 400) {
-        router.push("/register/success");
+        setIsOpen(true);
       }
     });
   };
@@ -127,6 +139,32 @@ const Register = (props) => {
           <Image src={registerImage} alt="Register Image" className="w-full object-cover" />
         </div>
       </div>
+      <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle className=""></AlertDialogTitle>
+            <AlertDialogDescription>
+              <div className="flex flex-col items-center gap-6">
+                <h2 className="text-2xl md:text-3xl font-normal text-center text-gray-800">
+                  Anda Telah Berhasil Mendaftar!
+                </h2>
+                <p className="text-base text-center font-light">
+                  Data anda telah tersimpan pada database kami, selanjutnya kami akan menghubungi
+                  anda melalui email atau nomor handphone yang tertera.
+                </p>
+                <button
+                  className="px-6 py-2 rounded-lg w-fit bg-[#1F98DB] text-white hover:bg-[#1f99dbe8] text-sm"
+                  onClick={() => {
+                    setIsOpen(false);
+                  }}
+                >
+                  OK
+                </button>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+        </AlertDialogContent>
+      </AlertDialog>
     </>
   );
 };

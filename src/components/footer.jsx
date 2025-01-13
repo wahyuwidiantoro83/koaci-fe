@@ -11,6 +11,7 @@ import logo from "@/images/koaci_slogan.png";
 import Image from "next/image";
 import { RiInstagramLine, RiLinkedinBoxLine, RiTiktokLine } from "react-icons/ri";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Footer = (props) => {
   const router = useRouter();
@@ -56,34 +57,18 @@ const Footer = (props) => {
         <div className="flex flex-col">
           <h5 className="font-normal mb-2">Halaman</h5>
           <div className="flex flex-col">
-            <a
-              onClick={() => {
-                router.push("/");
-              }}
-            >
-              <p className="font-light">Pendanaan</p>
-            </a>
-            <a
-              onClick={() => {
-                router.push("/project");
-              }}
-            >
-              <p className="font-light">Proyek</p>
-            </a>
-            <a
-              onClick={() => {
-                router.push("/faq");
-              }}
-            >
-              <p className="font-light">F.A.Q</p>
-            </a>
-            <a
-              onClick={() => {
-                router.push("/about-us");
-              }}
-            >
-              <p className="font-light">Tentang Kami</p>
-            </a>
+            <Link className="font-light" href={"/"}>
+              Pendanaan
+            </Link>
+            <Link className="font-light" href={"/project"}>
+              Proyek
+            </Link>
+            <Link className="font-light" href={"/faq"}>
+              F.A.Q
+            </Link>
+            <Link className="font-light" href={"/about-us"}>
+              Tentang Kami
+            </Link>
           </div>
         </div>
         <div className="flex flex-col">

@@ -186,13 +186,12 @@ export default function Home(props) {
                   <CarouselItem className={`md:basis-[80%] md:pl-10`}>
                     <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
                       <div className="flex flex-col gap-1">
-                        <p className="text-2xl font-medium text-[#1459A8]">Mayor Teddy</p>
-                        <p className="text-sm">CTO at Pengusaha Modal</p>
-                        <Rating value={4} starCount={5} />
+                        <p className="text-2xl font-medium text-[#1459A8]">Nur Islami Javad</p>
+                        <p className="text-sm">CEO at Sharing Vision</p>
+                        <Rating value={5} starCount={5} />
                       </div>
                       <p className="text-sm font-light">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum tenetur,
-                        porro exercitationem magni voluptatibus."
+                        "Koaci sangat bagus dan recommended! Monitoring dan pembukuannya dilakukan dengan disiplin, sehingga memberikan rasa aman. Mereka sangat profesional dalam menjalankan timeline dan mendampingi business owner. Selain itu, timnya kolaboratif dan terbuka terhadap masukan serta terus berkomitmen pada peningkatan kualitas."
                       </p>
                     </div>
                   </CarouselItem>
@@ -226,6 +225,7 @@ export default function Home(props) {
                       </p>
                     </div>
                   </CarouselItem>
+                  
                 </CarouselContent>
               </Carousel>
               <div className="flex gap-4 justify-center">
@@ -304,12 +304,12 @@ export default function Home(props) {
         </div>
         <div className="flex w-full py-16 md:py-20 px-4 md:px-24">
           <div className="flex w-full flex-col items-center">
-            <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-16 w-full mb-24">
+            <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-16 w-full mt-3 mb-32">
               <div className="flex justify-center w-full">
                 <Image
                   src={schemaOne}
                   alt="Schema One"
-                  className="w-full max-w-[698px] object-contain"
+                  className="w-full max-w-[698spx] object-contain"
                 />
               </div>
               <div className="flex flex-col w-full">
@@ -317,21 +317,17 @@ export default function Home(props) {
                   Skema Project Financing
                 </h2>
                 <p className="font-light text-sm md:text-lg">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur cum explicabo
-                  iure beatae numquam ea, quisquam nostrum quo a consequatur necessitatibus
-                  doloremque, molestias id ad inventore placeat illo, rerum eos?
+                Berikut adalah skema atau tahapan yang kami gunakan dalam proses pembiayaan proyek investasi berbasis syariah. Setiap langkah dirancang untuk memastikan kesesuaian dengan prinsip-prinsip syariah, transparansi, serta memberikan manfaat maksimal bagi semua pihak yang terlibat, baik investor maupun pengelola proyek.
                 </p>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-8 md:gap-16 w-full">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 w-full mt-11">
               <div className="flex flex-col w-full">
                 <h2 className="text-2xl md:text-3xl font-normal text-gray-800 mb-4">
                   Skema Alur Akad
                 </h2>
                 <p className="font-light text-sm md:text-lg">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur cum explicabo
-                  iure beatae numquam ea, quisquam nostrum quo a consequatur necessitatibus
-                  doloremque, molestias id ad inventore placeat illo, rerum eos?
+                Skema alur akad mencakup tahapan-tahapan yang sistematis, dimulai dari penentuan jenis akad yang sesuai dengan kebutuhan proyek, dilanjutkan dengan kesepakatan antara para pihak, pengikatan perjanjian secara tertulis, hingga pelaksanaan akad yang mengikuti prinsip-prinsip syariah.
                 </p>
               </div>
               <div className="flex justify-center w-full">

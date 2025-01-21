@@ -9,14 +9,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import {
   AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
-  AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
 const Register = (props) => {
@@ -28,24 +23,46 @@ const Register = (props) => {
     Role: "",
   });
   const [isOpen, setIsOpen] = useState(false);
+  const [isErrorOpen, setIsErrorOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const validateForm = () => {
+    return (
+      formData.Nama.trim() !== "" &&
+      formData.Email.trim() !== "" &&
+      formData.Nomor.trim() !== "" &&
+      formData.Role.trim() !== ""
+    );
+  };
 
   const submitFormRegister = () => {
+    if (!validateForm()) {
+      setIsErrorOpen(true);
+      return;
+    }
+
+    setIsLoading(true); // Aktifkan loading
     let data = new FormData();
     for (const key in formData) {
       data.append(key, formData[key]);
     }
+
     fetch(
-      "https://script.google.com/macros/s/AKfycby3uFO9_lA4dk79ve5G3OlcRTdgj59iyzorB2bGCVYbmhqDaTx3zjA-to3yTt3sApcw/exec",
+      "https://script.google.com/macros/s/AKfycbyaKxEjwOYaIS2i_x_SUVrRpwBwQccFccHA7ZQl1Oyvaxdx2QLFsvu2yPEA9v1GdrrK/exec",
       {
         method: "POST",
         body: data,
         mode: "no-cors",
       }
-    ).then((response) => {
-      if (response.status < 400) {
-        setIsOpen(true);
-      }
-    });
+    )
+      .then((response) => {
+        if (response.status < 400) {
+          setIsOpen(true); // Tampilkan dialog sukses
+        }
+      })
+      .finally(() => {
+        setIsLoading(false); // Matikan loading setelah proses selesai
+      });
   };
 
   return (
@@ -78,6 +95,7 @@ const Register = (props) => {
                 type="text"
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Nama Lengkap Anda"
+                required
                 onChange={(e) => {
                   setFormData((prev) => {
                     return { ...prev, Nama: e.target.value };
@@ -88,6 +106,7 @@ const Register = (props) => {
                 type="email"
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Email Anda"
+                required
                 onChange={(e) => {
                   setFormData((prev) => {
                     return { ...prev, Email: e.target.value };
@@ -95,9 +114,10 @@ const Register = (props) => {
                 }}
               />
               <input
-                type="text"
+                type="number"
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Nomor Handphone Anda"
+                required
                 onChange={(e) => {
                   setFormData((prev) => {
                     return { ...prev, Nomor: e.target.value };
@@ -106,6 +126,7 @@ const Register = (props) => {
               />
               <select
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 text-gray-200"
+                required
                 onChange={(e) => {
                   setFormData((prev) => {
                     return { ...prev, Role: e.target.value };
@@ -125,12 +146,10 @@ const Register = (props) => {
               </select>
               <Button
                 className="bg-white text-black hover:bg-gray-200"
-                onClick={() => {
-                  submitFormRegister();
-                  // router.push("/register/success");
-                }}
+                onClick={submitFormRegister}
+                disabled={isLoading}
               >
-                Kirim
+                {isLoading ? "Loading..." : "Kirim"}
               </Button>
             </div>
           </div>
@@ -139,10 +158,14 @@ const Register = (props) => {
           <Image src={registerImage} alt="Register Image" className="w-full object-cover" />
         </div>
       </div>
+      {isLoading && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="text-white text-2xl">Loading...</div>
+        </div>
+      )}
       <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle className=""></AlertDialogTitle>
             <AlertDialogDescription>
               <div className="flex flex-col items-center gap-6">
                 <h2 className="text-2xl md:text-3xl font-normal text-center text-gray-800">
@@ -155,8 +178,31 @@ const Register = (props) => {
                 <button
                   className="px-6 py-2 rounded-lg w-fit bg-[#1F98DB] text-white hover:bg-[#1f99dbe8] text-sm"
                   onClick={() => {
-                    setIsOpen(false);
+                    router.push("/");
                   }}
+                >
+                  OK
+                </button>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <AlertDialog open={isErrorOpen} onOpenChange={setIsErrorOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogDescription>
+              <div className="flex flex-col items-center gap-6">
+                <h2 className="text-2xl md:text-3xl font-normal text-center text-red-600">
+                  Input Tidak Valid!
+                </h2>
+                <p className="text-base text-center font-light">
+                  Mohon isi semua data dengan lengkap dan sesuai sebelum melanjutkan.
+                </p>
+                <button
+                  className="px-6 py-2 rounded-lg w-fit bg-red-600 text-white hover:bg-red-500 text-sm"
+                  onClick={() => setIsErrorOpen(false)}
                 >
                   OK
                 </button>

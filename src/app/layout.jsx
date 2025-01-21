@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Koaci Investasi - We provide better sharia life",
+  title: "Koaci Investasi - We Provide Better Sharia Life",
   description: "We provide better sharia life",
 };
 

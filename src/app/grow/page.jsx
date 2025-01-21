@@ -30,29 +30,55 @@ const Grow = (props) => {
     Alasan: "",
   });
   const [isOpen, setIsOpen] = useState(false);
+  const [isErrorOpen, setIsErrorOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // State untuk loading
+
+  const validateForm = () => {
+    return (
+      formData.Nama.trim() !== "" &&
+      formData.Email.trim() !== "" &&
+      formData.Telepon.trim() !== "" &&
+      formData.Medsos.trim() !== "" &&
+      formData.Alasan.trim() !== ""
+    );
+  };
 
   const submitFormGrow = () => {
+    if (!validateForm()) {
+      setIsErrorOpen(true); // Tampilkan modal error jika validasi gagal
+      return;
+    }
+
+    setIsLoading(true); // Set loading menjadi true saat pengiriman data dimulai
     let data = new FormData();
     for (const key in formData) {
       data.append(key, formData[key]);
     }
     fetch(
-      "https://script.google.com/macros/s/AKfycbzonTRyei0VCSQCIfnCZ5am2nDEtL0BioXLsqgK3_UePEmzR6gv_KyxtRxpx4SCAD8S/exec",
+      "https://script.google.com/macros/s/AKfycbwhUI6OsvWscmVTvX4bmpkHGEn5j5B2-ePi9O7X75hE652xo8zNHOhmxRv0QcQY7OE_Pw/exec",
       {
         method: "POST",
         body: data,
         mode: "no-cors",
       }
     ).then((response) => {
+      setIsLoading(false); // Set loading menjadi false setelah data selesai dikirim
       if (response.status < 400) {
         setIsOpen(true);
       }
+    }).catch(() => {
+      setIsLoading(false); // Tetap set false jika terjadi error
     });
   };
 
   return (
     <>
       <Layout>
+      {isLoading && ( // Tampilkan loading screen jika isLoading true
+          <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
+            <div className="text-white text-2xl">Loading...</div>
+          </div>
+        )}
         <div className="flex items-center w-full h-full overflow-hidden relative">
           <Image
             src={bgGrow}
@@ -178,6 +204,7 @@ const Grow = (props) => {
                   type="text"
                   id="nama_lengkap"
                   placeholder="Masukkan Nama Lengkap"
+                  required
                   onChange={(e) => {
                     setFormData((prev) => {
                       return { ...prev, Nama: e.target.value };
@@ -194,6 +221,7 @@ const Grow = (props) => {
                   type="email"
                   id="email"
                   placeholder="Masukkan Email"
+                  required
                   onChange={(e) => {
                     setFormData((prev) => {
                       return { ...prev, Email: e.target.value };
@@ -210,6 +238,7 @@ const Grow = (props) => {
                   type="text"
                   id="nomor_telpon"
                   placeholder="Masukkan Nomor Telpon"
+                  required
                   onChange={(e) => {
                     setFormData((prev) => {
                       return { ...prev, Telepon: e.target.value };
@@ -226,6 +255,7 @@ const Grow = (props) => {
                   type="text"
                   id="sosial_media"
                   placeholder="Masukkan Akun Media Sosial"
+                  required
                   onChange={(e) => {
                     setFormData((prev) => {
                       return { ...prev, Medsos: e.target.value };
@@ -241,6 +271,7 @@ const Grow = (props) => {
                   className="px-6 py-3 border border-gray-400 rounded-lg outline-gray-400"
                   rows={5}
                   id="alasan"
+                  required
                   onChange={(e) => {
                     setFormData((prev) => {
                       return { ...prev, Alasan: e.target.value };
@@ -263,7 +294,6 @@ const Grow = (props) => {
       <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle className=""></AlertDialogTitle>
             <AlertDialogDescription>
               <div className="flex flex-col items-center gap-6">
                 <h2 className="text-2xl md:text-3xl font-normal text-center text-gray-800">
@@ -278,6 +308,29 @@ const Grow = (props) => {
                   onClick={() => {
                     setIsOpen(false);
                   }}
+                >
+                  OK
+                </button>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <AlertDialog open={isErrorOpen} onOpenChange={setIsErrorOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogDescription>
+              <div className="flex flex-col items-center gap-6">
+                <h2 className="text-2xl md:text-3xl font-normal text-center text-red-600">
+                  Input Tidak Valid!
+                </h2>
+                <p className="text-base text-center font-light">
+                  Mohon isi semua data dengan lengkap dan sesuai sebelum melanjutkan.
+                </p>
+                <button
+                  className="px-6 py-2 rounded-lg w-fit bg-red-600 text-white hover:bg-red-500 text-sm"
+                  onClick={() => setIsErrorOpen(false)}
                 >
                   OK
                 </button>

@@ -22,13 +22,14 @@ import {
 } from "@/components/ui/alert-dialog";
 
 const Grow = (props) => {
-  const [formData, setFormData] = useState({
+  const initialForm = {
     Nama: "",
     Email: "",
     Telepon: "",
     Medsos: "",
     Alasan: "",
-  });
+  };
+  const [formData, setFormData] = useState(initialForm);
   const [isOpen, setIsOpen] = useState(false);
   const [isErrorOpen, setIsErrorOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false); // State untuk loading
@@ -61,20 +62,23 @@ const Grow = (props) => {
         body: data,
         mode: "no-cors",
       }
-    ).then((response) => {
-      setIsLoading(false); // Set loading menjadi false setelah data selesai dikirim
-      if (response.status < 400) {
-        setIsOpen(true);
-      }
-    }).catch(() => {
-      setIsLoading(false); // Tetap set false jika terjadi error
-    });
+    )
+      .then((response) => {
+        setIsLoading(false); // Set loading menjadi false setelah data selesai dikirim
+        if (response.status < 400) {
+          setFormData(initialForm);
+          setIsOpen(true);
+        }
+      })
+      .catch(() => {
+        setIsLoading(false); // Tetap set false jika terjadi error
+      });
   };
 
   return (
     <>
       <Layout>
-      {isLoading && ( // Tampilkan loading screen jika isLoading true
+        {isLoading && ( // Tampilkan loading screen jika isLoading true
           <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
             <div className="text-white text-2xl">Loading...</div>
           </div>
@@ -204,6 +208,7 @@ const Grow = (props) => {
                   type="text"
                   id="nama_lengkap"
                   placeholder="Masukkan Nama Lengkap"
+                  value={formData.Nama}
                   required
                   onChange={(e) => {
                     setFormData((prev) => {
@@ -221,6 +226,7 @@ const Grow = (props) => {
                   type="email"
                   id="email"
                   placeholder="Masukkan Email"
+                  value={formData.Email}
                   required
                   onChange={(e) => {
                     setFormData((prev) => {
@@ -238,6 +244,7 @@ const Grow = (props) => {
                   type="text"
                   id="nomor_telpon"
                   placeholder="Masukkan Nomor Telpon"
+                  value={formData.Telepon}
                   required
                   onChange={(e) => {
                     setFormData((prev) => {
@@ -255,6 +262,7 @@ const Grow = (props) => {
                   type="text"
                   id="sosial_media"
                   placeholder="Masukkan Akun Media Sosial"
+                  value={formData.Medsos}
                   required
                   onChange={(e) => {
                     setFormData((prev) => {
@@ -271,6 +279,7 @@ const Grow = (props) => {
                   className="px-6 py-3 border border-gray-400 rounded-lg outline-gray-400"
                   rows={5}
                   id="alasan"
+                  value={formData.Alasan}
                   required
                   onChange={(e) => {
                     setFormData((prev) => {

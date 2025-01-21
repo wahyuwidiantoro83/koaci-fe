@@ -15,13 +15,15 @@ import {
 } from "@/components/ui/alert-dialog";
 
 const Register = (props) => {
-  const router = useRouter();
-  const [formData, setFormData] = useState({
+  const initialForm = {
     Nama: "",
     Email: "",
     Nomor: "",
     Role: "",
-  });
+  };
+
+  const router = useRouter();
+  const [formData, setFormData] = useState(initialForm);
   const [isOpen, setIsOpen] = useState(false);
   const [isErrorOpen, setIsErrorOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -57,6 +59,7 @@ const Register = (props) => {
     )
       .then((response) => {
         if (response.status < 400) {
+          setFormData(initialForm);
           setIsOpen(true); // Tampilkan dialog sukses
         }
       })
@@ -95,6 +98,7 @@ const Register = (props) => {
                 type="text"
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Nama Lengkap Anda"
+                value={formData.Nama}
                 required
                 onChange={(e) => {
                   setFormData((prev) => {
@@ -107,6 +111,7 @@ const Register = (props) => {
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Email Anda"
                 required
+                value={formData.Email}
                 onChange={(e) => {
                   setFormData((prev) => {
                     return { ...prev, Email: e.target.value };
@@ -118,6 +123,7 @@ const Register = (props) => {
                 className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 placeholder="Masukkan Nomor Handphone Anda"
                 required
+                value={formData.Nomor}
                 onChange={(e) => {
                   setFormData((prev) => {
                     return { ...prev, Nomor: e.target.value };
@@ -125,14 +131,14 @@ const Register = (props) => {
                 }}
               />
               <select
-                className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 text-gray-200"
+                className="bg-transparent outline-none border-2 border-gray-200 focus:border-white rounded-md px-6 py-3 placeholder:text-gray-200"
                 required
                 onChange={(e) => {
                   setFormData((prev) => {
                     return { ...prev, Role: e.target.value };
                   });
                 }}
-                defaultValue={""}
+                value={formData.Role}
               >
                 <option value="" disabled>
                   Pilih Role Anda

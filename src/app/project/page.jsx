@@ -33,7 +33,7 @@ const Project = (props) => {
                 <Image className="w-full h-full object-cover" src={sample_project_1} alt="sample project 1" />
               </div>
               <div className="flex justify-between">
-                <p className="text-lg">Pembuatan Website Abracadabra</p>
+                <p className="text-lg">Pembuatan Website Abracadabra oleh PT Insan Agritama Teknologi</p>
                 <a href="#">
                   <RiArrowRightUpLine className="w-8 h-8" />
                 </a>
@@ -44,7 +44,7 @@ const Project = (props) => {
                   <p className="font-light text-sm">2022</p>
                 </div>
                 <div className="flex flex-col">
-                  <p>Klien</p>
+                  <p>Bouwheer</p>
                   <p className="font-light text-sm">PT Codephie Rekadaya Mandiri</p>
                 </div>
               </div>
@@ -63,7 +63,7 @@ const Project = (props) => {
               <div className="w-full aspect-square overflow-hidden">
               <Image className="w-full h-full object-cover" src={sample_project_2} alt="sample project 2" />              </div>
               <div className="flex justify-between">
-                <p className="text-lg">J-Bow Riser Main Oil Line (MOL) 12" XMA KE XAP</p>
+                <p className="text-lg">Pengadaan Barang J-Bow Riser Main Oil Line (MOL) 12" XMA KE XAP oleh PT Jaya Pipline Clamp</p>
                 <a href="#">
                   <RiArrowRightUpLine className="w-8 h-8" />
                 </a>
@@ -74,7 +74,7 @@ const Project = (props) => {
                   <p className="font-light text-sm">2024</p>
                 </div>
                 <div className="flex flex-col">
-                  <p>Klien</p>
+                  <p>Bouwheer</p>
                   <p className="font-light text-sm">PT Pertamina EP</p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ const Project = (props) => {
               <Image className="w-full h-full object-cover" src={sample_project_3} alt="sample project 3" /> 
               </div>
               <div className="flex justify-between">
-                <p className="text-lg">Bahan Kimia dan Biologi Pengolahan Limbah</p>
+                <p className="text-lg">Pembuatan Bahan Kimia dan Biologi Pengolahan Limbah oleh PT Ganesha Technology</p>
                 <a href="#">
                   <RiArrowRightUpLine className="w-8 h-8" />
                 </a>
@@ -105,7 +105,7 @@ const Project = (props) => {
                   <p className="font-light text-sm">2023</p>
                 </div>
                 <div className="flex flex-col">
-                  <p>Klien</p>
+                  <p>Bouwheer</p>
                   <p className="font-light text-sm">Online Seller</p>
                 </div>
               </div>
@@ -125,7 +125,7 @@ const Project = (props) => {
               <Image className="w-full h-full object-cover" src={sample_project_4} alt="sample project 4" /> 
               </div>
               <div className="flex justify-between">
-                <p className="text-lg">Pengadaan Barang dan Instalasi HVAC</p>
+                <p className="text-lg">Pengadaan Barang dan Instalasi HVAC oleh PT Sari Unggul Abadi</p>
                 <a href="#">
                   <RiArrowRightUpLine className="w-8 h-8" />
                 </a>
@@ -136,7 +136,7 @@ const Project = (props) => {
                   <p className="font-light text-sm">2023</p>
                 </div>
                 <div className="flex flex-col">
-                  <p>Klien</p>
+                  <p>Bouwheer</p>
                   <p className="font-light text-sm">PT Gandum Mas Kencana</p>
                 </div>
               </div>
@@ -155,7 +155,7 @@ const Project = (props) => {
               <Image className="w-full h-full object-cover" src={sample_project_5} alt="sample project 5" /> 
               </div>
               <div className="flex justify-between">
-                <p className="text-lg">Aksesoris Fiber Optic</p>
+                <p className="text-lg">Pengadaan Barang Aksesoris Fiber Optik oleh CV Inti Muda Perkasa</p>
                 <a href="#">
                   <RiArrowRightUpLine className="w-8 h-8" />
                 </a>
@@ -166,7 +166,7 @@ const Project = (props) => {
                   <p className="font-light text-sm">2024</p>
                 </div>
                 <div className="flex flex-col">
-                  <p>Klien</p>
+                  <p>Bouwheer</p>
                   <p className="font-light text-sm">PT Bimasakti Selular Indonesia</p>
                 </div>
               </div>
@@ -185,7 +185,7 @@ const Project = (props) => {
               <Image className="w-full h-full object-cover" src={sample_project_6} alt="sample project 6" /> 
               </div>
               <div className="flex justify-between">
-                <p className="text-lg">Bahan Kimia dan Biologi Pengolahan Limbah</p>
+                <p className="text-lg">Pembuatan Bahan Kimia dan Biologi Pengolahan Limbah oleh PT Ganesha Technology</p>
                 <a href="#">
                   <RiArrowRightUpLine className="w-8 h-8" />
                 </a>
@@ -196,7 +196,7 @@ const Project = (props) => {
                   <p className="font-light text-sm">2024</p>
                 </div>
                 <div className="flex flex-col">
-                  <p>Klien</p>
+                  <p>Bouwheer</p>
                   <p className="font-light text-sm">Online Seller</p>
                 </div>
               </div>
@@ -215,7 +215,7 @@ const Project = (props) => {
               <Image className="w-full h-full object-cover" src={sample_project_7} alt="sample project 7" /> 
               </div>
               <div className="flex justify-between">
-                <p className="text-lg">Pengadaan Barang dan Instalasi HVAC</p>
+                <p className="text-lg">Pengadaan Barang dan Instalasi HVAC oleh PT Sari Unggul Abadi</p>
                 <a href="#">
                   <RiArrowRightUpLine className="w-8 h-8" />
                 </a>
@@ -226,7 +226,7 @@ const Project = (props) => {
                   <p className="font-light text-sm">2023</p>
                 </div>
                 <div className="flex flex-col">
-                  <p>Klien</p>
+                  <p>Bouwheer</p>
                   <p className="font-light text-sm">PT. Gandum Mas Kencana</p>
                 </div>
               </div>
@@ -245,7 +245,7 @@ const Project = (props) => {
               <Image className="w-full h-full object-cover" src={sample_project_8} alt="sample project 8" /> 
               </div>
               <div className="flex justify-between">
-                <p className="text-lg">Pengadaan Barang dan Instalasi HVAC</p>
+                <p className="text-lg">Pengadaan Barang dan Instalasi HVAC Oleh PT Arya Jaya</p>
                 <a href="#">
                   <RiArrowRightUpLine className="w-8 h-8" />
                 </a>
@@ -256,7 +256,7 @@ const Project = (props) => {
                   <p className="font-light text-sm">2024</p>
                 </div>
                 <div className="flex flex-col">
-                  <p>Klien</p>
+                  <p>Bouwheer</p>
                   <p className="font-light text-sm">PT Assahimas Chemical</p>
                 </div>
               </div>
@@ -275,7 +275,7 @@ const Project = (props) => {
               <Image className="w-full h-full object-cover" src={sample_project_9} alt="sample project 9" /> 
               </div>
               <div className="flex justify-between">
-                <p className="text-lg">Pengadaan Barang Palletizing & Air Circulatio</p>
+                <p className="text-lg">Pengadaan Barang Palletizing & Air Circulator oleh PT Arya Jaya</p>
                 <a href="#">
                   <RiArrowRightUpLine className="w-8 h-8" />
                 </a>
@@ -286,7 +286,7 @@ const Project = (props) => {
                   <p className="font-light text-sm">2024</p>
                 </div>
                 <div className="flex flex-col">
-                  <p>Klien</p>
+                  <p>Bouwheer</p>
                   <p className="font-light text-sm">PT Perusahaan Industri Ceres</p>
                 </div>
               </div>
@@ -305,7 +305,7 @@ const Project = (props) => {
               <Image className="w-full h-full object-cover" src={sample_project_10} alt="sample project 10" /> 
               </div>
               <div className="flex justify-between">
-                <p className="text-lg">Pengadaan Barang AC WAREHOUSE FG-88</p>
+                <p className="text-lg">Pengadaan Barang AC Warehouse FG-88 oleh PT Arya Jaya</p>
                 <a href="#">
                   <RiArrowRightUpLine className="w-8 h-8" />
                 </a>
@@ -316,7 +316,7 @@ const Project = (props) => {
                   <p className="font-light text-sm">2024</p>
                 </div>
                 <div className="flex flex-col">
-                  <p>Klien</p>
+                  <p>Bouwheer</p>
                   <p className="font-light text-sm">PT Perusahaan Industri Ceres</p>
                 </div>
               </div>

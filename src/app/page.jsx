@@ -22,8 +22,8 @@ import portoTen from "@/images/porto_10.png";
 import investFlow from "@/images/investor_flow.png";
 import schemaOne from "@/images/schema_1.png";
 import schemaTwo from "@/images/schema_2.png";
-import { RiArrowRightLine } from "react-icons/ri";
-import { useEffect, useState } from "react";
+import { RiArrowRightLine, RiFullscreenLine, RiZoomInLine, RiZoomOutLine } from "react-icons/ri";
+import { useEffect, useRef, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import TestimonyCard from "@/components/testimonyCard";
 import Layout from "@/components/layout";
@@ -36,6 +36,9 @@ export default function Home(props) {
   const SLIDES = Array.from(Array(3).keys());
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
+  const [fullscreen, setFullscreen] = useState(false);
+  const fsSchemaOne = useRef();
+  const fsSchemaTwo = useRef();
 
   useEffect(() => {
     if (!api) {
@@ -191,7 +194,11 @@ export default function Home(props) {
                         <Rating value={5} starCount={5} />
                       </div>
                       <p className="text-sm font-light">
-                        "Koaci sangat bagus dan recommended! Monitoring dan pembukuannya dilakukan dengan disiplin, sehingga memberikan rasa aman. Mereka sangat profesional dalam menjalankan timeline dan mendampingi business owner. Selain itu, timnya kolaboratif dan terbuka terhadap masukan serta terus berkomitmen pada peningkatan kualitas."
+                        "Koaci sangat bagus dan recommended! Monitoring dan pembukuannya dilakukan
+                        dengan disiplin, sehingga memberikan rasa aman. Mereka sangat profesional
+                        dalam menjalankan timeline dan mendampingi business owner. Selain itu,
+                        timnya kolaboratif dan terbuka terhadap masukan serta terus berkomitmen pada
+                        peningkatan kualitas."
                       </p>
                     </div>
                   </CarouselItem>
@@ -225,7 +232,6 @@ export default function Home(props) {
                       </p>
                     </div>
                   </CarouselItem>
-                  
                 </CarouselContent>
               </Carousel>
               <div className="flex gap-4 justify-center">
@@ -306,18 +312,37 @@ export default function Home(props) {
           <div className="flex w-full flex-col items-center">
             <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-16 w-full mt-3 mb-32">
               <div className="flex justify-center w-full">
-                <Image
-                  src={schemaOne}
-                  alt="Schema One"
-                  className="w-full max-w-[698spx] object-contain"
-                />
+                <div ref={fsSchemaOne} className="w-full max-w-[698px] relative">
+                  <div
+                    className="w-12 h-12 p-2 absolute top-0 right-0 border rounded-md bg-white shadow-md hover:bg-gray-100 cursor-pointer"
+                    onClick={() => {
+                      if (document.fullscreenElement) {
+                        document.exitFullscreen();
+                        setFullscreen(false);
+                      } else {
+                        fsSchemaOne.current?.requestFullscreen();
+                        setFullscreen(true);
+                      }
+                    }}
+                  >
+                    {fullscreen ? (
+                      <RiZoomOutLine className="w-full h-full" />
+                    ) : (
+                      <RiZoomInLine className="w-full h-full" />
+                    )}
+                  </div>
+                  <Image src={schemaOne} alt="Schema One" className="w-full object-contain" />
+                </div>
               </div>
               <div className="flex flex-col w-full">
                 <h2 className="text-2xl md:text-3xl font-normal text-gray-800 mb-4">
                   Skema Project Financing
                 </h2>
                 <p className="font-light text-sm md:text-lg">
-                Berikut adalah skema atau tahapan yang kami gunakan dalam proses pembiayaan proyek investasi berbasis syariah. Setiap langkah dirancang untuk memastikan kesesuaian dengan prinsip-prinsip syariah, transparansi, serta memberikan manfaat maksimal bagi semua pihak yang terlibat, baik investor maupun pengelola proyek.
+                  Berikut adalah skema atau tahapan yang kami gunakan dalam proses pembiayaan proyek
+                  investasi berbasis syariah. Setiap langkah dirancang untuk memastikan kesesuaian
+                  dengan prinsip-prinsip syariah, transparansi, serta memberikan manfaat maksimal
+                  bagi semua pihak yang terlibat, baik investor maupun pengelola proyek.
                 </p>
               </div>
             </div>
@@ -327,15 +352,34 @@ export default function Home(props) {
                   Skema Alur Akad
                 </h2>
                 <p className="font-light text-sm md:text-lg">
-                Skema alur akad mencakup tahapan-tahapan yang sistematis, dimulai dari penentuan jenis akad yang sesuai dengan kebutuhan proyek, dilanjutkan dengan kesepakatan antara para pihak, pengikatan perjanjian secara tertulis, hingga pelaksanaan akad yang mengikuti prinsip-prinsip syariah.
+                  Skema alur akad mencakup tahapan-tahapan yang sistematis, dimulai dari penentuan
+                  jenis akad yang sesuai dengan kebutuhan proyek, dilanjutkan dengan kesepakatan
+                  antara para pihak, pengikatan perjanjian secara tertulis, hingga pelaksanaan akad
+                  yang mengikuti prinsip-prinsip syariah.
                 </p>
               </div>
               <div className="flex justify-center w-full">
-                <Image
-                  src={schemaTwo}
-                  alt="Schema Two"
-                  className="w-full max-w-[1026px] object-contain"
-                />
+                <div ref={fsSchemaTwo} className="w-full max-w-[1026px] relative">
+                  <div
+                    className="w-12 h-12 p-2 absolute top-0 right-0 border rounded-md bg-white shadow-md hover:bg-gray-100 cursor-pointer"
+                    onClick={() => {
+                      if (document.fullscreenElement) {
+                        document.exitFullscreen();
+                        setFullscreen(false);
+                      } else {
+                        fsSchemaTwo.current?.requestFullscreen();
+                        setFullscreen(true);
+                      }
+                    }}
+                  >
+                    {fullscreen ? (
+                      <RiZoomOutLine className="w-full h-full" />
+                    ) : (
+                      <RiZoomInLine className="w-full h-full" />
+                    )}
+                  </div>
+                  <Image src={schemaTwo} alt="Schema Two" className="w-full object-contain" />
+                </div>
               </div>
             </div>
           </div>

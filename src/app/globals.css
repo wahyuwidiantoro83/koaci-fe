@@ -94,3 +94,34 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+div:fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black; /* Optional: makes fullscreen background black */
+  width: 100vw;
+  height: 100vh;
+}
+
+div:fullscreen img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Safari fallback */
+div:-webkit-full-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+div:-webkit-full-screen img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

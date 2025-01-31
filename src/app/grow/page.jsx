@@ -120,8 +120,7 @@ const Grow = (props) => {
           <div className="flex flex-col px-4 md:px-24 py-16 gap-4 w-full items-center">
             <span className="bg-[#1F98DB] text-white px-10 py-2 rounded-full">Grow With Koaci</span>
             <p className="text-2xl text-center w-full mb-8 md:mb-20 font-normal">
-              Grow With Koaci adalah platform edukasi dan kolaborasi <br /> untuk investasi dan
-              bisnis syariah.
+              Grow With Koaci adalah wadah untuk tumbuh bersama dalam kebaikan.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center w-full gap-16">
               <div className="flex w-full max-w-72 h-[26rem] relative overflow-hidden rounded-lg">
@@ -171,11 +170,10 @@ const Grow = (props) => {
                     <span className="flex w-8 h-8 rounded-full justify-center items-center bg-white">
                       <span className="w-2 h-2 rounded-full bg-[#818181]"></span>
                     </span>
-                    <span className="text-xs">Media Belajar Keuangan</span>
+                    <span className="text-xs">Membangun relasi</span>
                   </div>
                   <p className="font-light">
-                    Grow With Koaci merupakan tempat membangun jaringan dengan pebisnis dan
-                    investor.
+                  Grow With Koaci merupakan tempat membangun jaringan dengan pebisnis dan investor.
                   </p>
                 </div>
               </div>

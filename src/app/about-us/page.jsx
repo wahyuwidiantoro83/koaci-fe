@@ -3,6 +3,8 @@
 import Layout from "@/components/layout";
 import Image from "next/image";
 import personOne from "@/images/person_1.png";
+import personTwo from "@/images/person_2.png";
+import personThree from "@/images/person_3.png";
 import AboutUS from "@/images/bg_about_us.png";
 import smallLogo from "@/images/logo_simple.png";
 
@@ -120,42 +122,27 @@ const About = () => {
                 <p className="text-center font-medium text-2xl">Norman Ibrahim Sultan</p>
                 <p className="text-center font-medium text-2xl italic">Founder & CEO</p>
                 <p className="text-justify font-light">
-                  Lulusan kampus POLBAN program studi Teknik Informatika. Berpengalaman bekerja di
-                  perusahaan software house, properti, dan asuransi selama 1 tahun, serta
-                  berpengalaman menjalankan usaha koperasi selama 1 tahun. Aktif mengikuti
-                  organisasi kampus sebagai ketua angkatan POLBAN Archery 2017, serta menjabat
-                  sebagai Ketua BEM POLBAN periode 2018/2019. Serta aktif organisasi pasca lulus
-                  sebagai kepala divisi hubungan almamater Ikatan Keluarga Alumni POLBAN (IKAPOLBAN)
-                  2021
+                Lulusan kampus POLBAN tahun 2020 program studi D3 Teknik Informatika. Berpengalaman sebagai full-stack developer dan marketing di perusahaan software house, properti, dan asuransi selama 1 tahun. Berpengalaman menjalankan usaha koperasi selama 1 tahun sebagai Kepala Manajemen. Aktif mengikuti organisasi kampus sebagai ketua angkatan POLBAN Archery 2017, dan Ketua BEM POLBAN periode 2018/2019, serta mengikuti organisasi pasca lulus sebagai kepala divisi hubungan almamater Ikatan Keluarga Alumni POLBAN (IKAPOLBAN) 2021. Mengemban amanah di Koaci dari awal pendirian pada tahun 2020.
                 </p>
               </div>
               <div className="flex max-w-96 flex-col gap-4">
                 <div className=" w-full aspect-square overflow-hidden rounded-sm">
-                  <Image className="w-full" src={personOne} alt="Person One" />
+                  <Image className="w-full" src={personTwo} alt="Person One" />
                 </div>
                 <p className="text-center font-medium text-2xl">Syarif Mawardi Putra</p>
                 <p className="text-center font-medium text-2xl italic">Co-Founder & COO</p>
                 <p className="text-justify font-light">
-                  Lulusan kampus UNISBA program studi Matematika dengan predikat Cum Laude, disertai
-                  menjadi asisten dosen praktikum matematika. Aktif mengikuti kegiatan organisasi
-                  kampus sebagai ketua angkatan Fakultas MIPA 2017 UNISBA, serta tergabung dengan
-                  ILM MIPA sebagai Koordinator Wilayah Jawa Barat, dan menjabat sebagai wakil ketua
-                  BEM Fakultas MIPA periode 2019/2020. Berpengalaman menjalankan bisnis F&B selama 1
-                  tahun, serta menjadi konsultan bisnis.
+                Lulusan kampus UNISBA 2021 program studi S1 Matematika dengan predikat Cum Laude, disertai menjadi asisten dosen praktikum matematika. Berpengalaman menjalankan usaha F&B selama 1 tahun, serta menjadi konsultan bisnis. Aktif mengikuti organisasi kampus sebagai ketua angkatan Fakultas MIPA 2017 UNISBA, tergabung dengan ILM MIPA sebagai Koordinator Wilayah Jawa Barat, dan wakil ketua BEM Fakultas MIPA periode 2019/2020. Mengemban amanah di Koaci dari tahun 2022, dengan latar belakang rekan SMA dari Norman Ibrahim Sultan (Founder & CEO).
                 </p>
               </div>
               <div className="flex max-w-96 flex-col gap-4">
                 <div className=" w-full aspect-square overflow-hidden rounded-sm">
-                  <Image className="w-full" src={personOne} alt="Person One" />
+                  <Image className="w-full" src={personThree} alt="Person One" />
                 </div>
                 <p className="text-center font-medium text-2xl">Septian Dwi Priyatmoko</p>
                 <p className="text-center font-medium text-2xl italic">Co-Founder & CFO</p>
                 <p className="text-justify font-light">
-                  Lulusan POLBAN tahun 2021 program studi D4 Akuntansi Pemerintahan dengan predikat
-                  Cum Laude. Aktif berorganisasi dan pernah menjabat sebagai Ketua Himpunan
-                  Mahasiswa Akuntansi POLBAN periode 2018/2019. Berpengalaman sebagai Akuntan di
-                  perusahaan manufaktur, jasa, dan pariwisata. Sudah tersertifikasi sebagai Teknisi
-                  Akuntan Yunior.
+                Lulusan kampus POLBAN tahun 2021 program studi D4 Akuntansi Manajemen Pemerintahan dengan predikat Cum Laude. Berpengalaman sebagai Akuntan di perusahaan manufaktur, jasa, dan pariwisata selama 1 tahun. Sudah tersertifikasi sebagai Teknisi Akuntan Yunior. Berpengalaman menjalankan usaha fashion, cuci sepatu, dan budidaya maggot selama 3 tahun. Aktif mengikuti organisasi sebagai Ketua Himpunan Mahasiswa Akuntansi POLBAN periode 2018/2019. Mengemban amanah di Koaci dari tahun 2023, dengan latar belakang rekan kampus POLBAN dari Norman Ibrahim Sultan (Founder & CEO).
                 </p>
               </div>
             </div>

@@ -30,13 +30,13 @@ const Footer = (props) => {
           <div className="flex gap-4 text-sm text-justify">
             <div>
               <p className="font-normal mb-1">Email</p>
-              <a href="mailto:koaci.sinergi@gmail.com">
-                <p className="font-light">koaci.sinergi@gmail.com</p>
+              <a href="mailto:administrasi@koaci.id">
+                <p className="font-light">administrasi@koaci.id</p>
               </a>
             </div>
             <div>
               <p className="font-normal mb-1">Telephone</p>
-              <p className="font-light">+62 882 1945 2787</p>
+              <p className="font-light">+62 821-2608-1955</p>
             </div>
           </div>
           <div className="flex flex-col">
@@ -148,35 +148,25 @@ const Footer = (props) => {
         <h2 className="text-2xl md:text-4xl mb-2 font-normal">DISCLAIMER</h2>
         <div className="flex flex-col gap-4 font-light text-sm text-justify">
           <p>
-            Layanan pembiayaan dan investasi berdasarkan prinsip syariah berbasis proyek merupakan
-            kesepakatan perdata antara pemberi pembiayaan (investor) dengan penerima pembiayaan
-            (pebisnis) sehingga segala resiko yang timbul dari kesepakatan tersebut ditanggung
-            sepenuhnya oleh masing-masing pihak.
+          Layanan Pembiayaan Berbasis Proyek (Project Financing) dan Kemitraan (Cashflow Financing) berdasarkan prinsip syariah merupakan kesepakatan perdata antara pemberi pembiayaan (investor) dengan penerima pembiayaan (pebisnis) sehingga segala resiko yang timbul dari kesepakatan tersebut ditanggung sepenuhnya oleh masing-masing pihak.
           </p>
           <p>
-            Risiko pembiayaan atau gagal bayar ditanggung sepenuhnya oleh investor. Tidak ada
-            lembaga atau otoritas negara yang bertanggung jawab atas resiko gagal bayar ini. PT
-            Koaci Sinergi Indonesia menyediakan wadah pertemuan tertutup antara investor dan
-            pebisnis, serta menjadi pihak penengah dan siap membantu pihak yang dirugikan hingga ke
-            jalur hukum.
+          PT Koaci Sinergi Indonesia adalah penyedia layanan yang mempertemukan antara investor dan beneficiary. Apabila terjadi pelanggaran baik itu atas kesepakatan kedua belah pihak atapun hukum yang berlaku di Negara Keatuan Republik Indonesia, keputusan jalur hukum dikembalikan ke masing-masing pihak dan PT Koaci Sinergi Indonesia tidak menjadi pihak yang menanggung biaya jalur hukum.
           </p>
           <p>
-            Investor yang belum memiliki pengetahuan dan pengalaman terhadap layanan pembiayaan dan
-            investasi ini disarankan agar tidak menggunakan layanan ini.
+          Investor yang belum memiliki pengalaman terhadap layanan pembiayaan dan investasi ini disarankan agar mempelajari mengenai investasi berbasis proyek terlebih dahulu.
           </p>
           <p>
-            Pengguna sebelum menjadi investor atau pebisnis harus membaca dan memahami informasi
-            sebelum membuat keputusan.
+          Pengguna yang belum pernah menjadi investor atau pebisnis harus membaca dan memahami informasi terkait S&K pengguna layanan yang disedia oleh PT Koaci Sinergi Indonesia sebelum membuat keputusan.
           </p>
           <p>
-            Setiap kecurangan yang terjadi secara digital di dunia maya dapat diketahui oleh
-            masyarakat luas di media sosial.
+          Setiap kecurangan yang terjadi secara digital di dunia maya dapat diketahui oleh masyarakat luas di media sosial.
           </p>
           <p>
-            Penyelenggara (PT Koaci Sinergi Indonesia) dengan persetujuan dari masing-masing
-            pengguna (investor ataupun pebisnis) dapat mengakses, memperoleh, menyimpan, mengelola
-            dan.atau menggunakan data pribadi pengguna pada perangkat lunak maupun perangkat keras
-            dengan memberitahukan tujuan, batasan, dan mekanisme pemanfaatan data kepada pengguna
+          Penyelenggara (PT Koaci Sinergi Indonesia) dengan persetujuan dari masing-masing pengguna (investor ataupun pebisnis) dapat mengakses, memperoleh, menyimpan, mengelola dan.atau menggunakan data pribadi pengguna pada perangkat lunak maupun perangkat keras dengan memberitahukan tujuan, batasan, dan mekanisme pemanfaatan data kepada pengguna.
+          </p>
+          <p>
+          Setiap kesepakatan atas layanan yang telah disepakati dan ditandatangani oleh investor tidak dapat dibatalkan ditengah keberjalanan proyek hingga proyek berakhir, kecuali terjadi wanprestasi.
           </p>
         </div>
         <div className="flex flex-col text-sm text-justify">

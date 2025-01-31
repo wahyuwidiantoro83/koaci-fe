@@ -118,7 +118,7 @@ const Navbar = ({ scrolling, openMoreMenu }) => {
             }`}
             onClick={() => {
               window.open(
-                "https://api.whatsapp.com/send/?phone=6282229427833&text=hallo&type=phone_number&app_absent=0",
+                "http://wa.me/6282126081955?text=Halo,%20apakah%20saya%20bisa%20mendapatkan%20informasi%20mengenai%20investasi?",
                 "__blank"
               );
             }}

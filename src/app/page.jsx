@@ -190,21 +190,22 @@ export default function Home(props) {
                     <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
                       <div className="flex flex-col gap-1">
                         <p className="text-2xl font-medium text-[#1459A8]">Nur Islami Javad</p>
-                        <p className="text-sm">CEO at Sharing Vision</p>
+                        <p className="text-sm">CDEF at Sharing Vision & Founder Invst.id</p>
                         <Rating value={5} starCount={5} />
                       </div>
                       <p className="text-sm font-light">
-                        "Koaci sangat bagus dan recommended! Monitoring dan pembukuannya dilakukan
+                        "Koaci sangat profesional dan disiplin dalam monitoring, pembukuan, serta menjalankan timeline. Timnya kolaboratif, terbuka terhadap masukan, dan berkomitmen pada peningkatan kualitas."
+                        {/* "Koaci sangat bagus dan recommended! Monitoring dan pembukuannya dilakukan
                         dengan disiplin, sehingga memberikan rasa aman. Mereka sangat profesional
                         dalam menjalankan timeline dan mendampingi business owner. Selain itu,
                         timnya kolaboratif dan terbuka terhadap masukan serta terus berkomitmen pada
-                        peningkatan kualitas."
+                        peningkatan kualitas." */}
                       </p>
                     </div>
                   </CarouselItem>
 
                   {/* Slide 2 */}
-                  <CarouselItem className={`md:basis-[80%] md:pl-10`}>
+                  {/* <CarouselItem className={`md:basis-[80%] md:pl-10`}>
                     <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
                       <div className="flex flex-col gap-1">
                         <p className="text-2xl font-medium text-[#1459A8]">Jane Doe</p>
@@ -216,10 +217,10 @@ export default function Home(props) {
                         iure architecto dolorum quidem."
                       </p>
                     </div>
-                  </CarouselItem>
+                  </CarouselItem> */}
 
                   {/* Slide 3 */}
-                  <CarouselItem className={`md:basis-[80%] md:pl-10`}>
+                  {/* <CarouselItem className={`md:basis-[80%] md:pl-10`}>
                     <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
                       <div className="flex flex-col gap-1">
                         <p className="text-2xl font-medium text-[#1459A8]">John Smith</p>
@@ -231,7 +232,7 @@ export default function Home(props) {
                         iste eos pariatur dolorum."
                       </p>
                     </div>
-                  </CarouselItem>
+                  </CarouselItem> */}
                 </CarouselContent>
               </Carousel>
               <div className="flex gap-4 justify-center">

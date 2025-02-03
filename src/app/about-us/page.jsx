@@ -29,25 +29,23 @@ const About = () => {
           <div className="flex flex-col md:flex-row w-full items-center px-4 py-16 md:py-28 md:px-24 gap-8 md:gap-20">
             <div className="flex w-full">
               <p className="text-4xl font-light">
-                "<span className="text-[#2F63B0] font-normal">KOACI</span> adalah platform <br></br>{" "}
-                layanan financial antara <br></br> pebisnis dan investor <br></br> berbasis syariah"
+                "<span className="text-[#2F63B0] font-normal">KOACI</span> merupakan ekosistem <br></br>{" "}
+                keuangan syariah berbasis<br></br>komunitas untuk pertumbuhan<br></br>berjama'ah"
               </p>
             </div>
             <div className="flex w-full flex-col gap-4">
               <h2 className="text-2xl md:text-3xl font-normal">Apa Itu Koaci?</h2>
               <div className="mr-15 font-light">
                 <p>
-                  Perusahaan investasi syariah berbasis komunitas atau Crowdfunding di Indonesia
-                  yang didedikasikan untuk memajukan nilai-nilai ekonomi Islam. Koaci berfokus pada
-                  pendanaan bisnis syariah yang berkelanjutan, menyediakan solusi keuangan yang adil
-                  dan aman dengan melakukan layanan solusi bisnis pada perusahaan yang diberikan
-                  pendanaan.
+                Perusahaan financial services syariah berbasis komunitas / Close-loop di Indonesia yang didedikasikan untuk memajukan nilai-nilai ekonomi syariah. Koaci berfokus pada pendanaan bisnis syariah yang berkelanjutan, menyediakan solusi keuangan yang adil dan aman dengan melakukan layanan solusi bisnis pada perusahaan yang diberikan pendanaan. 
                 </p>
                 <br />
                 <p>
-                  Bukan hanya pada pendanaan, kini Koaci juga berfokus pada memberikan layanan
-                  Solusi Bisnis untuk para mitra kami yang memiliki kendala pada pengelolaan
-                  operasional, keuangan, dan bagian HR
+                Selain memberikan pendanaan, Koaci memberikan layanan solusi bisnis untuk para mitra yang memiliki kendala pada pengelolaan operasional, keuangan, dan bagian manajemen atau HR.
+                </p>
+                <br />
+                <p>
+                Koaci juga membangun ekosistem yang menunjang setiap pihak dalam berkembang bersama dalam memajukan nilai-nilai ekonomi syariah, menjalankan syariat secara berjama’ah menjadi solusi utama untuk membangun ekosistem yang penuh keberkahan. 
                 </p>
               </div>
             </div>
@@ -57,8 +55,7 @@ const About = () => {
           <div className="flex flex-1 flex-col gap-4">
             <h3 className="text-2xl md:text-3xl font-normal">Visi Koaci</h3>
             <p className="font-light">
-              Berkontribusi terhadap pengembangan ekonomi syariah, dengan membangun ekosistem yang
-              bermanfaat disertai pelayanan terbaik dan dapat diandalkan oleh masyarakat Indonesia
+            Menanamkan nilai pemahaman dalam setiap kemitraan yang akan dijalankan, nilai keterbukaan dan kepercayaan dalam pelaksanaan, sehingga dapat memperoleh nilai keadilan dan keridhoan setelah kerjasama dilaksanakan
             </p>
           </div>
           <div className="flex flex-1 flex-col gap-4">
@@ -146,53 +143,6 @@ const About = () => {
                 </p>
               </div>
             </div>
-            {/* <div className="flex flex-col md:flex-row w-full justify-between gap-16 md:gap-32">
-              <div className="flex flex-col gap-4">
-                <div className=" w-full aspect-square overflow-hidden rounded-sm">
-                  <Image className="w-full" src={personOne} alt="Person One" />
-                </div>
-                <p className="text-center font-medium text-2xl">Norman Ibrahim Sultan</p>
-                <p className="text-center font-medium text-2xl italic">Founder & CEO</p>
-                <p className="text-justify font-light">
-                  Lulusan kampus POLBAN program studi Teknik Informatika. Berpengalaman bekerja di
-                  perusahaan software house, properti, dan asuransi selama 1 tahun, serta
-                  berpengalaman menjalankan usaha koperasi selama 1 tahun. Aktif mengikuti
-                  organisasi kampus sebagai ketua angkatan POLBAN Archery 2017, serta menjabat
-                  sebagai Ketua BEM POLBAN periode 2018/2019. Serta aktif organisasi pasca lulus
-                  sebagai kepala divisi hubungan almamater Ikatan Keluarga Alumni POLBAN (IKAPOLBAN)
-                  2021
-                </p>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className=" w-full aspect-square overflow-hidden rounded-sm">
-                  <Image className="w-full" src={personOne} alt="Person One" />
-                </div>
-                <p className="text-center font-medium text-2xl">Syarif Mawardi Putra</p>
-                <p className="text-center font-medium text-2xl italic">Co-Founder & COO</p>
-                <p className="text-justify font-light">
-                  Lulusan kampus UNISBA program studi Matematika dengan predikat Cum Laude, disertai
-                  menjadi asisten dosen praktikum matematika. Aktif mengikuti kegiatan organisasi
-                  kampus sebagai ketua angkatan Fakultas MIPA 2017 UNISBA, serta tergabung dengan
-                  ILM MIPA sebagai Koordinator Wilayah Jawa Barat, dan menjabat sebagai wakil ketua
-                  BEM Fakultas MIPA periode 2019/2020. Berpengalaman menjalankan bisnis F&B selama 1
-                  tahun, serta menjadi konsultan bisnis.
-                </p>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className=" w-full aspect-square overflow-hidden rounded-sm">
-                  <Image className="w-full" src={personOne} alt="Person One" />
-                </div>
-                <p className="text-center font-medium text-2xl">Septian Dwi Priyatmoko</p>
-                <p className="text-center font-medium text-2xl italic">Co-Founder & CFO</p>
-                <p className="text-justify font-light">
-                  Lulusan POLBAN tahun 2021 program studi D4 Akuntansi Pemerintahan dengan predikat
-                  Cum Laude. Aktif berorganisasi dan pernah menjabat sebagai Ketua Himpunan
-                  Mahasiswa Akuntansi POLBAN periode 2018/2019. Berpengalaman sebagai Akuntan di
-                  perusahaan manufaktur, jasa, dan pariwisata. Sudah tersertifikasi sebagai Teknisi
-                  Akuntan Yunior.
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
       </Layout>

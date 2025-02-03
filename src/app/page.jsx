@@ -30,6 +30,7 @@ import Layout from "@/components/layout";
 import Autoplay from "embla-carousel-autoplay";
 import { useRouter } from "next/navigation";
 import Rating from "@/components/rating";
+import NProgress from "nprogress";
 
 export default function Home(props) {
   const router = useRouter();
@@ -340,10 +341,7 @@ export default function Home(props) {
                   Skema Project Financing
                 </h2>
                 <p className="font-light text-sm md:text-lg">
-                  Berikut adalah skema atau tahapan yang kami gunakan dalam proses pembiayaan proyek
-                  investasi berbasis syariah. Setiap langkah dirancang untuk memastikan kesesuaian
-                  dengan prinsip-prinsip syariah, transparansi, serta memberikan manfaat maksimal
-                  bagi semua pihak yang terlibat, baik investor maupun pengelola proyek.
+                  Berikut ini adalah skema project financing, skema ini merupakan salah satu metode pembiayaan yang diterapkan Koaci. Dimana melakukan pembiayaan yang hanya tertuju pada proyek yang didanai. Setiap tahapan dirancang untuk memastikan kesesuaian dengan prinsip-prinsip syariah, transparansi, serta memberikan manfaat maksimal bagi investor dan pengelola proyek.
                 </p>
               </div>
             </div>
@@ -353,10 +351,7 @@ export default function Home(props) {
                   Skema Alur Akad
                 </h2>
                 <p className="font-light text-sm md:text-lg">
-                  Skema alur akad mencakup tahapan-tahapan yang sistematis, dimulai dari penentuan
-                  jenis akad yang sesuai dengan kebutuhan proyek, dilanjutkan dengan kesepakatan
-                  antara para pihak, pengikatan perjanjian secara tertulis, hingga pelaksanaan akad
-                  yang mengikuti prinsip-prinsip syariah.
+                Koaci menerapkan beberapa skema alur akad, di antaranya mudharabah, musyarakah, murabahah, ijarah dan wakalah. Dari berbagai skema tersebut, mudharabah, wakalah, dan murabahah merupakan yang paling sering digunakan. Prosesnya mencakup penentuan jenis akad yang sesuai dengan kebutuhan proyek, kesepakatan antara para pihak, pengikatan perjanjian secara tertulis, hingga pelaksanaan akad yang mengikuti prinsip-prinsip syariah.
                 </p>
               </div>
               <div className="flex justify-center w-full">

@@ -30,8 +30,8 @@ const Footer = (props) => {
           <div className="flex gap-4 text-sm text-justify">
             <div>
               <p className="font-normal mb-1">Email</p>
-              <a href="mailto:administrasi@koaci.id">
-                <p className="font-light">administrasi@koaci.id</p>
+              <a href="mailto:marketing@koaci.id">
+                <p className="font-light">marketing@koaci.id</p>
               </a>
             </div>
             <div>
@@ -42,13 +42,13 @@ const Footer = (props) => {
           <div className="flex flex-col">
             <p className="font-normal text-sm mb-1">Social Media</p>
             <div className="flex gap-2">
-              <a href="https://www.instagram.com/koaci_investasi/" target="_blank">
+              <a href="https://www.instagram.com/koaci_ecosystem/" target="_blank">
                 <RiInstagramLine className="w-7 h-7" />
               </a>
               <a href="https://www.linkedin.com/company/koaci-id/" target="_blank">
                 <RiLinkedinBoxLine className="w-7 h-7" />
               </a>
-              <a href="https://www.tiktok.com/@koaci_investasi" target="_blank">
+              <a href="https://www.tiktok.com/@koaci_ecosystem" target="_blank">
                 <RiTiktokLine className="w-7 h-7" />
               </a>
             </div>

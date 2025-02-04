@@ -15,11 +15,11 @@ const Navbar = ({ scrolling, openMoreMenu }) => {
   return (
     <>
       <nav
-        className={`flex w-full justify-between py-[37px] px-4 md:px-24 h-20 fixed top-0 left-0 z-50 ${
+        className={`flex w-full justify-between py-[37px] px-4 lg:px-20 h-20 fixed top-0 left-0 z-50 ${
           scrolling ? "bg-white text-gray-700 shadow-md" : "text-gray-200"
         } transition-all duration-200 `}
       >
-        <div className="flex w-full justify-between md:justify-normal items-center md:gap-12">
+        <div className="flex w-full justify-between lg:justify-normal items-center lg:gap-12">
           <Image
             src={scrolling ? logoBlack : logo}
             className="transition-all duration-200 cursor-pointer"
@@ -30,12 +30,12 @@ const Navbar = ({ scrolling, openMoreMenu }) => {
             }}
           />
           <RiMenuFill
-            className="md:hidden w-8 h-8 cursor-pointer"
+            className="lg:hidden w-8 h-8 cursor-pointer"
             onClick={() => {
               openMoreMenu();
             }}
           />
-          <div className="hidden md:flex gap-10 text-base">
+          <div className="hidden lg:flex gap-10 text-base">
             <div
               className="flex flex-col group overflow-hidden relative cursor-pointer"
               onClick={() => {
@@ -102,7 +102,7 @@ const Navbar = ({ scrolling, openMoreMenu }) => {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           <Button
             className="bg-green-400 text-gray-100 hover:bg-green-500 hover:text-gray-100"
             onClick={() => {

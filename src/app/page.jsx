@@ -54,13 +54,14 @@ export default function Home(props) {
   return (
     <>
       <Layout>
+        {/* Hero Section */}
         <div className="flex w-full h-svh items-center relative">
           <Image
             src={heroImage}
             alt="Hero Image"
             className="absolute top-0 left-0 w-full h-full object-cover"
           />
-          <div className="flex flex-col items-center md:items-start gap-4 md:gap-6 z-10 px-4 md:px-24">
+          <div className="flex flex-col items-center md:items-start gap-4 md:gap-6 z-10 px-4 md:px-20">
             <h1 className="text-2xl md:text-[2.75rem] md:leading-[3rem] font-medium text-center md:text-start w-full md:w-[60%] text-gray-100">
               Bangun Masa Depan Finansial Anda Bersama Kami
             </h1>
@@ -196,11 +197,6 @@ export default function Home(props) {
                       </div>
                       <p className="text-sm font-light">
                         "Koaci sangat profesional dan disiplin dalam monitoring, pembukuan, serta menjalankan timeline. Timnya kolaboratif, terbuka terhadap masukan, dan berkomitmen pada peningkatan kualitas."
-                        {/* "Koaci sangat bagus dan recommended! Monitoring dan pembukuannya dilakukan
-                        dengan disiplin, sehingga memberikan rasa aman. Mereka sangat profesional
-                        dalam menjalankan timeline dan mendampingi business owner. Selain itu,
-                        timnya kolaboratif dan terbuka terhadap masukan serta terus berkomitmen pada
-                        peningkatan kualitas." */}
                       </p>
                     </div>
                   </CarouselItem>

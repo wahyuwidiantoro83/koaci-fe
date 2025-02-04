@@ -82,13 +82,13 @@ const Layout = (props) => {
                 className="text-2xl font-light hover:font-normal cursor-pointer"
                 href={"/about-us"}
               >
-                About Us
+                Tentang Kami
               </Link>
               <Link
                 className="text-2xl font-light hover:font-normal cursor-pointer"
                 href={"/register"}
               >
-                Register
+                Daftar Sekarang
               </Link>
               <Link
                 className="text-2xl font-light hover:font-normal cursor-pointer"

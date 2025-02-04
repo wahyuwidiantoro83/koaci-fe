@@ -29,8 +29,8 @@ const About = () => {
           <div className="flex flex-col md:flex-row w-full items-center px-4 py-16 md:py-28 md:px-24 gap-8 md:gap-20">
             <div className="flex w-full">
               <p className="text-4xl font-light">
-                "<span className="text-[#2F63B0] font-normal">KOACI</span> merupakan ekosistem <br></br>{" "}
-                keuangan syariah berbasis<br></br>komunitas untuk pertumbuhan<br></br>berjama'ah"
+                "<span className="text-[#2F63B0] font-normal">KOACI</span> adalah sebuah <br></br>{" "}
+                wadah untuk tumbuh<br></br> bersama"
               </p>
             </div>
             <div className="flex w-full flex-col gap-4">

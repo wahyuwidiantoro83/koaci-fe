@@ -13,12 +13,12 @@ const FAQ = (props) => {
   return (
     <>
       <Layout>
-        <div className="flex items-end w-full px-4 pb-12 md:px-24 h-56 bg-gradient-to-r from-[#1E74D7] from-[0%] via-[#1F98DB] via-[54%] to-[#1EE0B3] to-100%">
+        <div className="flex items-end w-full px-4 pb-12 lg:px-24 h-56 bg-gradient-to-r from-[#1E74D7] from-[0%] via-[#1F98DB] via-[54%] to-[#1EE0B3] to-100%">
           <h1 className="text-xl md:text-3xl text-white font-normal">
             Frequently Asked Questions (F.A.Q)
           </h1>
         </div>
-        <div className="flex w-full justify-center px-4 py-16 md:px-24">
+        <div className="flex w-full justify-center px-4 py-16 lg:px-24">
           <Tabs defaultValue="umum" className="flex flex-col w-full items-center">
             <TabsList className="flex w-fit flex-wrap place-items-center gap-2 mb-8 md:mb-16 h-full bg-[#DBF0FC]">
               <TabsTrigger

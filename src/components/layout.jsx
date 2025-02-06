@@ -4,7 +4,8 @@ import Footer from "@/components/footer";
 import logoBlack from "@/images/koaci_slogan_black.png";
 import Image from "next/image";
 import { RiCloseFill } from "react-icons/ri";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { useRouter } from "nextjs-toploader/app";
 import Link from "next/link";
 
 const Layout = (props) => {
@@ -12,7 +13,6 @@ const Layout = (props) => {
   const [moreMenu, setMoreMenu] = useState(false);
   const bodyFrame = useRef();
   const router = useRouter();
-  const urlPath = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,6 +56,7 @@ const Layout = (props) => {
                 width={120}
                 onClick={() => {
                   router.push("/");
+                  setMoreMenu((prev) => !prev);
                 }}
               />
               <RiCloseFill
@@ -66,27 +67,48 @@ const Layout = (props) => {
               />
             </div>
             <div className="flex flex-col gap-2">
-              <Link className="text-2xl font-light hover:font-normal cursor-pointer" href={"/"}>
+              <Link
+                className="text-2xl font-light hover:font-normal cursor-pointer"
+                href={"/"}
+                onClick={() => {
+                  setMoreMenu((prev) => !prev);
+                }}
+              >
                 Pendanaan
               </Link>
               <Link
                 className="text-2xl font-light hover:font-normal cursor-pointer"
                 href={"/project"}
+                onClick={() => {
+                  setMoreMenu((prev) => !prev);
+                }}
               >
                 Proyek
               </Link>
-              <Link className="text-2xl font-light hover:font-normal cursor-pointer" href={"/faq"}>
+              <Link
+                className="text-2xl font-light hover:font-normal cursor-pointer"
+                href={"/faq"}
+                onClick={() => {
+                  setMoreMenu((prev) => !prev);
+                }}
+              >
                 F.A.Q
               </Link>
               <Link
                 className="text-2xl font-light hover:font-normal cursor-pointer"
                 href={"/about-us"}
+                onClick={() => {
+                  setMoreMenu((prev) => !prev);
+                }}
               >
                 Tentang Kami
               </Link>
               <Link
                 className="text-2xl font-light hover:font-normal cursor-pointer"
                 href={"/register"}
+                onClick={() => {
+                  setMoreMenu((prev) => !prev);
+                }}
               >
                 Daftar Sekarang
               </Link>

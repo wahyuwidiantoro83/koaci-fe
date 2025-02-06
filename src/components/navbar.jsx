@@ -5,7 +5,8 @@ import logo from "@/images/koaci_slogan.png";
 import logoBlack from "@/images/koaci_slogan_black.png";
 import { Button } from "@/components/ui/button";
 import { RiCloseFill, RiMenuFill, RiWhatsappLine } from "react-icons/ri";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { useRouter } from "nextjs-toploader/app";
 import { useState } from "react";
 
 const Navbar = ({ scrolling, openMoreMenu }) => {

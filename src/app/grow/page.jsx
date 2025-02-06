@@ -89,7 +89,7 @@ const Grow = (props) => {
             alt="Background Grow"
             className="w-full h-full object-fill absolute top-0 left-0 z-10"
           />
-          <div className="flex flex-col-reverse md:flex-row w-full px-4 md:px-24 z-20 gap-8">
+          <div className="flex flex-col-reverse md:flex-row w-full px-4 lg:px-24 z-20 gap-8">
             <div className="flex flex-col items-center md:items-start w-full md:w-[50%] gap-4 z-20 text-white">
               <h1 className="text-2xl md:text-4xl font-medium text-center md:text-start">
                 Mari Bertumbuh Membangun Jaringan Bersama Kami
@@ -110,24 +110,24 @@ const Grow = (props) => {
               <Image
                 src={growLogo}
                 alt="Grow Logo"
-                className="w-full object-contain z-20 md:absolute -top-20 left-0"
+                className="w-full object-contain z-20 md:absolute md:-top-12 lg:-top-20 left-0"
               />
             </div>
           </div>
         </div>
 
         <div className="flex w-full">
-          <div className="flex flex-col px-4 md:px-24 py-16 gap-4 w-full items-center">
+          <div className="flex flex-col px-4 lg:px-24 py-16 gap-4 w-full items-center">
             <span className="bg-[#1F98DB] text-white px-10 py-2 rounded-full">Grow With Koaci</span>
-            <p className="text-2xl text-center w-full mb-8 md:mb-20 font-normal">
+            <p className="text-2xl text-center w-full mb-8 md:mb-10 lg:mb-20 font-normal">
               Grow With Koaci adalah wadah untuk tumbuh bersama dalam kebaikan.
             </p>
-            <div className="flex flex-col md:flex-row justify-center items-center w-full gap-16">
+            <div className="flex flex-col md:flex-row justify-center items-center w-full gap-10 md:gap-8 lg:gap-16">
               <div className="flex w-full max-w-72 h-[26rem] relative overflow-hidden rounded-lg">
                 <Image
                   src={growOne}
                   alt="Grow One"
-                  className="w-full object-cover absolute bottom-0 left-0"
+                  className="w-full h-full object-cover absolute left-0 top-0"
                 />
                 <div className="flex flex-col gap-4 p-4 w-full rounded-md z-20 text-white">
                   <div className="flex gap-4 items-center">
@@ -145,7 +145,7 @@ const Grow = (props) => {
                 <Image
                   src={growTwo}
                   alt="Grow Two"
-                  className="w-full object-cover absolute top-0 left-0"
+                  className="w-full h-full object-cover absolute top-0 left-0"
                 />
                 <div className="flex flex-col gap-4 p-4 w-full rounded-md z-20 text-white">
                   <div className="flex gap-4 items-center">
@@ -163,7 +163,7 @@ const Grow = (props) => {
                 <Image
                   src={growThree}
                   alt="Grow Three"
-                  className="w-full object-cover absolute top-0 left-0"
+                  className="w-full h-full object-cover absolute top-0 left-0"
                 />
                 <div className="flex flex-col gap-4 p-4 w-full rounded-md z-20 text-white">
                   <div className="flex gap-4 items-center">
@@ -173,7 +173,8 @@ const Grow = (props) => {
                     <span className="text-xs">Membangun relasi</span>
                   </div>
                   <p className="font-light">
-                  Grow With Koaci merupakan tempat membangun jaringan dengan pebisnis dan investor.
+                    Grow With Koaci merupakan tempat membangun jaringan dengan pebisnis dan
+                    investor.
                   </p>
                 </div>
               </div>
@@ -192,11 +193,11 @@ const Grow = (props) => {
             alt="ornament"
             className="w-[31rem]  object-contain absolute bottom-0 -left-64"
           />
-          <div className="flex w-full flex-col items-center px-4 md:px-24 py-16">
-            <h2 className="text-2xl md:text-4xl mb-8 md:mb-24 text-center font-normal">
+          <div className="flex w-full flex-col items-center px-4 lg:px-24 py-16">
+            <h2 className="text-2xl md:text-4xl mb-8 lg:mb-24 text-center font-normal">
               Daftar Grow With Koaci Sekarang
             </h2>
-            <div className="flex flex-col gap-2 md:gap-4 w-full md:w-[50%]">
+            <div className="flex flex-col gap-2 md:gap-4 w-full md:w-[70%] lg:w-[50%]">
               <div className="flex flex-col gap-1">
                 <label className="text-xl md:text-2xl font-light" htmlFor="nama_lengkap">
                   Nama Lengkap

@@ -5,7 +5,8 @@ import logoKoaci from "@/images/koaci_slogan.png";
 import Image from "next/image";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
+import { useRouter } from "nextjs-toploader/app";
 import { useState } from "react";
 import {
   AlertDialog,
@@ -71,7 +72,7 @@ const Register = (props) => {
   return (
     <>
       <div className="flex w-full min-h-svh">
-        <div className="flex w-full md:w-[50%] flex-col px-4 md:px-24 py-10 bg-gradient-to-b from-[#1E74D7] from-[10%] to-[#1EE0B3] to-100%">
+        <div className="flex w-full lg:w-[50%] flex-col px-4 lg:px-24 py-10 bg-gradient-to-b from-[#1E74D7] from-[10%] to-[#1EE0B3] to-100%">
           <div
             className="flex items-center mb-8 md:mb-16 text-gray-100 cursor-pointer"
             onClick={() => {
@@ -160,7 +161,7 @@ const Register = (props) => {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex w-[50%]">
+        <div className="hidden lg:flex w-[50%]">
           <Image src={registerImage} alt="Register Image" className="w-full object-cover" />
         </div>
       </div>

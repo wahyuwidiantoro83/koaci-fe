@@ -9,28 +9,17 @@ import achievementTwo from "@/images/pencapaian_2.png";
 import achievementThree from "@/images/pencapaian_3.png";
 import achievementFour from "@/images/pencapaian_4.png";
 import achievementFive from "@/images/pencapaian_5.png";
-import portoOne from "@/images/porto_1.png";
-import portoTwo from "@/images/porto_2.png";
-import portoThree from "@/images/porto_3.png";
-import portoFour from "@/images/porto_4.png";
-import portoFive from "@/images/porto_5.png";
-import portoSix from "@/images/porto_6.png";
-import portoSeven from "@/images/porto_7.png";
-import portoEight from "@/images/porto_8.png";
-import portoNine from "@/images/porto_9.png";
-import portoTen from "@/images/porto_10.png";
 import investFlow from "@/images/investor_flow.png";
 import schemaOne from "@/images/schema_1.png";
 import schemaTwo from "@/images/schema_2.png";
-import { RiArrowRightLine, RiFullscreenLine, RiZoomInLine, RiZoomOutLine } from "react-icons/ri";
+import { RiArrowRightLine, RiZoomInLine, RiZoomOutLine } from "react-icons/ri";
 import { useEffect, useRef, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import TestimonyCard from "@/components/testimonyCard";
 import Layout from "@/components/layout";
 import Autoplay from "embla-carousel-autoplay";
-// import { useRouter } from "next/navigation";
 import { useRouter } from "nextjs-toploader/app";
 import Rating from "@/components/rating";
+import { portfolio, testimony } from "@/data/dummy";
 
 export default function Home(props) {
   const router = useRouter();
@@ -187,60 +176,29 @@ export default function Home(props) {
                 setApi={setApi}
               >
                 <CarouselContent>
-                  {/* Slide 1 */}
-                  <CarouselItem className={`lg:basis-[80%] lg:pl-10`}>
-                    <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
-                      <div className="flex flex-col gap-1">
-                        <p className="text-2xl font-medium text-[#1459A8]">Nur Islami Javad</p>
-                        <p className="text-sm">CDEF at Sharing Vision & Founder Invst.id</p>
-                        <Rating value={5} starCount={5} />
-                      </div>
-                      <p className="text-sm font-light">
-                        "Koaci sangat profesional dan disiplin dalam monitoring, pembukuan, serta
-                        menjalankan timeline. Timnya kolaboratif, terbuka terhadap masukan, dan
-                        berkomitmen pada peningkatan kualitas."
-                      </p>
-                    </div>
-                  </CarouselItem>
-
-                  {/* Slide 2 */}
-                  {/* <CarouselItem className={`md:basis-[80%] md:pl-10`}>
-                    <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
-                      <div className="flex flex-col gap-1">
-                        <p className="text-2xl font-medium text-[#1459A8]">Jane Doe</p>
-                        <p className="text-sm">CEO at Startup Labs</p>
-                        <Rating value={5} starCount={5} />
-                      </div>
-                      <p className="text-sm font-light">
-                        "Aliquid recusandae consequatur exercitationem porro maiores, repellendus
-                        iure architecto dolorum quidem."
-                      </p>
-                    </div>
-                  </CarouselItem> */}
-
-                  {/* Slide 3 */}
-                  {/* <CarouselItem className={`md:basis-[80%] md:pl-10`}>
-                    <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
-                      <div className="flex flex-col gap-1">
-                        <p className="text-2xl font-medium text-[#1459A8]">John Smith</p>
-                        <p className="text-sm">Product Manager at Innovatech</p>
-                        <Rating value={3} starCount={5} />
-                      </div>
-                      <p className="text-sm font-light">
-                        "Temporibus culpa blanditiis excepturi ratione maxime inventore voluptatum
-                        iste eos pariatur dolorum."
-                      </p>
-                    </div>
-                  </CarouselItem> */}
+                  {testimony.map((val, idx) => {
+                    return (
+                      <CarouselItem key={idx} className={`lg:basis-[80%] lg:pl-10`}>
+                        <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
+                          <div className="flex flex-col gap-1">
+                            <p className="text-2xl font-medium text-[#1459A8]">{val.name}</p>
+                            <p className="text-sm">{val.job}</p>
+                            <Rating value={val.rating} starCount={5} />
+                          </div>
+                          <p className="text-sm font-light">{val.comment}</p>
+                        </div>
+                      </CarouselItem>
+                    );
+                  })}
                 </CarouselContent>
               </Carousel>
               <div className="flex gap-4 justify-center">
-                {SLIDES.map((val, idx) => (
+                {testimony.map((val, idx) => (
                   <span
                     key={idx}
-                    onClick={() => api.scrollTo(val)}
+                    onClick={() => api.scrollTo(idx + 1)}
                     className={`rounded-full w-2 h-2 ${
-                      current === val ? "bg-gray-100" : "bg-gray-800"
+                      current === idx + 1 ? "bg-gray-100" : "bg-gray-800"
                     }`}
                   ></span>
                 ))}
@@ -260,36 +218,13 @@ export default function Home(props) {
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 grid-flow-row gap-4 md:gap-6">
-              <div className="flex h-24">
-                <Image src={portoOne} alt="Porto One" className="w-full object-contain" />
-              </div>
-              <div className="flex h-24">
-                <Image src={portoTwo} alt="Porto Two" className="w-full object-contain" />
-              </div>
-              <div className="flex h-24">
-                <Image src={portoThree} alt="Porto Three" className="w-full object-contain" />
-              </div>
-              <div className="flex h-24">
-                <Image src={portoFour} alt="Porto Four" className="w-full object-contain" />
-              </div>
-              <div className="flex h-24">
-                <Image src={portoFive} alt="Porto Five" className="w-full object-contain" />
-              </div>
-              <div className="flex h-24">
-                <Image src={portoSix} alt="Porto Six" className="w-full object-contain" />
-              </div>
-              <div className="flex h-24">
-                <Image src={portoSeven} alt="Porto Seven" className="w-full object-contain" />
-              </div>
-              <div className="flex h-24">
-                <Image src={portoEight} alt="Porto Eight" className="w-full object-contain" />
-              </div>
-              <div className="flex h-24">
-                <Image src={portoNine} alt="Porto Nine" className="w-full object-contain" />
-              </div>
-              <div className="flex h-24">
-                <Image src={portoTen} alt="Porto Ten" className="w-full object-contain" />
-              </div>
+              {portfolio.map((val, idx) => {
+                return (
+                  <div key={idx} className="flex h-24">
+                    <Image src={val.image} alt={val.alt} className="w-full object-contain" />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -156,7 +156,7 @@ const Footer = (props) => {
           <p>
             PT Koaci Sinergi Indonesia adalah penyedia layanan yang mempertemukan antara investor
             dan beneficiary. Apabila terjadi pelanggaran baik itu atas kesepakatan kedua belah pihak
-            atapun hukum yang berlaku di Negara Keatuan Republik Indonesia, keputusan jalur hukum
+            atapun hukum yang berlaku di Negara Kesatuan Republik Indonesia, keputusan jalur hukum
             dikembalikan ke masing-masing pihak dan PT Koaci Sinergi Indonesia tidak menjadi pihak
             yang menanggung biaya jalur hukum.
           </p>

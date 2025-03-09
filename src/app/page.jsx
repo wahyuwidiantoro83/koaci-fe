@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import heroImage from "@/images/hero.png";
+import heroImage from "@/images/hero.webp";
 import signContract from "@/images/sign_contract.jpg";
 import { Button } from "@/components/ui/button";
 import achievementOne from "@/images/pencapaian_1.png";
@@ -14,7 +14,11 @@ import schemaOne from "@/images/schema_1.png";
 import schemaTwo from "@/images/schema_2.png";
 import { RiArrowRightLine, RiZoomInLine, RiZoomOutLine } from "react-icons/ri";
 import { useEffect, useRef, useState } from "react";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import Layout from "@/components/layout";
 import Autoplay from "embla-carousel-autoplay";
 import { useRouter } from "nextjs-toploader/app";
@@ -55,7 +59,8 @@ export default function Home(props) {
               Bangun Masa Depan Finansial Anda Bersama Kami
             </h1>
             <p className="text-sm md:text-base font-light md:font-light text-center md:text-start w-full md:w-[40%] text-gray-100">
-              Kami menyediakan ekosistem syariah yang lebih baik dan dimulai dengan keuangan.
+              Kami menyediakan ekosistem syariah yang lebih baik dan dimulai
+              dengan keuangan.
             </p>
             <div className="flex flex-col md:flex-row gap-2 w-fit md:gap-4">
               <Button
@@ -84,7 +89,9 @@ export default function Home(props) {
           <div className="flex flex-col w-full gap-6">
             <div className="flex flex-col md:flex-row gap-4 lg:gap-6">
               <div className="flex flex-col w-full md:w-[60%]">
-                <h2 className="font-normal mb-2 md:mb-4 text-2xl md:text-3xl">Pencapaian Kami</h2>
+                <h2 className="font-normal mb-2 md:mb-4 text-2xl md:text-3xl">
+                  Pencapaian Kami
+                </h2>
                 <Button
                   size="lg"
                   variant="outline"
@@ -98,19 +105,28 @@ export default function Home(props) {
               </div>
               <div className="flex w-full md:w-[40%]">
                 <p className="font-light text-sm md:text-sm">
-                  Kami selalu berkomitmen untuk memberikan pelayanan terbaik kepada investor kami
-                  dengan memastikan setiap langkah yang kami ambil didasarkan pada transparansi,
-                  integritas, dan dedikasi tinggi untuk mencapai hasil yang optimal serta memenuhi
-                  harapan mereka secara konsisten.
+                  Kami selalu berkomitmen untuk memberikan pelayanan terbaik
+                  kepada investor kami dengan memastikan setiap langkah yang
+                  kami ambil didasarkan pada transparansi, integritas, dan
+                  dedikasi tinggi untuk mencapai hasil yang optimal serta
+                  memenuhi harapan mereka secara konsisten.
                 </p>
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <div className="flex h-48 md:h-72 lg:h-96 overflow-hidden w-full md:w-[60%] border border-gray-400 rounded-2xl">
-                <Image src={achievementOne} className="w-full object-cover" alt="Achievement One" />
+                <Image
+                  src={achievementOne}
+                  className="w-full object-cover"
+                  alt="Achievement One"
+                />
               </div>
               <div className="flex h-48 md:h-72 lg:h-96 overflow-hidden w-full md:w-[40%] border border-gray-400 rounded-2xl">
-                <Image src={achievementTwo} className="w-full object-cover" alt="Achievement One" />
+                <Image
+                  src={achievementTwo}
+                  className="w-full object-cover"
+                  alt="Achievement One"
+                />
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
@@ -149,7 +165,8 @@ export default function Home(props) {
                 Mengapa Harus Menggalang Dana di Koaci?
               </h2>
               <p className="text-base font-light">
-                Kami telah dipercaya oleh para investor sebagai mitra yang handal dan profesional.
+                Kami telah dipercaya oleh para investor sebagai mitra yang
+                handal dan profesional.
               </p>
               <p className="text-base font-semibold">#InvestasiSyariah</p>
               <div className="flex flex-col gap-1">
@@ -163,7 +180,9 @@ export default function Home(props) {
                 >
                   Daftar Sekarang <RiArrowRightLine />
                 </Button>
-                <p className="text-[0.5rem] font-light">*Berdasarkan data Desember 2024</p>
+                <p className="text-[0.5rem] font-light">
+                  *Berdasarkan data Desember 2024
+                </p>
               </div>
             </div>
             <div className="flex flex-col gap-4 md:gap-6 w-full md:w-[60%]">
@@ -178,10 +197,15 @@ export default function Home(props) {
                 <CarouselContent>
                   {testimony.map((val, idx) => {
                     return (
-                      <CarouselItem key={idx} className={`lg:basis-[80%] lg:pl-10`}>
+                      <CarouselItem
+                        key={idx}
+                        className={`lg:basis-[80%] lg:pl-10`}
+                      >
                         <div className="flex flex-col min-h-64 w-full gap-4 md:gap-6 p-6 md:p-8 rounded-lg bg-white shadow-inner">
                           <div className="flex flex-col gap-1">
-                            <p className="text-2xl font-medium text-[#1459A8]">{val.name}</p>
+                            <p className="text-2xl font-medium text-[#1459A8]">
+                              {val.name}
+                            </p>
                             <p className="text-sm">{val.job}</p>
                             <Rating value={val.rating} starCount={5} />
                           </div>
@@ -213,15 +237,20 @@ export default function Home(props) {
                 Portofolio Kami
               </h2>
               <p className="text-center text-base w-full md:w-[553px]">
-                Kami menempatkan kebutuhan Anda sebagai prioritas utama, menghadirkan layanan yang
-                disesuaikan dengan tujuan finansial Anda.
+                Kami menempatkan kebutuhan Anda sebagai prioritas utama,
+                menghadirkan layanan yang disesuaikan dengan tujuan finansial
+                Anda.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 grid-flow-row gap-4 md:gap-6">
               {portfolio.map((val, idx) => {
                 return (
                   <div key={idx} className="flex h-24">
-                    <Image src={val.image} alt={val.alt} className="w-full object-contain" />
+                    <Image
+                      src={val.image}
+                      alt={val.alt}
+                      className="w-full object-contain"
+                    />
                   </div>
                 );
               })}
@@ -234,7 +263,11 @@ export default function Home(props) {
               <h2 className="text-2xl md:text-3xl font-normal text-gray-100">
                 Bagaimana Cara Investasi Melalui Koaci?
               </h2>
-              <Image src={investFlow} alt="Invest Flow" className="object-contain w-full" />
+              <Image
+                src={investFlow}
+                alt="Invest Flow"
+                className="object-contain w-full"
+              />
             </div>
           </div>
           <Image
@@ -247,7 +280,10 @@ export default function Home(props) {
           <div className="flex w-full flex-col items-center">
             <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 w-full mt-3 mb-20 lg:mb-32">
               <div className="flex justify-center w-full">
-                <div ref={fsSchemaOne} className="w-full max-w-[698px] relative">
+                <div
+                  ref={fsSchemaOne}
+                  className="w-full max-w-[698px] relative"
+                >
                   <div
                     className="w-12 h-12 p-2 absolute top-0 right-0 border rounded-md bg-white shadow-md hover:bg-gray-100 cursor-pointer"
                     onClick={() => {
@@ -266,7 +302,11 @@ export default function Home(props) {
                       <RiZoomInLine className="w-full h-full" />
                     )}
                   </div>
-                  <Image src={schemaOne} alt="Schema One" className="w-full object-contain" />
+                  <Image
+                    src={schemaOne}
+                    alt="Schema One"
+                    className="w-full object-contain"
+                  />
                 </div>
               </div>
               <div className="flex flex-col w-full">
@@ -274,11 +314,13 @@ export default function Home(props) {
                   Skema Project Financing
                 </h2>
                 <p className="font-light text-sm md:text-lg">
-                  Berikut ini adalah skema project financing, skema ini merupakan salah satu metode
-                  pembiayaan yang diterapkan Koaci. Dimana melakukan pembiayaan yang hanya tertuju
-                  pada proyek yang didanai. Setiap tahapan dirancang untuk memastikan kesesuaian
-                  dengan prinsip-prinsip syariah, transparansi, serta memberikan manfaat maksimal
-                  bagi investor dan pengelola proyek.
+                  Berikut ini adalah skema project financing, skema ini
+                  merupakan salah satu metode pembiayaan yang diterapkan Koaci.
+                  Dimana melakukan pembiayaan yang hanya tertuju pada proyek
+                  yang didanai. Setiap tahapan dirancang untuk memastikan
+                  kesesuaian dengan prinsip-prinsip syariah, transparansi, serta
+                  memberikan manfaat maksimal bagi investor dan pengelola
+                  proyek.
                 </p>
               </div>
             </div>
@@ -288,16 +330,21 @@ export default function Home(props) {
                   Skema Alur Akad
                 </h2>
                 <p className="font-light text-sm md:text-lg">
-                  Koaci menerapkan beberapa skema alur akad, di antaranya mudharabah, musyarakah,
-                  murabahah, ijarah dan wakalah. Dari berbagai skema tersebut, mudharabah, wakalah,
-                  dan murabahah merupakan yang paling sering digunakan. Prosesnya mencakup penentuan
-                  jenis akad yang sesuai dengan kebutuhan proyek, kesepakatan antara para pihak,
-                  pengikatan perjanjian secara tertulis, hingga pelaksanaan akad yang mengikuti
+                  Koaci menerapkan beberapa skema alur akad, di antaranya
+                  mudharabah, musyarakah, murabahah, ijarah dan wakalah. Dari
+                  berbagai skema tersebut, mudharabah, wakalah, dan murabahah
+                  merupakan yang paling sering digunakan. Prosesnya mencakup
+                  penentuan jenis akad yang sesuai dengan kebutuhan proyek,
+                  kesepakatan antara para pihak, pengikatan perjanjian secara
+                  tertulis, hingga pelaksanaan akad yang mengikuti
                   prinsip-prinsip syariah.
                 </p>
               </div>
               <div className="flex justify-center w-full">
-                <div ref={fsSchemaTwo} className="w-full max-w-[1026px] relative">
+                <div
+                  ref={fsSchemaTwo}
+                  className="w-full max-w-[1026px] relative"
+                >
                   <div
                     className="w-12 h-12 p-2 absolute top-0 right-0 border rounded-md bg-white shadow-md hover:bg-gray-100 cursor-pointer"
                     onClick={() => {
@@ -316,7 +363,11 @@ export default function Home(props) {
                       <RiZoomInLine className="w-full h-full" />
                     )}
                   </div>
-                  <Image src={schemaTwo} alt="Schema Two" className="w-full object-contain" />
+                  <Image
+                    src={schemaTwo}
+                    alt="Schema Two"
+                    className="w-full object-contain"
+                  />
                 </div>
               </div>
             </div>

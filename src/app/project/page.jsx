@@ -32,14 +32,23 @@ const Project = (props) => {
               return (
                 <>
                   <div
-                    className={`h-1 w-full ${idx === 0 ? `hidden md:block` : `hidden`} bg-gray-200`}
+                    className={`h-1 w-full ${
+                      idx === 0 ? `hidden md:block` : `hidden`
+                    } bg-gray-200`}
                   ></div>
-                  <div className="flex flex-col md:flex-row w-full justify-between gap-10 lg:gap-16">
+                  <div
+                    key={idx}
+                    className="flex flex-col md:flex-row w-full justify-between gap-10 lg:gap-16"
+                  >
                     {val.map((value, index) => {
                       return (
-                        <div className="flex w-full md:w-[30%] flex-col gap-4">
+                        <div
+                          key={index}
+                          className="flex w-full md:w-[30%] flex-col gap-4"
+                        >
                           <div className="w-full aspect-square overflow-hidden">
                             <Image
+                              placeholder="blur"
                               className="w-full h-full object-cover"
                               src={value.srcImg}
                               alt={value.title}
@@ -58,12 +67,16 @@ const Project = (props) => {
                             </div>
                             <div className="flex flex-col">
                               <p>Bouwheer</p>
-                              <p className="font-light text-sm">{value.client}</p>
+                              <p className="font-light text-sm">
+                                {value.client}
+                              </p>
                             </div>
                           </div>
                           <div className="flex flex-col">
                             <p>Deskripsi</p>
-                            <p className="font-light text-sm">{value.description}</p>
+                            <p className="font-light text-sm">
+                              {value.description}
+                            </p>
                           </div>
                         </div>
                       );

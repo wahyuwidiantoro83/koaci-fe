@@ -91,8 +91,9 @@ const Register = (props) => {
               Mari bergabung menjadi bagian dari kami
             </p>
             <p className="text-base">
-              Lakukan pendaftaran sebagai investor atau pengusaha dan dapatkan info lebih lanjut
-              dari kami. Kami sangat menunggu anda untuk bergabung bersama kami.
+              Lakukan pendaftaran sebagai investor atau pengusaha dan dapatkan
+              info lebih lanjut dari kami. Kami sangat menunggu anda untuk
+              bergabung bersama kami.
             </p>
             <div className="flex flex-col gap-2">
               <input
@@ -162,7 +163,12 @@ const Register = (props) => {
           </div>
         </div>
         <div className="hidden lg:flex w-[50%]">
-          <Image src={registerImage} alt="Register Image" className="w-full object-cover" />
+          <Image
+            placeholder="blur"
+            src={registerImage}
+            alt="Register Image"
+            className="w-full object-cover"
+          />
         </div>
       </div>
       {isLoading && (
@@ -179,8 +185,9 @@ const Register = (props) => {
                   Anda Telah Berhasil Mendaftar!
                 </h2>
                 <p className="text-base text-center font-light">
-                  Data anda telah tersimpan pada database kami, selanjutnya kami akan menghubungi
-                  anda melalui email atau nomor handphone yang tertera.
+                  Data anda telah tersimpan pada database kami, selanjutnya kami
+                  akan menghubungi anda melalui email atau nomor handphone yang
+                  tertera.
                 </p>
                 <button
                   className="px-6 py-2 rounded-lg w-fit bg-[#1F98DB] text-white hover:bg-[#1f99dbe8] text-sm"
@@ -205,7 +212,8 @@ const Register = (props) => {
                   Input Tidak Valid!
                 </h2>
                 <p className="text-base text-center font-light">
-                  Mohon isi semua data dengan lengkap dan sesuai sebelum melanjutkan.
+                  Mohon isi semua data dengan lengkap dan sesuai sebelum
+                  melanjutkan.
                 </p>
                 <button
                   className="px-6 py-2 rounded-lg w-fit bg-red-600 text-white hover:bg-red-500 text-sm"

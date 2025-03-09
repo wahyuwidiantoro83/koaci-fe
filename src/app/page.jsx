@@ -52,6 +52,7 @@ export default function Home(props) {
           <Image
             src={heroImage}
             alt="Hero Image"
+            placeholder="blur"
             className="absolute top-0 left-0 w-full h-full object-cover"
           />
           <div className="flex flex-col items-center md:items-start gap-4 md:gap-6 z-10 px-4 lg:px-20">
@@ -116,6 +117,7 @@ export default function Home(props) {
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <div className="flex h-48 md:h-72 lg:h-96 overflow-hidden w-full md:w-[60%] border border-gray-400 rounded-2xl">
                 <Image
+                  placeholder="blur"
                   src={achievementOne}
                   className="w-full object-cover"
                   alt="Achievement One"
@@ -123,6 +125,7 @@ export default function Home(props) {
               </div>
               <div className="flex h-48 md:h-72 lg:h-96 overflow-hidden w-full md:w-[40%] border border-gray-400 rounded-2xl">
                 <Image
+                  placeholder="blur"
                   src={achievementTwo}
                   className="w-full object-cover"
                   alt="Achievement One"
@@ -133,6 +136,7 @@ export default function Home(props) {
               <div className="flex flex-col md:flex-row w-full md:w-[60%] gap-4 md:gap-6">
                 <div className="flex w-full h-48 md:h-36 lg:h-48 border overflow-hidden border-gray-400 rounded-2xl">
                   <Image
+                    placeholder="blur"
                     src={achievementThree}
                     className="w-full object-cover"
                     alt="Achievement Three"
@@ -149,6 +153,7 @@ export default function Home(props) {
               <div className="flex w-full md:w-[40%]">
                 <div className="flex flex-1 h-48 md:h-36 lg:h-48 border overflow-hidden border-gray-400 rounded-2xl">
                   <Image
+                    placeholder="blur"
                     src={achievementFive}
                     className="w-full object-cover"
                     alt="Achievement Five"
@@ -247,6 +252,7 @@ export default function Home(props) {
                 return (
                   <div key={idx} className="flex h-24">
                     <Image
+                      placeholder="blur"
                       src={val.image}
                       alt={val.alt}
                       className="w-full object-contain"
@@ -264,6 +270,7 @@ export default function Home(props) {
                 Bagaimana Cara Investasi Melalui Koaci?
               </h2>
               <Image
+                placeholder="blur"
                 src={investFlow}
                 alt="Invest Flow"
                 className="object-contain w-full"
@@ -271,6 +278,7 @@ export default function Home(props) {
             </div>
           </div>
           <Image
+            placeholder="blur"
             src={signContract}
             alt="Sign Contract"
             className="hidden md:block absolute w-[55%] h-full top-0 right-0 object-cover"
@@ -303,6 +311,7 @@ export default function Home(props) {
                     )}
                   </div>
                   <Image
+                    placeholder="blur"
                     src={schemaOne}
                     alt="Schema One"
                     className="w-full object-contain"
@@ -364,6 +373,7 @@ export default function Home(props) {
                     )}
                   </div>
                   <Image
+                    placeholder="blur"
                     src={schemaTwo}
                     alt="Schema Two"
                     className="w-full object-contain"

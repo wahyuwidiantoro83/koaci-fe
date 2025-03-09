@@ -47,7 +47,7 @@ const Layout = (props) => {
           }}
         />
         <div
-          className={`fixed top-0 w-full h-svh ${
+          className={`fixed top-0 w-full h-dvh ${
             moreMenu ? "right-0" : "-right-full"
           } bg-white z-[51] transition-all duration-500`}
         >
